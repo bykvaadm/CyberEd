@@ -98,7 +98,7 @@
    ```
 
 6. Подготовливаем конфиг nginx для загрузки на сервер nginx-1. Для этого прописываем указанный ниже конфиг в
-   ansible/host_vars/nginx-1.yaml, запускаем ansible и проверяем: curl -Lk <nginx-1>. где -L - follow redirect (http->
+   ansible/host_vars/nginx-1.yaml, запускаем ansible и проверяем: curl -Lk \<nginx-1\>. где -L - follow redirect (http->
    https) а -k - игнорировать что сертификат недоверенный.
 
    ```yaml
