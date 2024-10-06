@@ -1,0 +1,44 @@
+- hosts: nginx
+  gather_facts: false
+  vars:
+    ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
+  tasks:
+    - name: install nginx
+      apt:
+        name: nginx
+        update_cache: yes
+        state: present
+    - name: ensure static files
+      copy:
+        dest: /var/www/html/index.nginx-debian.html
+        content: |
+          <h1>Hello world! It's {{ inventory_hostname }}</h1>
+      notify: restart nginx
+    - name: ensure lb config
+      when: nginx_config is defined
+      copy:
+        dest: /etc/nginx/sites-available/default
+        content: "{{ nginx_config }}"
+      notify: restart nginx
+    - name: ensure ssl dir
+      file:
+        dest: /etc/nginx/ssl
+        state: directory
+    - name: ensure certificates
+      when: nginx_ssl_certs is defined
+      notify: restart nginx
+      copy:
+        dest: "/etc/ssl/{{ item.name }}"
+        content: "{{ item.value }}"
+        owner: root
+        group: root
+        mode: 0400
+      loop: "{{ nginx_ssl_certs }}"
+
+  handlers:
+    - name: restart nginx
+      systemd:
+        name: nginx
+        state: restarted
+        enabled: yes
+        daemon-reload: yes

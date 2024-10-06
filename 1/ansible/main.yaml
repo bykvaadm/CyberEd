@@ -1,0 +1,11 @@
+- hosts: osquery
+  gather_facts: false
+  tasks:
+    - name: install atop
+      apt:
+        name: atop
+        state: present
+    - name: install htop
+      apt:
+        name: htop
+        state: present

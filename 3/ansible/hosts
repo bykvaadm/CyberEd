@@ -1,0 +1,4 @@
+[nginx]
+nginx-1 ansible_host=84.201.132.108 ansible_user=debian
+nginx-2 ansible_host=51.250.8.93 ansible_user=debian
+nginx-3 ansible_host=89.169.154.197 ansible_user=debian
