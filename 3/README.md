@@ -110,7 +110,7 @@
      server {
        listen 80;
        server_name nginx-1.local;
-       return 301 https://$host:8443$request_uri;
+       return 301 https://$host:443$request_uri;
      }
      server {
        listen 443 ssl http2;
