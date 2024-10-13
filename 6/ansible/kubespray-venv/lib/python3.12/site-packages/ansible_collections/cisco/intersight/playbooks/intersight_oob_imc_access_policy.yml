@@ -1,0 +1,31 @@
+---
+# Example Playbook: cisco.intersight.intersight_..._policy
+# Runs on localhost since policies are only configured once
+- name: Configure Out of Band IMC Access policy
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  vars:
+    # Create an anchor for api_info that can be used throughout the file
+    api_info: &api_info
+      # if api_key vars are omitted, INTERSIGHT_API_KEY_ID, INTERSIGHT_API_PRIVATE_KEY,
+      # and INTERSIGHT_API_URI environment variables used for API key data
+      api_private_key: "{{ api_private_key | default(omit) }}"
+      api_key_id: "{{ api_key_id | default(omit) }}"
+      api_uri: "{{ api_uri | default(omit) }}"
+      validate_certs: "{{ validate_certs | default(omit) }}"
+      state: "{{ state | default('present') }}"
+    # Organization name
+    org_name: Demo-DevNet
+  tasks:
+    - name: Configure Out of Band IMC Access policy
+      cisco.intersight.intersight_imc_access_policy:
+        <<: *api_info
+        organization: "{{ org_name }}"
+        name: "{{ imc_access_name | default('sjc07-imc-access') }}"
+        tags:
+          - Key: Site
+            Value: SJC07
+        description: Updated OOB IMC access for SJC labs
+        out_of_band: true
+        ip_pool: "{{ ip_pool | default('DevNet-SJC07-R14-IPPool') }}"

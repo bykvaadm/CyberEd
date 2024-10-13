@@ -1,0 +1,27 @@
+- hosts: localhost
+  gather_facts: false
+  tasks:
+  - name: Create
+    cisco.meraki.devices_switch_routing_interfaces:
+      meraki_suppress_logging: true
+      state: present
+      defaultGateway: 192.168.1.1
+      interfaceIp: 192.168.1.2
+      # ipv6:
+      #   address: 1:2:3:4::1
+      #   assignmentMode: static
+      #   gateway: 1:2:3:4::2
+      #   prefix: 1:2:3:4::/48
+      # multicastRouting: disabled
+      name: L3 interface
+      # ospfSettings:
+      #   area: '0'
+      #   cost: 1
+      #   isPassiveEnabled: true
+      # ospfV3:
+      #   area: '1'
+      #   cost: 2
+      #   isPassiveEnabled: true
+      serial: L_828099381482770866
+      # subnet: 192.168.1.0/24
+      # vlanId: 100

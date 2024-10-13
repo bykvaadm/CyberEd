@@ -1,0 +1,19 @@
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    # - name: Update by id
+    #   cisco.meraki.devices:
+    #     meraki_suppress_logging: false
+    #     state: present
+    #     # lat: "37.4180951010364"
+    #     # lng: "-122.098531723021"
+    #     # mac: 4c:c8:a1:11:01:0b
+    #     name: My AP 3
+    #     serial: QBSD-36C3-473D
+    #     # tags: ["testing"]
+    - name: change name of device
+      cisco.meraki.devices:
+        name: new name 12
+        serial: QBSC-ALSL-3GXN
+        state: present 

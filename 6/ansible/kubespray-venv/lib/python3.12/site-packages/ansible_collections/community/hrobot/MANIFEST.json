@@ -1,0 +1,37 @@
+{
+ "collection_info": {
+  "namespace": "community",
+  "name": "hrobot",
+  "version": "1.9.3",
+  "authors": [
+   "Felix Fontein (github.com/felixfontein)"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "hetzner",
+   "robot",
+   "failover",
+   "failoverip",
+   "firewall"
+  ],
+  "description": "Modules for controlling Hetzner's Robot",
+  "license": [
+   "GPL-3.0-or-later",
+   "BSD-2-Clause"
+  ],
+  "license_file": null,
+  "dependencies": {},
+  "repository": "https://github.com/ansible-collections/community.hrobot",
+  "documentation": "https://docs.ansible.com/ansible/devel/collections/community/hrobot/",
+  "homepage": "https://github.com/ansible-collections/community.hrobot",
+  "issues": "https://github.com/ansible-collections/community.hrobot/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "8a93cef07c78593d5a46319f43bd2a4d5f6482c82b4c2845d24cf4035692b9da",
+  "format": 1
+ },
+ "format": 1
+}

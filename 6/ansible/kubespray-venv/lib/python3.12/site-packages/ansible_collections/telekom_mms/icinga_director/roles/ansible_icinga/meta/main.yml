@@ -1,0 +1,10 @@
+---
+collections:
+  - telekom_mms.icinga_director
+galaxy_info:
+  author: telekom_mms
+  description: icinga configuration
+  license: GPLv3
+  min_ansible_version: 2.9
+  galaxy_tags:
+    - icinga

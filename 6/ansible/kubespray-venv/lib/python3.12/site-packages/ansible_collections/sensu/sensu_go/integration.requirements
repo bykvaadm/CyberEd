@@ -1,0 +1,4 @@
+molecule ~= 5.0.1
+molecule-docker ~= 2.1.0
+pytest
+pytest-molecule ~= 2.0.0

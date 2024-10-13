@@ -1,0 +1,106 @@
+ancestor: null
+releases:
+  1.0.0:
+    changes:
+      major_changes:
+      - Added module appliance_info
+      - Added module guest_info
+      - Added module license_info
+      - Release 1.0.0
+      release_summary: Initial release 1.0.0
+    fragments:
+    - 001-release-100.yaml
+    - 002-release-summary.yaml
+    release_date: '2024-05-07'
+  1.1.0:
+    changes:
+      minor_changes:
+      - Added module vm_list_group_by_clusters
+    fragments:
+    - 16-vm_list_group_by_clusters.yml
+    release_date: '2024-05-16'
+  1.2.0:
+    changes:
+      bugfixes:
+      - guest_info - Fixed bugs that caused module failure when specifying the guest_name
+        attribute
+      deprecated_features:
+      - vm_list_group_by_clusters - deprecate the module since it was renamed to ``vm_list_group_by_clusters_info``
+      minor_changes:
+      - Clarify pyVmomi requirement (https://github.com/ansible-collections/vmware.vmware/pull/15).
+      - vcsa_settings - Add new module to configure VCSA settings
+    fragments:
+    - 10_vcsa_settings_new_module.yml
+    - 15-clarify-pyvmomi-requirement.yml
+    - 21-doc.yml
+    - 25-deprecated_module_vm_list_goup_by_clusters.yml
+    - 27-guest-info-vm-name-bug.yml
+    release_date: '2024-05-28'
+  1.3.0:
+    changes:
+      minor_changes:
+      - content_template - Add new module to manage templates in content library
+      - vm_list_group_by_clusters_info - Add the appropriate returned value for the
+        deprecated module ``vm_list_group_by_clusters``
+    fragments:
+    - 23-new-module-content-create-template.yml
+    - 34-docs.yml
+    - 35-add-requirements-filed-to-modules-doc.yml
+    - 37-vm_list_group_by_clusters_info_returned_obj.yml
+    release_date: '2024-06-24'
+  1.4.0:
+    changes:
+      bugfixes:
+      - _vmware_facts - fixed typo in hw_interfaces fact key and added missing annotation
+        fact key and value
+      - _vmware_folder_paths - fixed issue where resolved folder paths incorrectly
+        included a leading slash
+      - guest_info - added more optional attributes to the example
+      - module_utils/vmware_rest_client - rename get_vm_by_name method as there is
+        same signature already
+      minor_changes:
+      - cluster_drs - added cluster_drs module to manage DRS settings in vcenter
+      - folder_template_from_vm - add module and tests to create a template from an
+        existing VM in vcenter and store the template in a folder
+      - guest_info - migrated functionality from community vmware_guest_info and vmware_vm_info
+        into guest_info. Changes are backwards compatible but legacy outputs are deprecated
+      - module_utils/vmware_tasks - added shared utils to monitor long running tasks
+        in vcenter
+      - module_utils/vmware_type_utils - added shared utils for validating, transforming,
+        and comparing vcenter settings with python variables
+      - vm_portgroup_info - add module to get all the portgroups that associated with
+        VMs
+    fragments:
+    - 10-rename_get_vm_by_name.yaml
+    - 48-add_folder_template.yml
+    - 49-add_vm_portgroup_info.yml
+    - 50-add_cluster_drs_module.yaml
+    - 51-migrate_vm_info_modules.yml
+    - 54-bugfix_custom_fact_values.yml
+    - 55-add_docs_for_mandatory_vars.yml
+    modules:
+    - description: Returns information about the portgroups of virtual machines
+      name: vm_portgroup_info
+      namespace: ''
+    release_date: '2024-08-06'
+  1.5.0:
+    changes:
+      bugfixes:
+      - README - Fix typos in README (https://github.com/ansible-collections/vmware.vmware/pull/66).
+      minor_changes:
+      - Add action group (https://github.com/ansible-collections/vmware.vmware/pull/59).
+      - cluster - Added cluster module, which is meant to succeed the community.vmware.vmware_cluster
+        module (https://github.com/ansible-collections/vmware.vmware/pull/60).
+      - cluster_vcls - Added module to manage vCLS settings, based on community.vmware.vmware_cluster_vcls
+        (https://github.com/ansible-collections/vmware.vmware/pull/61).
+      - folder_template_from_vm - Use a more robust method when waiting for tasks
+        to complete to improve accuracy (https://github.com/ansible-collections/vmware.vmware/pull/64).
+    fragments:
+    - 59-add-action_groups.yaml
+    - 60-add-cluster-module.yaml
+    - 61-add-cluster_vcls.yaml
+    - 61-update-readme-format.yaml
+    - 63-add-cluster-module-to-action_groups.yaml
+    - 64-add-cluster-module.yaml
+    - 66-fix-typos-in-readme.yaml
+    release_date: '2024-09-06'

@@ -1,0 +1,30 @@
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Create
+      cisco.meraki.organizations_config_templates:
+        meraki_suppress_logging: true
+        state: present
+        name: "My config template"
+        organizationId: "828099381482762270"
+        timeZone: "America/Los_Angeles"
+
+    # - name: Update by id
+    #   cisco.meraki.organizations_config_templates:
+    #     meraki_suppress_logging: true
+    #     state: present
+    #     configTemplateId: string
+    #     name: My config template
+    #     organizationId: "828099381482762270"
+    #     timeZone: America/Los_Angeles
+
+    # - name: Delete by id
+    #   cisco.meraki.organizations_config_templates:
+    #     meraki_suppress_logging: true
+    #     
+    #     meraki_use_iterator_for_get_pages: "{{meraki_use_iterator_for_get_pages}}"
+    #     meraki_inherit_logging_config: "{{meraki_inherit_logging_config}}"
+    #     state: absent
+    #     configTemplateId: "L_828099381482770921"
+    #     organizationId: "828099381482762270"

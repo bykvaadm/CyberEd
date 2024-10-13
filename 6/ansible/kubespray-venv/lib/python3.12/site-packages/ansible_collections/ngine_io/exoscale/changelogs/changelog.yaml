@@ -1,0 +1,10 @@
+ancestor: null
+releases:
+  1.0.0:
+    release_date: '2020-08-15'
+  1.1.0:
+    modules:
+    - description: Manages reverse DNS records for Exoscale compute instances.
+      name: instance_rdns_record
+      namespace: ''
+    release_date: '2023-08-23'

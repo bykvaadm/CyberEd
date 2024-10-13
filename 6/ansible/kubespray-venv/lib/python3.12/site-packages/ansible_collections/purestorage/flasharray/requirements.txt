@@ -1,0 +1,9 @@
+distro
+purestorage
+py-pure-client
+python >= 3.6
+netaddr
+requests
+pycountry
+pytz
+urllib3

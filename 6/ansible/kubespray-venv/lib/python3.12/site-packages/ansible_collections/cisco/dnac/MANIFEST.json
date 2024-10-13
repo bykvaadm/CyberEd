@@ -1,0 +1,53 @@
+{
+ "collection_info": {
+  "namespace": "cisco",
+  "name": "dnac",
+  "version": "6.18.0",
+  "authors": [
+   "Rafael Campos <rcampos@altus.cr>",
+   "William Astorga <wastorga@altus.cr>",
+   "Jose Bogarin <jbogarin@altus.cr>",
+   "Bryan Vargas <bvargas@altus.cr>",
+   "Francisco Mu\u00f1oz <fmunoz@altus.cr>",
+   "Madhan Sankaranarayanan <madsanka@cisco.com>",
+   "Rishita Chowdhary (@rishitachowdhary)",
+   "Muthu Rakesh Babu <mutbabu@cisco.com>",
+   "Akash Bhaskaran <akabhask@cisco.com>",
+   "Abinash Mishra <abimishr@cisco.com>",
+   "Abhishek Maheshwari <abmahesh@cisco.com>",
+   "Phan Nguyen <phannguy@cisco.com>",
+   "Rugvedi Kapse <rukapse@cisco.com>",
+   "Rangaprabhu Deenadayalu <radeenad@cisco.com>",
+   "Ajith Andrew J <jajandre@cisco.com>",
+   "Syed Khadeer Ahmed <syedkahm@cisco.com>",
+   "A Mohamed Rafeek <mabdulk2@cisco.com>"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "cisco",
+   "dnac",
+   "cloud",
+   "collection",
+   "networking",
+   "sdn"
+  ],
+  "description": "Ansible Modules for Cisco DNA Center",
+  "license": [],
+  "license_file": "LICENSE",
+  "dependencies": {
+   "ansible.utils": ">=2.0.0,<5.0"
+  },
+  "repository": "https://github.com/cisco-en-programmability/dnacenter-ansible",
+  "documentation": "https://cisco-en-programmability.github.io/dnacenter-ansible/",
+  "homepage": "https://github.com/cisco-en-programmability/dnacenter-ansible",
+  "issues": "https://github.com/cisco-en-programmability/dnacenter-ansible/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "cc163a2430c142a93ace612b1ec0b0563688cb360aadf8454cdb45f0e3f35248",
+  "format": 1
+ },
+ "format": 1
+}

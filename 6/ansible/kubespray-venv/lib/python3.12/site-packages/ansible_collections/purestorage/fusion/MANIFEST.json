@@ -1,0 +1,34 @@
+{
+ "collection_info": {
+  "namespace": "purestorage",
+  "name": "fusion",
+  "version": "1.6.1",
+  "authors": [
+   "Pure Storage Ansible Team <pure-ansible-team@purestorage.com>"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "purestorage",
+   "fusion",
+   "storage"
+  ],
+  "description": "Collection of modules to manage Pure Fusion",
+  "license": [
+   "GPL-3.0-or-later"
+  ],
+  "license_file": null,
+  "dependencies": {},
+  "repository": "https://github.com/Pure-Storage-Ansible/Fusion-Collection",
+  "documentation": "https://github.com/Pure-Storage-Ansible/Fusion-Collection",
+  "homepage": null,
+  "issues": "https://github.com/Pure-Storage-Ansible/Fusion-Collection/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "fcdf40d7eabc65ac35369e36b6ed40579ce799ee0ea94caed4b7ab06c0efd0b5",
+  "format": 1
+ },
+ "format": 1
+}

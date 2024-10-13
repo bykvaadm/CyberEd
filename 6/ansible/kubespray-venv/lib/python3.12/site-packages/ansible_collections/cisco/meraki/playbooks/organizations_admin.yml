@@ -1,0 +1,31 @@
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Create
+      cisco.meraki.organizations_admins:
+        meraki_suppress_logging: true
+        meraki_caller: "test 123"
+        state: absent
+        name: DevNet Admin 3455
+        email: devnetmerakiadmin23@yopmail.com
+        authenticationMethod: Email
+        orgAccess: full
+        networks: []
+        tags: []
+        organizationId: "828099381482762270"
+  #       - name: Create
+  # cisco.meraki.organizations_admins:
+  #   meraki_host: "{{meraki_host}}"
+  #   state: present
+  #   authenticationMethod: Email
+  #   email: miles@meraki.com
+  #   name: Miles Meraki
+  #   networks:
+  #   - access: full
+  #     id: N_24329156
+  #   orgAccess: none
+  #   organizationId: string
+  #   tags:
+  #   - access: read-only
+  #     tag: west

@@ -1,0 +1,40 @@
+- name: Configure Switchports with async API
+  hosts: localhost
+  connection: local
+  vars:
+    sn: Q3EA-239B-ZQV7
+    auth_key: <ACB>
+    org_name: Test Ansible
+    switchports:
+      - name: WAN Trunk1
+        type: trunk
+        allowedVlans: "1,2,19,20,50"
+
+  collections:
+    - cisco.meraki
+  tasks:
+
+  - name: Configure switchports
+    meraki_ms_switchport:
+      auth_key: "{{ auth_key }}"
+      org_name: "{{ org_name }}"
+      serial: "{{ sn }}"
+      number: "{{ ansible_loop.index }}"
+      name: "{{ item.name }}"
+      type: "{{ item.type }}"
+      enabled: "{{ item.enabled | default(omit) }}"
+      vlan: "{{ item.vlan | default(omit) }}"
+      allowed_vlans: "{{ omit if item.allowedVlans is undefined else item.allowedVlans.split(',')}}"
+      voice_vlan: "{{ item.voiceVlan | default(omit) }}"
+      access_policy_type: "{{ item.accessPolicyType | default(omit) }}"
+      access_policy_number: "{{ item.accessPolicyNumber | default(omit) }}"
+      state: present
+    loop: "{{ switchports }}"
+    loop_control:
+      extended: yes
+      label: "{{ item.name }}"
+      pause: 0.3
+    register: async_results
+    # async: 120
+    # poll: 0
+    tags: [always]

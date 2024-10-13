@@ -1,0 +1,5675 @@
+{
+ "files": [
+  {
+   "name": ".",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "867374819319da961efd5218443bf80a319c27e57ead358d82fb925c79e981dd",
+   "format": 1
+  },
+  {
+   "name": "CHANGELOG.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6f54356870c1f1ce5e08d8b3be1b4d2358708df49e81975d8da6410a38d6e6cd",
+   "format": 1
+  },
+  {
+   "name": "CONTRIBUTING.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "11337b573ba4ffe704e9a94e682e018f7a489b4bd9ed5b474643ec2ae136ddf4",
+   "format": 1
+  },
+  {
+   "name": "docs",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/how-to-use",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/how-to-use/media",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/how-to-use/media/advanced_dns_name.png",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3f4c6892f90e4b7a2ef8ce70fbe04c4c1cee8806d2aa37ffe09955045eb96bb2",
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/how-to-use/media/api_device_post.png",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "abdd29c2a0dc029c4aa6d4176b1a205dbc5d4d1f434d821e04b9a08a26175221",
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/how-to-use/media/advanced_dict.png",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b0d011fef324a804f6cbb2778e65d69c6373c8123fac576d9f49072471a6e908",
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/how-to-use/modules.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "720bd7b5e52bf0923a949930fff93636d166388dee964928f065e67649b6cfe0",
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/how-to-use/inventory.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7b28ca7e2a6cf1d0549a4eb2cafc901e3b2adfc449c3de6950bdf165daeb2b35",
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/how-to-use/advanced.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "aad987bea7cd675b99e0a3224b88b8ce6163ec6626a7c6f1393d0c52fe988c30",
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/how-to-use.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "24afa8389fadeb19111920ff8dedfad7bbbe0cf54c9fefa238c564b8809a39e9",
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/contributing",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/contributing/modules",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/contributing/modules/new_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "992100c8aa6c94c16d82d1196bbf725193ebad97aa7630eec5c2c58556ed363c",
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/contributing/modules/architecture.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9f1a0fce897bddacaa5a5b979a00bbe6cbecdcd3d0fff4fca484db73ac76e82b",
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/contributing/modules/media",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/contributing/modules/media/post_rt.png",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7c5735f28bbce3e68418d44c9d799bfd9a546304ea826bc31e9da6604817ca51",
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/contributing/modules/media/vrf_options.png",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c04ff654c85e611c7968264f1596973cd6f28b6d48a71efcafa5a22f5c498daf",
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/contributing/modules/index.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5158e3e659bafe06c7cd9d2897af6e7ac6209207d906fb4bb530b200b390832e",
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/contributing/modules/update_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "afff5f11445cb862a1177e48f0f2e92316056b7781786a368fa960645ccb34bd",
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/contributing/index.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "08326dcd2935d4a33b028eb1dab2a5afda56afb802d9ca6c89e1a59c0c45afd2",
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/contributing/inventory",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/contributing/inventory/index.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "698639c0280fc8b9d8a8926baf2e53dbaff581600a4cc3f65cf9ecdc4dc19732",
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/installation.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a4a35f73d6e5c37ffbc2e117b4c11a1f9ebeaa78d93b9c36efca62080792c7ca",
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/index.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "105990e8aebad3487a6e7174313bc26bc4138813416cd4c98c8157f158b6904c",
+   "format": 1
+  },
+  {
+   "name": "docs/getting_started/contributing.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7029fde832d231a3111e5484faac6759377430100b288bc14f6b2670c6022d73",
+   "format": 1
+  },
+  {
+   "name": "docs/_extensions",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/_extensions/pygments_lexer.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6fa5a72e224c3cae4a07f42ea993bed348822e31e4435c300f01e707fb961cb8",
+   "format": 1
+  },
+  {
+   "name": "docs/media",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/media/postresults.PNG",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "12ce503f9c545a573466e75cf028f316afc893e41f056be1ce6838b44db49537",
+   "format": 1
+  },
+  {
+   "name": "docs/Makefile",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8b6587b859607f200f116e2cb043fc358e1c3a26c326b563bf348453cfc68307",
+   "format": 1
+  },
+  {
+   "name": "docs/changelog",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/changelog/index.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1831a65ac37c6d38d1024a11f051b0fb19e95123b9372436ea5d6fd366fe8c54",
+   "format": 1
+  },
+  {
+   "name": "docs/changelog/changelog_include.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d8a74a8989015f6ff8f2e9c52c07518770e91dd69c81b078eec816aafc8ab9a2",
+   "format": 1
+  },
+  {
+   "name": "docs/module_utils",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/module_utils/netbox_dcim",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/module_utils/netbox_dcim/index.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "aac738555b1754e47e6a3b632cde1a825c7af6f831382487ccad4eccc8910f13",
+   "format": 1
+  },
+  {
+   "name": "docs/module_utils/netbox_utils",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/module_utils/netbox_utils/index.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "51b1dc879f2785c838a3a573ceeef3c09cf6d169d36f4e856d25cb60fde62463",
+   "format": 1
+  },
+  {
+   "name": "docs/module_utils/netbox_ipam",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/module_utils/netbox_ipam/index.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5c83d597e8b57c1fc6e1b240b361802f04cf5b2b93ed5b163430c2ad2a25c700",
+   "format": 1
+  },
+  {
+   "name": "docs/module_utils/netbox_virtualization",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/module_utils/netbox_virtualization/index.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "96fccbb031a84baaa22a47b0feca0bd05c5471eecaceb2908caf75f5d20384a4",
+   "format": 1
+  },
+  {
+   "name": "docs/module_utils/netbox_extras",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/module_utils/netbox_extras/index.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "91e0d05c958f3fd4bddd1f90fcffd40cb838ca9fe10ddb23fed96c96c29f925b",
+   "format": 1
+  },
+  {
+   "name": "docs/module_utils/index.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b4fdf0597f752c618b999e67fb63624f430780bf693e4b2b408ab5666df9d1bd",
+   "format": 1
+  },
+  {
+   "name": "docs/module_utils/netbox_secrets",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/module_utils/netbox_secrets/index.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8fe38c525cf5a8c333411a9c0266960fb55f3360ec7aaf981a0765d126326c89",
+   "format": 1
+  },
+  {
+   "name": "docs/module_utils/netbox_tenancy",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/module_utils/netbox_tenancy/index.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d3aae8ae61995eda566696ff9322a02bcd663128520294b5dbcee6c2d7b62f71",
+   "format": 1
+  },
+  {
+   "name": "docs/module_utils/netbox_circuits",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/module_utils/netbox_circuits/index.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "69b4f0147da11b460812a18e1a30c46cf783038607e8aa15b8104ebcf745971b",
+   "format": 1
+  },
+  {
+   "name": "docs/conf.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9f66ecb31620add016b1743c7943620b384c4f0acb370aa4479f3b4b38bd6933",
+   "format": 1
+  },
+  {
+   "name": "docs/index.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "13a5ee7e9853fc07707a7cdc745cb837c7b2ee852328f4b4c7ebcf6e3acb881b",
+   "format": 1
+  },
+  {
+   "name": "docs/_static",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/_static/pygments.css",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "74318b36e2302111536796af5aa86a9ceab09faa3eedc3e7d28878b8751896d6",
+   "format": 1
+  },
+  {
+   "name": "docs/_static/ansible.css",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0787ca656847c399975c5cca01be77f08d4ff9344b87bec1c1ba1aaa3cff56a8",
+   "format": 1
+  },
+  {
+   "name": "docs/js",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/js/ansible",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/js/ansible/application.js",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2a63425844f360eba3a0f4548933729f58ec6e6df6fbf1906bf2986e394cf149",
+   "format": 1
+  },
+  {
+   "name": "docs/requirements.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "39988308e7ae66376608418d13d7979ccd50fcdc3e1c3439912ff9943c210ca3",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_tag_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a97ab7ce58ecd2ad9b898b262cd569baed9fd99d7b9e018c13ce17e03e3ef897",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_manufacturer_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5722e58b3c307dd1d6418e380407c6bc5da28e61baae914678f1c22f17b9bf8f",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_vlan_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "48d1e2fa6c9751d1eb14395682cdcb1e0a4069ab1fe801dbf45b9353ad9fd4dc",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_circuit_type_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "29fe3da4217a1e02c4e1cd0aee2d5da9d8c72ca7b6271c9e08d53cea1ee3248a",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/nb_inventory_inventory.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b3b197f2bfcb61687d409a10ca657a074a84d0ccde5117f1fdbb67f18e9ec377",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_device_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e562e2210574d4f7aa3b48df116228a2044a6e2f9e84c3b5f1c5927115e46f9a",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_virtual_disk_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e7b5322cb65f16892d7dc4d659ed50026597086827433d143a2864d92ccbb4ac",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_interface_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bac3e444069da9456bf44a79c764f5456459888f9158c3458a092c7ff4431a65",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_console_server_port_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3cf74e2863e74649e510ac082ed4abacba90d05dc36ddbff39bbe92cafa3c711",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_tenant_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6d4aa3632e8fca16e7627b6b7d490f436aef519dd4e768ca6a1e3fe537caea3c",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_config_template_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4f0c06e0bbb37536e9976122b259b43c9295cd06833084f3dc45a41db1ab4166",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_service_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6da244a6e53c70121e6e4a82a1678fef951baa26d2af1ccfc7b80afde8a8e8c7",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_front_port_template_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b2f13d54e6f2bc3f211ab4c529a9b39d85aee24b2ca238cdb620e74a441ec7cd",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_circuit_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2e0137de67ad465b4642cba7a7ffdd12315589aececf49ac70badf6115b6adb6",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_virtual_chassis_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f66968af2f62108e940df3623b567d94ae87bb74e60969d148dad9dfa9871be9",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_provider_network_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "63df2d0530365042b95472518762ec27b40c34b4b04b56c50b015d161d8bbc79",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_custom_link_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5864550194796e6c551cd4e17f41e3cc5184dec730e70a0a18357eb8c3503f3a",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_device_interface_template_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7417d997c30baa6b3b1eb917dd5646c0674e361b12a528211bca5a3318ba0c65",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_l2vpn_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2a60b86b3424fe47f412fef844b4bb4c5dc23fe19c8cfc89bd3b41238f2532e1",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_console_port_template_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4a81ba46c8f1f4ac438640bf9ca23d2ffd86862c353fb0f587c883339f7348d8",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_ip_address_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9264e93eb8fd9ddfd9287f8929931d624e79ebc6e2add8ca3547eb8c066635b6",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_rack_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5ec3266b5d0ca1e04a62370fe08e24ee1b7daea62c207e147d42b19970de0fed",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_console_port_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "68951df7af440f38fce10bfa21f53f10506de84a9d14ba4a05984dcf0ca9abee",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_contact_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b73dd97651a1a49591a7c66bbf9a2d9d41b6930dd3959f3b809ef14f2e575a77",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_rack_role_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5e69fb0e845987507a6ee349152bf79aeeeb6ec65daaba466cd5f9c1f0b41252",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_power_feed_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2310946a748854ea73f5bc85216e062332364a2db381836277e11b746e9b8827",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_rear_port_template_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "619f7201fcb6aab3e91a37aba75e967c8ac231242cefdff9115f7c9f81ee4681",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_prefix_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "33c090974cf17ac907514872269cba7152929841346cad931ff6aa5fb36aaa8f",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_device_interface_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3fce5b2e3ddbf9b47b659d1143cb0d3bb6519120da29705a6e52f0f83c83a13f",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_location_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "347b5691f3131f983a2227c7aeeae9cef71c1563d91ea23978b4881c543f8cc8",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_vm_interface_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "28aba6d533870acf30dfd6897a0a283f660e3d4360c68e3c41907f1bc34d4142",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_asn_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bf6aca4c3711ac2de31dd62c02eceb420fe82af9cc8683ce3baf79835ae2bbd8",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_rir_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ebb4429feabd382488facbcad09de2bf575a09b4f71ce608090e28c57a8800c1",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_power_outlet_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fc7d7941f9f1dfa964a0d109060f5c29d71c6cd160d77256a5f2fe65e60779e0",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_module_bay_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "08e2aa5511760dfeaa6ca2cbb781fa2f5dd9bd17d57b382ebf55282d6637303a",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_console_server_port_template_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "efa9a228ad792bdfdba42644a73a8958e944263271f5a97637efcdfa57f79e69",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_tenant_group_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "952163b4e0e3eb0141fd73a83a100d4d4fa98f9d291c54630e7bf17728cbaf64",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_region_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f9cb10228cc7ecba3ef6e596b742024d5b9405f8073ae3dc43eb701f8c1f1b97",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_virtual_machine_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e621952249adb466955a0fa3393f79ba4e38dfab405ce08c8ca60b8ba0a36c59",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_power_panel_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "edb5de14b9c23b2e64c00d9c82a3c3ed22b39c1caaa9e41ef9b73a2a7dc70176",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_vrf_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "979b761cf3a7a11c6ed46817681a8a576407cc8f41c83a4ecf43a41d0ca365a8",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/index.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfc6078d8bc269c544cf3d942d09b6a114a10ce8e88f16c571755086c7d65c60",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_contact_role_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b2ceaa92e04ef846e13e9e01133375728e3f65393bd3c4425fc43d867e9fb487",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/nb_lookup_lookup.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2bef14a52568c6121405016e88c5e2fc897aca3d571a47bf343fd0fb6695beac",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_route_target_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d2ebcbd13954aa23efb2bf617ba1c3b12f0d762f034dabf3882084962efa01bc",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_circuit_termination_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9d7d596568b3f18960e07912574d8f144f835b86b8d4d541563c82a6011416be",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_cluster_type_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ef30e4cdcc86265248affaa5d80048d1e042a9bdbf292a81b8c35ef761f41ce0",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_module_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a919bed8c9b25864f490765dda8daa29cd466efc1e992de860755b620d6c4765",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_wireless_lan_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "73bb96346604431a986a1e08b3e09db51bcafcbf56e691f339fefaaf68810e3c",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_front_port_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8fa7f2672790e4a27b837b67501624234569617c10c3f4ccc6fe5acf4f557652",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_webhook_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cc02772fcbddb4ae813f507c09e53e7d89d9fe00ad00c13773e426a78ec21510",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_cluster_group_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ebad52e6ee70a0137b83ab0cef224fe96a16af1509c50c5d71584ab8166cae16",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_fhrp_group_assignment_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "27403b3044509983b77b855a33987037e7befb26c8935ddf981e8a650cf3a068",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_ipam_role_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e9907323114eab10dab4110c4bbba66093f7acb7aa58d0d678de843a6f394092",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_vlan_group_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "98582636ed7e504ef820419feedbf980be9a25a93edaea1ad86feacc4dd2e57b",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_wireless_lan_group_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1fea89108e1203e20769b83e9ea67a4d10f65dc7eed8648a2f48430ca83b8320",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/environment_variables.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "10e745dac34a45446f4c4be0664ca250b0111d404b6a35eadc39bc5b3f3dd06a",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_rear_port_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bd2bd2d3ffa3a1f7b98c6329354e4791cdc6d5b34195bfba8a25a660783685e2",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_inventory_item_role_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c5a25b964beb053ff9edf610062899fc25b1b309d09424cc400e898affb6dd5b",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_power_port_template_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "62b01724e8449c8fe73547a14020fcf8865dbe6a800df5317a0ec34e05ff2228",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_cable_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e59817abf34d99d4755d3da36468a9872fa8f902aec1041f6242dca8b1bc7afc",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_custom_field_choice_set_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7b26e451abadcc9d832a21686aaca5279ebc3f81bc47e5aad69c57d91951cdc2",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_fhrp_group_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "15fee14645708e18acca082b3cf1d0992fd5ec5995d0ad2a059d1bcb60fc575d",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_device_type_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f64e2831906a386ce1a632a2a836e7ce1789f9f255b9a9160c6b63ecbac0a4c4",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_module_type_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7e627cd4cdb8d75e8e382e0fcf9f000acb2b142cdc780acf1e699748a1cd218e",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_service_template_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e6e69ae63c79c142a8ebcfa0a853d9b8dd526c9571af08a0712ad52207043459",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_cluster_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5068f575a382a5858e6b0f1fe860f87feea8576c36c81b2f495ee49b296f22bc",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_power_outlet_template_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "78f4fcb9e202ae6bfe455a52f0ad8a568706d193389358bbbcd591f036447ad4",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_aggregate_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8e7280a943bd24ad12425ce7a22050e0b5acf4a3127b50fc6ead2c50c7daa877",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_power_port_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfc95851e83d59a4484e75c57a4f3cbc313c8963ce3256de273c98732c96fb85",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_device_bay_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1d265d84e58b26733e813dde8ea3a272c50338f7da8e71ec6a92ad188f4bd46b",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_device_bay_template_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab6fc008b3d9ddb5d2f2b298526b75f704f8a24526ff77ee71adfc450a2214ee",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_rack_group_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2dc0fe15897938b5bc845e66b31e769985df5d206e8e568f57343c89784421c5",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_journal_entry_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e770a41021d2c3120eddaaf0e97deb77decc841be494aa18b6f89adabc59f87b",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_contact_group_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5f3419991a945d47d1dd57ab02245403be9cf8e0555689de39c8aeb848c841a4",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_site_group_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8acbb19fda55662d22611dbceda002027e27ebf75dd28267a1b90b60b09c3e8b",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_provider_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a2c08949e04779767e171c98d478bb22e095ff7ad232249e3ec7e6b042c4dba1",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_l2vpn_termination_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "494acd3c966bf49937f0064a387a0d289399b2f89654bc4b7f15d2cf1345e75d",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_export_template_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "14fe06bd1bc07d781c70e27fe6e05ac428bb4c2be14616eeb52caa5f48499680",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_device_role_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4745a922212d4089a015cd4785718f76cf210ef38e89776d1c19985768eb4ba0",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_inventory_item_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a8839304fa1620dda1332f8e989b7b855ba418edef0524d7890c417efbeff6fe",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_custom_field_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "18dcdcf6ecdbe74c31a91640a022cf44715910c98cf9f6989f6f1062a962e681",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_site_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a7f69c7ba9a94613140c543792b8535d65c9aafc86b8ccabbf0392382fc16a6b",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_platform_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f02a16a74b17a348dc7798e982eaf3d37549e3bc8c4d088aba766766ff3385ac",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_config_context_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "75ed0e5cd64091a8cafd3b896da5228ded27a905832a82184f6c27f7a90db49d",
+   "format": 1
+  },
+  {
+   "name": "docs/plugins/netbox_wireless_link_module.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9c74db49ca19ceada23c452ce76fdbbf6ad6cca6796c8ecde65843c0182cfd7c",
+   "format": 1
+  },
+  {
+   "name": ".gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c0ac384e24827235e0b17021954d2b803c3da263038dfaa24967d3d40a86ea15",
+   "format": 1
+  },
+  {
+   "name": "changelogs",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "changelogs/config.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bad0157e7ffee11df87f3adaa5dcfa3f1841e816a27cbcf5b866fa21f63ef1bd",
+   "format": 1
+  },
+  {
+   "name": "changelogs/changelog.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "76b3301e977ee917fcfaa22b3ddde95ffba94e868707303ac015dd78faa77b85",
+   "format": 1
+  },
+  {
+   "name": "changelogs/fragments",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "changelogs/fragments/.gitkeep",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "ansible.cfg",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b5e219ab076b1e90de2c650d480fe0a4b8724f839ac95f5240ed64a80202dfbf",
+   "format": 1
+  },
+  {
+   "name": "LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "605e9047a563c5c8396ffb18232aa4304ec56586aee537c45064c6fb425e44ad",
+   "format": 1
+  },
+  {
+   "name": "pyproject.toml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4cb7c45388fa048d16fee536d074fc5d802744f9711885475436f73cd41dd1a1",
+   "format": 1
+  },
+  {
+   "name": "hacking",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "hacking/build.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c824f229eafb4ad8fcc24c800b6d08ad8af1c8ca866e9cdbfd543429b2a04a24",
+   "format": 1
+  },
+  {
+   "name": "hacking/local-test.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3c4c16322033b5df7c08d9081098e11416b3bbdebede263ba84a92c4f043d815",
+   "format": 1
+  },
+  {
+   "name": "hacking/black.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "31b38a6d54cf7fd233d647760c6f9b695bde61762b09b0aba5899ea746d14248",
+   "format": 1
+  },
+  {
+   "name": "hacking/make-docs.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eaf25c88bd9a0d8d8b583c8f65bed04ce553749fe2949e2e07063fc420b08bbb",
+   "format": 1
+  },
+  {
+   "name": "hacking/update_test_inventories.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c02406514a0a53c1328f5397a4df2aae6ed1096159a3a85db20e34b5c73acdbe",
+   "format": 1
+  },
+  {
+   "name": "tox-ansible.ini",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6365ac7f012c2abf8fdda1781d0c36ec4f4e166ebd8442492914f5438ec0b9e8",
+   "format": 1
+  },
+  {
+   "name": "poetry.lock",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "37dc342a2eaa02e0d336865a0243ca94b245e3568731bd6c4d42eb62120b3e51",
+   "format": 1
+  },
+  {
+   "name": "requirements.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5dfa35ed19609e37e1629ce816373f8dd766b78c0e65d948bfa6e69da08cd090",
+   "format": 1
+  },
+  {
+   "name": ".readthedocs.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b6bc4a2db269d9e5a9c546a5badfcd26bd56c877c7540278cff7a8f0b870e993",
+   "format": 1
+  },
+  {
+   "name": ".github",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".github/ISSUE_TEMPLATE",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".github/ISSUE_TEMPLATE/housekeeping.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6952213267de18d7a4656f4aa76a8fecd52fad264d38159074ce5fea2ebf3986",
+   "format": 1
+  },
+  {
+   "name": ".github/ISSUE_TEMPLATE/config.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "417cfe754f2372185d81c8ef435d8ade002ab0f5db9f7f917a9ac26ec7479851",
+   "format": 1
+  },
+  {
+   "name": ".github/ISSUE_TEMPLATE/documentation_change.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a1c372660a10ea2ce252341ddcf8f52b5faf3923b4d3ca2f864609450cfe3534",
+   "format": 1
+  },
+  {
+   "name": ".github/ISSUE_TEMPLATE/feature_request.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4c042a9f4b7a1e6a8a3c7962b44e364f5b2cfe5242f17415bb9e7af94103561b",
+   "format": 1
+  },
+  {
+   "name": ".github/ISSUE_TEMPLATE/bug_report.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c626f2997fc48e16250057238523be1a42788d29eb48755db176bd433c79e13a",
+   "format": 1
+  },
+  {
+   "name": ".github/pull_request_template.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "63489727d4197ef434809dfd6310bcb819a32864f5586f1b7f604338c3b86808",
+   "format": 1
+  },
+  {
+   "name": ".github/workflows",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".github/workflows/tests.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0c92711af925ff0e4c24e1173b14497783014373cb175d5b8533a1e75d632b37",
+   "format": 1
+  },
+  {
+   "name": ".github/workflows/release.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f60625361566d151303c75db858e6bdeec0d40f1caaf67c1cc832659b29285e4",
+   "format": 1
+  },
+  {
+   "name": ".github/workflows/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9fb9e9c4ecc4ba1220731997700fb2a0660be9cc29136b4310475138f2fd2e44",
+   "format": 1
+  },
+  {
+   "name": "meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "meta/runtime.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "60937475296509a4a4e56f81236215983395396771507b8ce1c7d231d401f1d5",
+   "format": 1
+  },
+  {
+   "name": "meta/execution-environment.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0cd0b966cbb8fefb00f7122190d7a9b42dc5da517a8c5ba9d86e34c51bc3e43a",
+   "format": 1
+  },
+  {
+   "name": ".ansible-lint",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b43ecf9cad4057c044a233c4b4ac61c46f6171284e2760e201cc429b487d1eab",
+   "format": 1
+  },
+  {
+   "name": "requirements.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d003b5dde4117b9ef860b6d4fd67096a2909ea206f63116d5d46d1955fcc94f1",
+   "format": 1
+  },
+  {
+   "name": ".ansible-lint-ignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c9f3858f2f46c33226d8494ece32bb03872c105e228fb32e56b4d4c342b924c9",
+   "format": 1
+  },
+  {
+   "name": "test-requirements.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "47f934aaf74138c7491a9fedb7e83b606f40334ed0ad8169e79de138d51933e1",
+   "format": 1
+  },
+  {
+   "name": "plugins",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/netbox_tenancy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "50a1de4f8a2dd29d4ee73a75fa9ab8e3f5e444a5fc1935a8d09172a56f290d11",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/netbox_ipam.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "368bdd616498612f33b9a3903abe22da7df375eb969be91d71e9c21e9fa34398",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/netbox_utils.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "30169185e24d41d9bf843e1471609d2144e5687c171a828482a1a41eee98100e",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/netbox_dcim.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ad6b8d8a7537c776e8579cbbf75800c7fc57b1d4ea2d56d39d36e03bb1ec4ff6",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/netbox_circuits.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1e448439cc15b42ac16bf9e390741429fc6293dae59817e680dc5dae4de5683e",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/netbox_extras.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7caec2ff44747f93ef6f18b1201d4b8abd1ba455f41db4a902d859e819bc99c2",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/netbox_vpn.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "af3a42c86663730a585e2853c8bfb36b071b8c75bc33f071579d5471af5b3219",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/netbox_wireless.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e962fa78336a3c28fb139d8ef1485b74451d06bcad5bb779d849344e74303d84",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/netbox_virtualization.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4888905fe5f076ebb504c9259b5a7a04975265001c91daab7a144772f6d331cc",
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/netbox_secrets.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b12f0853325dd27f38948cd9da65b72c563ce46612f8cf55cfa5806b1ab784c6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_virtual_disk.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "213ca5145932f7b848bbc3d93ed282dff9153c50727f51f4747137135d5e2e3f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_front_port.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3ca3d33bfbee6d950e92ec23cd92876e4d6ef8ebb22bc82118ea9a2ff3ebb527",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_config_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6c4e8fbba0a4a370f572ce87c4f49559476b2adf1fb75ba1c00ea8c11dfc8afc",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_manufacturer.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7562792a9f7bb0cda5180d4ef2c6127ea6c5250c01bc2a3f8bb0fcb681ac836e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_wireless_link.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6ff0e8be94d254e8d074e45954755f315fd9edf9137661826abd2b17cf831460",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_device_interface.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3140aed168eaa5609f6d4f3246c671b203adb00576ae7ecdb38e6ff1178cafb",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_console_port_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3bad97e5cefb8d56f784bf9e8f2dd7b8c6fabbf737e1acb4e8e0d753bf9903cb",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_module.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "05a271bbb128fd2083abf52cf65df145b416340f8020ca1fae0567e1bed2a45d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_journal_entry.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e4d8f7d87a363368d9fe18bda8c77392851e98e9ac46161f89dfa6bacdecb1ed",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_site.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "142edd8247ffb608050e9f140fc83dac895a8a3bbfb736483b97e1d036a2de2a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_power_outlet.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "05f934116bfba3947288f4f3eef2dbaf705bd077e3bd6fbf15d4937c0b4288d4",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_device_type.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f419cbd269160a7fa6b6eda4929cfb99b1e7245ce7db44447c8a3eaa9885c231",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_power_port.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "810c2aba9e965ecd4a8e0f437e330a5c2d068b06c384c8f3777d1c09f075aa74",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_circuit.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9fd9f64d9887eca8ce2a128e3261dd9a900f7a5345470c8e801980680648b480",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_custom_field_choice_set.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a4ce60e3b58f719b3e4f577404ed14a4876033850bd83e55ce29371a3e8c45aa",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_circuit_type.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6636665daf3094c1dfcf1ad6e406f1c545e144d83157d945e28f91864de7bc92",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_asn.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2ea2240131475f5a03e062f7510517cae8d32f2039eee611008cd24ebde770cc",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_power_outlet_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "890b7fb0444b514cd5e3ece079a507b861dbf2891c5ac44770dc36577e975d1a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_front_port_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "35b11c253d567c858b7927bc95c9fdae68de7019657021e949536ddd5e4b41bd",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_device_role.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "83d9795f3371255a833f3944231b4a5da5ab99cfe4f20e76483ff49856b845d5",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_service_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "04a40a22ba361900ebb90ef35e38972a4db791f2ac4f7f3328de0b477809a47e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_module_bay.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a7ad78cf8ad94dee64058b6122ddbc6b7520dfb51d1cab7a75b676f0c33bc45f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_power_port_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "970a4d5f21f065104a6585e48d6076a793cde0b87f36974af3019d96b9629e92",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_console_port.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "22d0691edb3978d72f23f4131ddd8520aa7430c43ccceee188e204d39a4cffcf",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_fhrp_group.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "44a5d39cedb28a79b2b4caea15025abbeca990b5d19e139eadf56bebff50925e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_config_context.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "82856c9866618126bb9767651a6a86db8c52240247a761515dde467b621cd140",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_l2vpn_termination.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "19f273e9c69300f75685605c07de32692829c4397913cf2279cfca7da0cda433",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_tenant.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4d4517859d7f1fb6492e58cabb50264d5c7fa8b3c3f75030a89989632fae44f2",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_cable.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bdcb740914e8b63db284b86b0dd92499526c668ecc4a9385482d268bbc147920",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_power_panel.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bf77eeca2ff7495d3dbea12f0848889d332c0c3ad7323dab0f6cd21e536c9f89",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_aggregate.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f6986e99d152086f462a477c4796585dd6cbbe22258f7595335113a5e4eef0cf",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_webhook.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1060bd63ba3d1fc3243fa7585140dfc3030ff0c52dfbf88d75c45b7d8ea99818",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_ipam_role.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bdae208439bee3f22aecba61e93ce377780ea02e7c39ba3f6df565240d4f6c5f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_power_feed.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "be2e18e3463e0be77686b1a9b9b23ab674bc65d8b76757bd08d18315b613ce9d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_prefix.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7219271669ce842f93c91a7ee8b6600f798b4d9806e4a13a314ae077564b826a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_site_group.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "81d354cd6dcdaaa0e4267e628d0e28a20b24d3313edecf7e8cc8b0615028ddc0",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_provider.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d52039cff5a155d8bd27872ef27902356d6cfc3dd56121a9fdb1452a09848ada",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_l2vpn.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8af6e4df049e34038f1ebadd11f337eaa24e26fbcf8a86834c4bf3ef79fffb56",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_rack.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8cbe5d65ac1770b62cbaec8f7a5bc5f7aa86268e29d3d04975311e27cb38ed28",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_fhrp_group_assignment.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a056bc88bba0fed5eaf823a6f8b6bbb11db2de8b7de044dd9e97c843b11ebbcd",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_console_server_port.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5bfcbf1b1403757095db86810251a73d71d761d7c7e12dd21870bbc80d80bcc9",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_rear_port_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0774a138a14545017bd78766e461c5f723991aa4c54804eeeca96ac09c3bfb4f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_device.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eba8b1469a775d0793b28c259305811172d900f4cad500f826c6012036d67fc3",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_rir.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "623f518cee58aad0d0f8fa70ccbcc23945e9c67dfcd7722004f7958ea4d19456",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_provider_network.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e7d61d14305709e298ae538853f531c2fcdf7704bfd5c3bc0d5a2d9bf1780983",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_vrf.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3e118e744fa36ff6b96694c90384ce092eff62534a0b1007b91049d55580e2ad",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_inventory_item.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b486dc3dcf750bc36bc29e79bb5ef756f57a2970caddc97485fd765fade9489c",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_console_server_port_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "67d4f7bd5f7c75842829388993cc7ce4a94c183a470baa5f0478b15e1337857e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_circuit_termination.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "625f56c8b99f27b151f05827a0a3a423688d753bf7b051d07c030eb5f302dae7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_tag.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b57d9ba9911fa979987d82027af3ae416d0a54bae21559f0346d9c6fd9160c6d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_device_interface_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a54862fefebb77674e3bc78d485eeb8a2cb5d0b8f562023999f8ccacaf8543d9",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_module_type.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9b50044bae1b05dd580bf6e7620aaba2e5a74f50b271fcf74aa45de46dcda3ae",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_rear_port.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2a7278ac9b53aec8726f6110c6e336aea6ca8e8ddc06a9c41aa9e98ea53d31e8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_vlan.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "771f17cfdacf3c1dd13f25c9a341b4c4716396b5ea0e8c8997d25077d7856e31",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_tenant_group.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d718548666a1b6ae349c9175f39935bad5af259704a97eb415ad0b6ca273ffc5",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_contact_role.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "385d48ba1d4b904e1caf01af3e140410b7ebc8b5666ba69a1743eba4044578e9",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_custom_link.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "026a4cd881bae68d2bcde93a69620441905b473d1e6a60cdde110f2bf1db094e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_vlan_group.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ca6bc993ddb97d20e33461b6192e583a77c5e33901455dd1b6133a6b865476d7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_cluster_type.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c8e9eaa064b4421aa51a5bb3128d72c277891d08305c730450177e55e12eb1d8",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_platform.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "287aec55bb1e282c54d9f1ff68dd9f3df05761c19054ba817f5cd8a2e80aed38",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_inventory_item_role.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "50c6ef2a713ca82ddf49d34b0c3093e6c01c3048b215ef0ef891906c333b1529",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_contact_group.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d83cc16f31751d1ede538d6b6f6be1715713f4c9973c198e805ad24ff580c3ef",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_virtual_chassis.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "645e5c160dce736090188005632028848087315b802e58fdce8fb0feccc17033",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_cluster_group.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "99dfdd55163f21679ad39dcbe39906dc2cee1925214f547e48a7784ee2d41e1a",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_wireless_lan.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "46df15ad06bd919abaa71e0bd5b82aaa00d639246ad49fb548cb098c087371e1",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_export_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "69d6d720adfbf91c1a52374338625267752eb7c394b160da8601fe43d4d13b65",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_custom_field.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c4e20b77b7fafcab6b08f884044702deb67b48cd5db8f65331b03858f38e1c26",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_location.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "46cb99dfe1c8580d4b5d76a09f41b78dbe3f59e8fd6b037b204fba3e299d7750",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_device_bay_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "78b9cb6d4d613b317adad86574dfb910d62177f9394ae9c093e8913ce5b09abc",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_contact.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "20f811d01fb87b4b207d873c1ce1afa1a5e202d140ed6e1559782aafa22d5722",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_rack_role.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b8adaac5cdc7ebdcdfa35adc9e6be3f781706e2b0cdeffc26313dba4ceea3be0",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_vm_interface.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6a7d1475ca5a998ed2903b62d17b83622c98a8dcd7925096d091477c9ee28d5d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_virtual_machine.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a7e34783a4b677503cef053372c015c78daeaf863132c725da18b5db82212434",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_region.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4dc8b9cbcd390de75587ce141d16a5424259306e90dc604869d90dca3c13345d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_service.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1633413ba3a58551f1b0d47077d726726dd7f021241efdb759bd1a25d9ef0e98",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_rack_group.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "868c00a12cb69124a62f12ee70dac8c9ee5fc6e7ac300405f121bd8310c08c43",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_device_bay.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9c3f2d1215abb817dd04ba6515530b3114fe290262f734eee3f1bf0d80ea6113",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_ip_address.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bfb2a61a2716406a54aafb2817d8501661412575ef8fa03a92f73e363323107e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_route_target.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "80e0c903f3c8c84d6f80ef78e5212bd5469d1e8fcce822c745d84e3c53300c09",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_wireless_lan_group.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f421c362d197fc435a38fc22205968857dff44c42daa7d9a13214d9cec7725ee",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/netbox_cluster.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3f39e39d7e59888141e4325a3269e324c2f216c08881e22596d0cd3d03c1b99",
+   "format": 1
+  },
+  {
+   "name": "plugins/inventory",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/inventory/nb_inventory.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9942727128363d0a785781e14dd23051e434464adc01463ef58dea3ea35bdbc3",
+   "format": 1
+  },
+  {
+   "name": "plugins/lookup",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/lookup/nb_lookup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "50eed1cbe9447594e74b50a9e63079489e16dcf3c9d11ca51d3c81da915b0fd4",
+   "format": 1
+  },
+  {
+   "name": "plugins/doc_fragments",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/doc_fragments/common.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b4d6dcd47f317aeaf14303eca8299617b4c493b3fe233b30c6bfeb4eda9fdf46",
+   "format": 1
+  },
+  {
+   "name": "tests",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/config.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "71ff5426485cc74b3c360a0941dc40661ef17ffc8983435481f55f9f4143ae4f",
+   "format": 1
+  },
+  {
+   "name": "tests/integration",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/integration.cfg",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b5e219ab076b1e90de2c650d480fe0a4b8724f839ac95f5240ed64a80202dfbf",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/render_config.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "30d66afe6eb2e85dbbcba336f2f49db90499b8f6e2a382139a8ffba2ba3aaec5",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/netbox-deploy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c1f1d876d55d22c6d9315bd4e5b5a2cd99ef811d6278d76177ef5c4428b59f78",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/regression-v3.5",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/regression-v3.5/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/regression-v3.5/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d353cfb6cab6f4a778a9fcbb44ab5730d1150d866c96bdea997014d39fc1c831",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/regression-v3.6",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/regression-v3.6/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/regression-v3.6/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d353cfb6cab6f4a778a9fcbb44ab5730d1150d866c96bdea997014d39fc1c831",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3efbf182d151ffe527a8a250a044a83997eec84d250c8651dcdfe6f62c60a97d",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/runme.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f2d26a7388590de5e1126420c402289975eded15a914293329f046406a82ed1d",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/files",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/files/test-inventory.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2ebe08e8fa91b5d960239258dc4e38a0ede81f73da3b4f55f07c6db61177cb4b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/files/test-inventory-legacy.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "71f03a61506d106d1985bf9c237f78b900dcbd1f360558a23e6bf5fac6e77e17",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/files/test-inventory-jinja2-filter.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "13df164774b2a43a0b6cca377c3e17869a0b1c5394dcc18a3c67cf271fc3c618",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/files/test-inventory-plurals.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "af1bb368a12123645f179057976ab6ad11049c655c4f96f18185f1c2d4c53705",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/files/test-inventory-options.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "abe32d82135b4cb211e594c2a789bea69427808de1a261f016bd68d82e31f6ad",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/files/test-inventory-options-flatten.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "66fef6cc9a2d8d69a7d2eea0b52cfef5d6d0bb7681f11580065bab398f7ee441",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/files/test-inventory.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4fa1b3d0e6aae52974d9c5595bced609448e3c71d4183332fca6f9eaa5541162",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/files/test-inventory-jinja2.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "45f7aba5d2f5500f7b43dc461a91140c4069910b2ba7c54a126aceb082d0c9d9",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/files/test-inventory-plurals-flatten.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a1240c3ef4e6fca185f723107c089e3079996b23e8d630e25a48623a1b77b706",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/files/test-inventory-jinja2.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "abe32d82135b4cb211e594c2a789bea69427808de1a261f016bd68d82e31f6ad",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/files/test-inventory-options-flatten.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fa8fa9856a8cb16c7e5fbe45826e20fa319f62a0f2672aa907285d6f81940f4f",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/files/test-inventory-noracks.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d2f73a8cf0695c20b2d1b47bea80ecca284484c13da2e055e23f09fa9837dbd1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/files/test-inventory-options.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e1bb426120346d183fd6496e2d4db53ee3613e16bebd5ab804b322848ac4a318",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/files/test-inventory-legacy.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e60953c71b6fd825dc552ee6306a82a395f653677b94d6b75a22610003cd33e6",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/files/test-inventory-jinja2-filter.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "07bf21906dd0fdad49a7da12b85dbe91bff6614b5205dc31c1514bdc4f684119",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/files/test-inventory-plurals-flatten.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "628f7f5d1979ac14d573921f294a16f2e806435c0531b3c4812a4d451245c811",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/files/test-inventory-noracks.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "108e879a651ae65ef30040c4ab7910160f9ca5e47ef6d5c3d7ce8b48a5dc2d6d",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/files/test-inventory-bearer-token.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8c0f26aca1c87eafa7524f177a6ab8dd1c3616a5bc1889e8de0a2ed036521d74",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/files/test-inventory-bearer-token.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "132a27a2b7b0112317290b60310c7b651631af9769cf07e139bbb01bc7b8657a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/files/test-inventory-plurals.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3a53d46d9eafdedf2909441f1963e48bb986e07fbeacd96ceb1a337f85b2de65",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/.gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "deacc9eea815485333d506e5bd64fb0c4a4a9980a33ff1b443a2deb0ca488209",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/compare_inventory_json.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b124d3651bbc95d0f9a91bf941603d005fb84cc6732f092f10f5fdb7e0606cc7",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.7/runme_config.template",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "de40fd34a465f7da8925f1e9ba52359e10ac740e08f2dfa398691810fcc03bd7",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_rack.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "05008a27b746cbc423241ccf119122a4504c88622a804eb92fd9180daa652416",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_virtual_chassis.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a6e10d83c29843e16136c44d1c83e59f5710af722516ee1a50a50d01ada9936c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_cable.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "949d8b64df5d75dd5aef8c8a4cb6fd2130a545bf3f2c4dff3b555d585bfbcf2f",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_export_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "25758f818b6c78e918db571c0e88e8e8472e62ef2eea93e739f552b6c3df8a62",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_lookup.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "72696bdd3be84fa6a7a2af55a69c8febb5acba9ce9e92797cc476b5421261ffb",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_device.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8bf622400692606b11595726a5bdf15d8c3698d3cd3fb576389c953a3aed8cda",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_ip_address.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d8cd7d8a69f8a032b0a72ba9fbfe48869eb38a7fa57f6b57003e94c7e91451f7",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_device_role.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ce033d9508643e8c49526a974501176855693695ec4df51fa939158759ee2f51",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_cluster.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8a792917906c74e992cdbf619a5e4b21f262e19cf2608ada8c525816c88d0b6f",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_power_panel.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "17165ceb389769d30297e5d28cd61517f1753a3b1f0f86eea7b3dc2b698a66ba",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_inventory_item_role.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f7fee772a4a9b6f48163ffec16cfee663e8e6747e2c26f9698b5074e97af1442",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_platform.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ccb6154491d5ba029d390674c7bcfaaea27abfd9be491874d3051bbfe5b3a724",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_aggregate.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0ac4b09ba8fc47cbbdb3b5d4fc4830e6ab5325c5e283ea5424bb5665fea1bb97",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_journal_entry.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3a6524c6a048a0282c890f8216ca1eb19d40fa377842f2a5afcac395f11bf53a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_l2vpn.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3d0f64ef7ae2061a2447205db494ed8367c9646d2b10ae5549c3f10cccda6503",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_vrf.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3f1a5dab109569be7a5aa4a7b7b568d8bfbd7d5b17fc0e2424a4d47f0b321866",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_contact_role.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d7a5644fe75789ad3cc615de2c5d23aaa262763b80e078757e1a2247f64de617",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_circuit.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5a4518332beaffdecd006ea6f56082c0091990ecd6e1e07acaaf3f364a879a30",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_wireless_lan.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "64f26adbd0e58e8ade42fded522650f129b94ca54b85e0e19ecbf2c742a37f9c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_module_bay.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4003a39a5132206a0f4b256bb466fbef857bcadbceedcd43a6fe9042be30619a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_circuit_type.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2ba7477427c6e0c5e4fb95f8731cf9134e0ae1ea7830de9c4d9aa930ab647508",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_console_port.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "97a3b6773243884f57fdeb3f8e5b7759a774bdd49a5245edbf879ba158985370",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_rear_port_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c447858ce56b010ade5e270a4946c136f55ce62f1acf537794bf5ecfd0bd764c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_cluster_type.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7540de23db3cbc7fdb0fdf7ee8b401d1329a06ce86406b6af8149f527c497434",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_module_type.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3390662b64aa51fd25c120ba98815eba45eb2a7389dc828eb2eb985e791a7cce",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_l2vpn_termination.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "72993bb4e4c7519b83e30babedd32dabb4d90a9768d00d6b70f274aeac3ee45b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_fhrp_group_assignment.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9dd8966d59ed6d3b9ed7250956715a6b79116e38851df7d4fd77c549490d5356",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_route_target.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9142507b1fc0cf09182ce2a2df17a5ba4b10e02f4aef5e8221181d8a6ea4fe92",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_console_server_port_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9995e0004b5473922fd605b5734a2bacb4a8ee28bd7d1a329a71081c6368fdeb",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_rir.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "11e4da868d00d8de767f052be4d103d8cc5c3bb36b999f369a46db3456d15a58",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_device_interface.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fa1bd5454f23ddb0f68440d46081384bc59d518065c482d82760722c53ae1148",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_console_port_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "34f6827b41414f45567db756890c96017801791620a0f5f3fd34957d52cea41e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_webhook.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e6f3c29c240fec28b69d6bea5d9db984d2ed6a4ee54ac4b51078d2060c0ce895",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_tenant_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c6013a1c956d588d0f927d7c513be42c8fc1a91e4deb016ddc23a251a9067245",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_manufacturer.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "602806156756634f7b9ca2d8b2a24364ef8385aa68f85a0cbe56ae6fed45be90",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_vlan_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cf6717d7f30ef367d4049c7d8087b88032e56c5041093e50dde12e3cc323fd82",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_contact.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b0a3264d210d7a3fecb8edca38167f8615b842a4b54995e141aa35f7eaff1e4c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_device_bay.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3d08ca60364615906bd685d55c4528058a507a37cab50378376e0b1cf356056c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_site.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "892a39c82540cf0ee8315ec090fc01f8f7c71b51b06340cb460efd008a5a9294",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_wireless_lan_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "25034eac8b5e4c8cf293055a90906e70d807d3fd5789ba9dc87adbf7861a55a5",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "841c2460203179530e0a46216a7e82297446ffc96d8c3bc33455644b755ebe4d",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_config_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4500c8b3a396ccf6590e426f4c3d8c67824fc180a486a93445375dfffb52a43c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_inventory_item.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fcc2f0371f0f8995d81aeff8a3703657ae4fc9aab338b7580141728588fae777",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_module.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "702abfdc17f0d47b34325b99870e63e2d0a74a3baa5e8a35d875b3c65fe27b05",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_rear_port.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "17e9b9eafcac50f2b934c23bfc94213f84fe4eb23f5c80ef8e651b021fac7550",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_front_port.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "234f840e4ccc8bf521f75e11089fa14656919a1a85d1e04a083c7b15cfb1925e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_tenant.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "374db9ef14a5ad3f28eb748e5a3e1a695ed622c89ecfe8c190264c934b2d3160",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_power_port_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "75a31cd47526a885482c3d44901674b3f33c8415978c343410b4897ed5423079",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_device_bay_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c942b0b528cea2de144b744e3d84b33223b9bd5c5b3110ffa9a4cbac926ee092",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_console_server_port.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9aea5c2b0b02bfcf481b23201853cd354d04452b17507b5b3fdc9cb494c81530",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_wireless_link.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "803d79b36bf3618e3283242d8dadae714c09913755288dc43c3bda9d19c1f6ac",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_custom_link.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a1594b8640a23cb5ab804b64906ac62161696276dd8467c1ee2cab380e11726c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_config_context.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "df4a1f9cd476ce57438b2c478667c9914e71923495fdebf489dd7811a51f55da",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_region.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ccd04021429ee77b69edb2e219cec7cb9d4ad291029bf735eb73860b70492c25",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_device_interface_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8cd6756a0407f04ab8790222293b3835ab242094ffb958a4c365ee6beffc93ba",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_power_feed.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9791bbf4cda16f4189caa2f9910d48a57790baf9f00c06b3b2de33d7f8ec148c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_power_outlet_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d68cfbb7e8d0efeb2c683bd1a6cdd891de8c00cab74af5ccd08493551cfb55ce",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_power_port.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfbebf7401c3d835bc8d2245803b093be89ab9747375704065a997713eef1865",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_virtual_disk.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1c5554999363ab282f9eeac5f4a171a7192a129f88ea5598cda624d35c146332",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_cluster_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cf464a2bd2d8fe3338add9e782e37869ac573d2ca4b0070215cc6c5c18a53e82",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_power_outlet.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c2114d5a5403f08d7c8e805fc5f5deaaadff30f72dc41965a7869b513caa8a33",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_circuit_termination.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5f65f18257e67029d5c7bb97aa06a8c3f2a75d662c0d3135333007e11db87dc8",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_front_port_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fc0477e2d1e41c7364e3afad1a0f880284ab4dca487d3a1dd8af8614de0c872c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_prefix.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "aeb27e31ec707d92e3c6702c9f79d74d8eda59466e0d0be48ffe0956f80f6e41",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_vm_interface.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d1502b94dac2f7d32bf66caa19f82fe273f7caa1044034d0d8ea5c5db4db715b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_fhrp_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c4111d64926c954d64ecfa36bf0b19609b11ed079d181edcceaa7040efc04460",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_rack_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "38a8451d8064030aea164f006ef382c20f92f34909571eb3fd5f6e545c76b025",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_vlan.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "24675cf58ccbc62e103e2b12d58b1879626fdc4060e10883fcc0221654e4d57c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_ipam_role.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7ceb5fbc06093cfb74e70b9890cd7ee2a63400abde4859c232ae2696ed8c4a8e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_service_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3de123df2afca03aabda0c72df05dbe648539bd85dafa557e0e9875a3d187c88",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_asn.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e166e0e9b57f80051a393c89d84e217aa3749040f9779b58bcfd0c6668756b42",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_rack_role.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f38ea66d9f75164b06ad3d3da8b7a4826dc03a3c22dd2dc20e6a1ab76c5d3446",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_provider_network.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9b0cad326050fd05d658114529543fd266660b18c56ac1dafdc645304c7c82ca",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_service.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "284ba7a8c0c4289324906f530321a35d97ea04881d12b11dd72da2e187fa97aa",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_site_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0dc3566f5851e868d35dd673565b243652f09cfe2de7089f0b605241c11ab5c1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_location.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eb2c983ee5af371a527fca7e20de968debb8cb00ab00a3288e91530d0e95edf1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_provider.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9d0e8dcec59fd43ad5c4fd25e8b5cc3402f11d31981e4ef183a19be5cd204141",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_device_type.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b59c642074bb81a361367906f132fda8bd32479418a35d8c0aa56ff1831e80b8",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_custom_field.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "aedb9b9c8a7ed00249fe494435614c5108d97a7dae79d844b9c1e5020a78d4ac",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_virtual_machine.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dcb63cfbe1c5e4bc03fd99c2acc5748166b17f9b515e74722a14a707a35af52c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.7/tasks/netbox_tag.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0dd53a692f8af842a04c746f97259aefa6b9e33a02ac66f979a35616d0348043",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3efbf182d151ffe527a8a250a044a83997eec84d250c8651dcdfe6f62c60a97d",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/runme.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f2d26a7388590de5e1126420c402289975eded15a914293329f046406a82ed1d",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/files",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/files/test-inventory.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2ebe08e8fa91b5d960239258dc4e38a0ede81f73da3b4f55f07c6db61177cb4b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/files/test-inventory-legacy.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "71f03a61506d106d1985bf9c237f78b900dcbd1f360558a23e6bf5fac6e77e17",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/files/test-inventory-jinja2-filter.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1065a83e0e3b43e8b977c17edb8dae3922f0a069348248376c97952ff81b1bc8",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/files/test-inventory-plurals.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bef705d7a4bb0e838d5d175a5eeafd74a167e2fcef903ed15a3870df30fde263",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/files/test-inventory-options.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "abe32d82135b4cb211e594c2a789bea69427808de1a261f016bd68d82e31f6ad",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/files/test-inventory-options-flatten.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0eac007057f5196403d3372c9d67af60dde0647e2dce63f5c232f18a3cd31747",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/files/test-inventory.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6bbfd5fddf4478d645866f3407acfb809f8143a1440ef85e9ea5395843958433",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/files/test-inventory-jinja2.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "45f7aba5d2f5500f7b43dc461a91140c4069910b2ba7c54a126aceb082d0c9d9",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/files/test-inventory-plurals-flatten.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a1240c3ef4e6fca185f723107c089e3079996b23e8d630e25a48623a1b77b706",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/files/test-inventory-jinja2.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "abe32d82135b4cb211e594c2a789bea69427808de1a261f016bd68d82e31f6ad",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/files/test-inventory-options-flatten.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fa8fa9856a8cb16c7e5fbe45826e20fa319f62a0f2672aa907285d6f81940f4f",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/files/test-inventory-noracks.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d2f73a8cf0695c20b2d1b47bea80ecca284484c13da2e055e23f09fa9837dbd1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/files/test-inventory-options.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e1bb426120346d183fd6496e2d4db53ee3613e16bebd5ab804b322848ac4a318",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/files/test-inventory-legacy.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "970d63d35cf9f73edcd7d192a9ff74a57bee700745ade35c9985515855f6d966",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/files/test-inventory-jinja2-filter.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "07bf21906dd0fdad49a7da12b85dbe91bff6614b5205dc31c1514bdc4f684119",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/files/test-inventory-plurals-flatten.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "628f7f5d1979ac14d573921f294a16f2e806435c0531b3c4812a4d451245c811",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/files/test-inventory-noracks.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2130c775b7edfc15ff9faf019f985f3c043d0a8dded624fd3b02c00f5eba95a6",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/files/test-inventory-bearer-token.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "24721f38cc28e5e5b92b2aa9c2b8cd194375537599ec1e0953e57349a3224e4f",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/files/test-inventory-bearer-token.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "132a27a2b7b0112317290b60310c7b651631af9769cf07e139bbb01bc7b8657a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/files/test-inventory-plurals.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3a53d46d9eafdedf2909441f1963e48bb986e07fbeacd96ceb1a337f85b2de65",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/.gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "deacc9eea815485333d506e5bd64fb0c4a4a9980a33ff1b443a2deb0ca488209",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/compare_inventory_json.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b124d3651bbc95d0f9a91bf941603d005fb84cc6732f092f10f5fdb7e0606cc7",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v4.0/runme_config.template",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "de40fd34a465f7da8925f1e9ba52359e10ac740e08f2dfa398691810fcc03bd7",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_rack.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "05008a27b746cbc423241ccf119122a4504c88622a804eb92fd9180daa652416",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_virtual_chassis.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a6e10d83c29843e16136c44d1c83e59f5710af722516ee1a50a50d01ada9936c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_cable.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "949d8b64df5d75dd5aef8c8a4cb6fd2130a545bf3f2c4dff3b555d585bfbcf2f",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_export_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "25758f818b6c78e918db571c0e88e8e8472e62ef2eea93e739f552b6c3df8a62",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_lookup.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "72696bdd3be84fa6a7a2af55a69c8febb5acba9ce9e92797cc476b5421261ffb",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_device.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8bf622400692606b11595726a5bdf15d8c3698d3cd3fb576389c953a3aed8cda",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_ip_address.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0eefd696969ede9ce7708ffceca830598936edd409af86e0d392b49279cf647c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_device_role.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ce033d9508643e8c49526a974501176855693695ec4df51fa939158759ee2f51",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_cluster.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8a792917906c74e992cdbf619a5e4b21f262e19cf2608ada8c525816c88d0b6f",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_power_panel.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "17165ceb389769d30297e5d28cd61517f1753a3b1f0f86eea7b3dc2b698a66ba",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_inventory_item_role.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f7fee772a4a9b6f48163ffec16cfee663e8e6747e2c26f9698b5074e97af1442",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_platform.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ccb6154491d5ba029d390674c7bcfaaea27abfd9be491874d3051bbfe5b3a724",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_aggregate.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0ac4b09ba8fc47cbbdb3b5d4fc4830e6ab5325c5e283ea5424bb5665fea1bb97",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_journal_entry.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3a6524c6a048a0282c890f8216ca1eb19d40fa377842f2a5afcac395f11bf53a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_l2vpn.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3d0f64ef7ae2061a2447205db494ed8367c9646d2b10ae5549c3f10cccda6503",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_vrf.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3f1a5dab109569be7a5aa4a7b7b568d8bfbd7d5b17fc0e2424a4d47f0b321866",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_contact_role.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d7a5644fe75789ad3cc615de2c5d23aaa262763b80e078757e1a2247f64de617",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_circuit.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5a4518332beaffdecd006ea6f56082c0091990ecd6e1e07acaaf3f364a879a30",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_wireless_lan.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "64f26adbd0e58e8ade42fded522650f129b94ca54b85e0e19ecbf2c742a37f9c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_module_bay.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4003a39a5132206a0f4b256bb466fbef857bcadbceedcd43a6fe9042be30619a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_circuit_type.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2ba7477427c6e0c5e4fb95f8731cf9134e0ae1ea7830de9c4d9aa930ab647508",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_console_port.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "97a3b6773243884f57fdeb3f8e5b7759a774bdd49a5245edbf879ba158985370",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_rear_port_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c447858ce56b010ade5e270a4946c136f55ce62f1acf537794bf5ecfd0bd764c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_cluster_type.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7540de23db3cbc7fdb0fdf7ee8b401d1329a06ce86406b6af8149f527c497434",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_module_type.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3390662b64aa51fd25c120ba98815eba45eb2a7389dc828eb2eb985e791a7cce",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_l2vpn_termination.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "72993bb4e4c7519b83e30babedd32dabb4d90a9768d00d6b70f274aeac3ee45b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_fhrp_group_assignment.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9dd8966d59ed6d3b9ed7250956715a6b79116e38851df7d4fd77c549490d5356",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_route_target.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9142507b1fc0cf09182ce2a2df17a5ba4b10e02f4aef5e8221181d8a6ea4fe92",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_console_server_port_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9995e0004b5473922fd605b5734a2bacb4a8ee28bd7d1a329a71081c6368fdeb",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_rir.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "11e4da868d00d8de767f052be4d103d8cc5c3bb36b999f369a46db3456d15a58",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_device_interface.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fa1bd5454f23ddb0f68440d46081384bc59d518065c482d82760722c53ae1148",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_console_port_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "34f6827b41414f45567db756890c96017801791620a0f5f3fd34957d52cea41e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_webhook.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e6f3c29c240fec28b69d6bea5d9db984d2ed6a4ee54ac4b51078d2060c0ce895",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_tenant_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c6013a1c956d588d0f927d7c513be42c8fc1a91e4deb016ddc23a251a9067245",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_manufacturer.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "602806156756634f7b9ca2d8b2a24364ef8385aa68f85a0cbe56ae6fed45be90",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_vlan_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cf6717d7f30ef367d4049c7d8087b88032e56c5041093e50dde12e3cc323fd82",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_contact.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b0a3264d210d7a3fecb8edca38167f8615b842a4b54995e141aa35f7eaff1e4c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_device_bay.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3d08ca60364615906bd685d55c4528058a507a37cab50378376e0b1cf356056c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_site.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "892a39c82540cf0ee8315ec090fc01f8f7c71b51b06340cb460efd008a5a9294",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_custom_field_choice_set.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "43b89204a87c831e7464537c2947367aecd277f332a530b8d8a0d6e6f18e2665",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_wireless_lan_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "25034eac8b5e4c8cf293055a90906e70d807d3fd5789ba9dc87adbf7861a55a5",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "78f3c85c06c64676267bc8abc233bee99c6cbf5f0cf3cba8944fef82eb21b82a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_config_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4500c8b3a396ccf6590e426f4c3d8c67824fc180a486a93445375dfffb52a43c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_inventory_item.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fcc2f0371f0f8995d81aeff8a3703657ae4fc9aab338b7580141728588fae777",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_module.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "702abfdc17f0d47b34325b99870e63e2d0a74a3baa5e8a35d875b3c65fe27b05",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_rear_port.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "17e9b9eafcac50f2b934c23bfc94213f84fe4eb23f5c80ef8e651b021fac7550",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_front_port.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "234f840e4ccc8bf521f75e11089fa14656919a1a85d1e04a083c7b15cfb1925e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_tenant.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "374db9ef14a5ad3f28eb748e5a3e1a695ed622c89ecfe8c190264c934b2d3160",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_power_port_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "75a31cd47526a885482c3d44901674b3f33c8415978c343410b4897ed5423079",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_device_bay_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c942b0b528cea2de144b744e3d84b33223b9bd5c5b3110ffa9a4cbac926ee092",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_console_server_port.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9aea5c2b0b02bfcf481b23201853cd354d04452b17507b5b3fdc9cb494c81530",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_wireless_link.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "803d79b36bf3618e3283242d8dadae714c09913755288dc43c3bda9d19c1f6ac",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_custom_link.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a1594b8640a23cb5ab804b64906ac62161696276dd8467c1ee2cab380e11726c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_config_context.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "df4a1f9cd476ce57438b2c478667c9914e71923495fdebf489dd7811a51f55da",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_region.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ccd04021429ee77b69edb2e219cec7cb9d4ad291029bf735eb73860b70492c25",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_device_interface_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8cd6756a0407f04ab8790222293b3835ab242094ffb958a4c365ee6beffc93ba",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_power_feed.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9791bbf4cda16f4189caa2f9910d48a57790baf9f00c06b3b2de33d7f8ec148c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_power_outlet_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d68cfbb7e8d0efeb2c683bd1a6cdd891de8c00cab74af5ccd08493551cfb55ce",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_power_port.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfbebf7401c3d835bc8d2245803b093be89ab9747375704065a997713eef1865",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_cluster_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cf464a2bd2d8fe3338add9e782e37869ac573d2ca4b0070215cc6c5c18a53e82",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_power_outlet.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c2114d5a5403f08d7c8e805fc5f5deaaadff30f72dc41965a7869b513caa8a33",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_circuit_termination.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5f65f18257e67029d5c7bb97aa06a8c3f2a75d662c0d3135333007e11db87dc8",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_front_port_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fc0477e2d1e41c7364e3afad1a0f880284ab4dca487d3a1dd8af8614de0c872c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_prefix.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "aeb27e31ec707d92e3c6702c9f79d74d8eda59466e0d0be48ffe0956f80f6e41",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_vm_interface.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d1502b94dac2f7d32bf66caa19f82fe273f7caa1044034d0d8ea5c5db4db715b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_fhrp_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c4111d64926c954d64ecfa36bf0b19609b11ed079d181edcceaa7040efc04460",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_rack_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "38a8451d8064030aea164f006ef382c20f92f34909571eb3fd5f6e545c76b025",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_vlan.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "24675cf58ccbc62e103e2b12d58b1879626fdc4060e10883fcc0221654e4d57c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_ipam_role.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7ceb5fbc06093cfb74e70b9890cd7ee2a63400abde4859c232ae2696ed8c4a8e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_service_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3de123df2afca03aabda0c72df05dbe648539bd85dafa557e0e9875a3d187c88",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_asn.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e166e0e9b57f80051a393c89d84e217aa3749040f9779b58bcfd0c6668756b42",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_rack_role.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d49b5ef42b54cad2c517e85d50c095796a3f14ce4a675044cca9ba9cf5d99ac9",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_provider_network.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9b0cad326050fd05d658114529543fd266660b18c56ac1dafdc645304c7c82ca",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_service.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "284ba7a8c0c4289324906f530321a35d97ea04881d12b11dd72da2e187fa97aa",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_site_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0dc3566f5851e868d35dd673565b243652f09cfe2de7089f0b605241c11ab5c1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_location.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eb2c983ee5af371a527fca7e20de968debb8cb00ab00a3288e91530d0e95edf1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_provider.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9d0e8dcec59fd43ad5c4fd25e8b5cc3402f11d31981e4ef183a19be5cd204141",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_device_type.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b59c642074bb81a361367906f132fda8bd32479418a35d8c0aa56ff1831e80b8",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_custom_field.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "13b999462bc7082e25e787402f2b31734e9ed509bef4c90f13870e4f698c5d39",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_virtual_machine.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dcb63cfbe1c5e4bc03fd99c2acc5748166b17f9b515e74722a14a707a35af52c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.6/tasks/netbox_tag.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0dd53a692f8af842a04c746f97259aefa6b9e33a02ac66f979a35616d0348043",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/regression-v4.0",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/regression-v4.0/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/regression-v4.0/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d353cfb6cab6f4a778a9fcbb44ab5730d1150d866c96bdea997014d39fc1c831",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_rack.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "05008a27b746cbc423241ccf119122a4504c88622a804eb92fd9180daa652416",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_virtual_chassis.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a6e10d83c29843e16136c44d1c83e59f5710af722516ee1a50a50d01ada9936c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_cable.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "949d8b64df5d75dd5aef8c8a4cb6fd2130a545bf3f2c4dff3b555d585bfbcf2f",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_export_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5eca00fd8b84237b66ec86e00cfc228fdd53b30006ed0d83ae534f020aac0af2",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_lookup.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "72696bdd3be84fa6a7a2af55a69c8febb5acba9ce9e92797cc476b5421261ffb",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_device.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d1ca0b9611dfe3bcfa427f8996e1c56ecdcae5e05769a35c3023d0e3cf99eea2",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_ip_address.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d8cd7d8a69f8a032b0a72ba9fbfe48869eb38a7fa57f6b57003e94c7e91451f7",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_device_role.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ce033d9508643e8c49526a974501176855693695ec4df51fa939158759ee2f51",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_cluster.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8a792917906c74e992cdbf619a5e4b21f262e19cf2608ada8c525816c88d0b6f",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_power_panel.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "17165ceb389769d30297e5d28cd61517f1753a3b1f0f86eea7b3dc2b698a66ba",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_inventory_item_role.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f7fee772a4a9b6f48163ffec16cfee663e8e6747e2c26f9698b5074e97af1442",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_platform.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ccb6154491d5ba029d390674c7bcfaaea27abfd9be491874d3051bbfe5b3a724",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_aggregate.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0ac4b09ba8fc47cbbdb3b5d4fc4830e6ab5325c5e283ea5424bb5665fea1bb97",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_journal_entry.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3a6524c6a048a0282c890f8216ca1eb19d40fa377842f2a5afcac395f11bf53a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_l2vpn.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3d0f64ef7ae2061a2447205db494ed8367c9646d2b10ae5549c3f10cccda6503",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_vrf.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3f1a5dab109569be7a5aa4a7b7b568d8bfbd7d5b17fc0e2424a4d47f0b321866",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_contact_role.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d7a5644fe75789ad3cc615de2c5d23aaa262763b80e078757e1a2247f64de617",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_circuit.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5a4518332beaffdecd006ea6f56082c0091990ecd6e1e07acaaf3f364a879a30",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_wireless_lan.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "64f26adbd0e58e8ade42fded522650f129b94ca54b85e0e19ecbf2c742a37f9c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_module_bay.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4003a39a5132206a0f4b256bb466fbef857bcadbceedcd43a6fe9042be30619a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_circuit_type.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2ba7477427c6e0c5e4fb95f8731cf9134e0ae1ea7830de9c4d9aa930ab647508",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_console_port.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "97a3b6773243884f57fdeb3f8e5b7759a774bdd49a5245edbf879ba158985370",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_rear_port_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c447858ce56b010ade5e270a4946c136f55ce62f1acf537794bf5ecfd0bd764c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_cluster_type.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7540de23db3cbc7fdb0fdf7ee8b401d1329a06ce86406b6af8149f527c497434",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_module_type.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3390662b64aa51fd25c120ba98815eba45eb2a7389dc828eb2eb985e791a7cce",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_l2vpn_termination.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "72993bb4e4c7519b83e30babedd32dabb4d90a9768d00d6b70f274aeac3ee45b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_fhrp_group_assignment.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9dd8966d59ed6d3b9ed7250956715a6b79116e38851df7d4fd77c549490d5356",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_route_target.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9142507b1fc0cf09182ce2a2df17a5ba4b10e02f4aef5e8221181d8a6ea4fe92",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_console_server_port_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9995e0004b5473922fd605b5734a2bacb4a8ee28bd7d1a329a71081c6368fdeb",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_rir.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "11e4da868d00d8de767f052be4d103d8cc5c3bb36b999f369a46db3456d15a58",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_device_interface.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fa1bd5454f23ddb0f68440d46081384bc59d518065c482d82760722c53ae1148",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_console_port_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "34f6827b41414f45567db756890c96017801791620a0f5f3fd34957d52cea41e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_webhook.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e6f3c29c240fec28b69d6bea5d9db984d2ed6a4ee54ac4b51078d2060c0ce895",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_tenant_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c6013a1c956d588d0f927d7c513be42c8fc1a91e4deb016ddc23a251a9067245",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_manufacturer.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "602806156756634f7b9ca2d8b2a24364ef8385aa68f85a0cbe56ae6fed45be90",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_vlan_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cf6717d7f30ef367d4049c7d8087b88032e56c5041093e50dde12e3cc323fd82",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_contact.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b0a3264d210d7a3fecb8edca38167f8615b842a4b54995e141aa35f7eaff1e4c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_device_bay.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3d08ca60364615906bd685d55c4528058a507a37cab50378376e0b1cf356056c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_site.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "892a39c82540cf0ee8315ec090fc01f8f7c71b51b06340cb460efd008a5a9294",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_wireless_lan_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "25034eac8b5e4c8cf293055a90906e70d807d3fd5789ba9dc87adbf7861a55a5",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bde20c254d567e709b7eebb6817890925ab77a7b57d7111f6a2172ba0f9f0ac0",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_config_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4500c8b3a396ccf6590e426f4c3d8c67824fc180a486a93445375dfffb52a43c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_inventory_item.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fcc2f0371f0f8995d81aeff8a3703657ae4fc9aab338b7580141728588fae777",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_module.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "702abfdc17f0d47b34325b99870e63e2d0a74a3baa5e8a35d875b3c65fe27b05",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_rear_port.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "17e9b9eafcac50f2b934c23bfc94213f84fe4eb23f5c80ef8e651b021fac7550",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_front_port.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "234f840e4ccc8bf521f75e11089fa14656919a1a85d1e04a083c7b15cfb1925e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_tenant.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "374db9ef14a5ad3f28eb748e5a3e1a695ed622c89ecfe8c190264c934b2d3160",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_power_port_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "75a31cd47526a885482c3d44901674b3f33c8415978c343410b4897ed5423079",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_device_bay_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c942b0b528cea2de144b744e3d84b33223b9bd5c5b3110ffa9a4cbac926ee092",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_console_server_port.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9aea5c2b0b02bfcf481b23201853cd354d04452b17507b5b3fdc9cb494c81530",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_wireless_link.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "803d79b36bf3618e3283242d8dadae714c09913755288dc43c3bda9d19c1f6ac",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_custom_link.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6e8639a6b80b9885ceb706b2f3af4516bd300db7e60b44178a78c27a4a0c0211",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_config_context.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "df4a1f9cd476ce57438b2c478667c9914e71923495fdebf489dd7811a51f55da",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_region.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ccd04021429ee77b69edb2e219cec7cb9d4ad291029bf735eb73860b70492c25",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_device_interface_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8cd6756a0407f04ab8790222293b3835ab242094ffb958a4c365ee6beffc93ba",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_power_feed.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9791bbf4cda16f4189caa2f9910d48a57790baf9f00c06b3b2de33d7f8ec148c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_power_outlet_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d68cfbb7e8d0efeb2c683bd1a6cdd891de8c00cab74af5ccd08493551cfb55ce",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_power_port.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfbebf7401c3d835bc8d2245803b093be89ab9747375704065a997713eef1865",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_virtual_disk.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1c5554999363ab282f9eeac5f4a171a7192a129f88ea5598cda624d35c146332",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_cluster_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cf464a2bd2d8fe3338add9e782e37869ac573d2ca4b0070215cc6c5c18a53e82",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_power_outlet.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c2114d5a5403f08d7c8e805fc5f5deaaadff30f72dc41965a7869b513caa8a33",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_circuit_termination.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5f65f18257e67029d5c7bb97aa06a8c3f2a75d662c0d3135333007e11db87dc8",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_front_port_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fc0477e2d1e41c7364e3afad1a0f880284ab4dca487d3a1dd8af8614de0c872c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_prefix.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "aeb27e31ec707d92e3c6702c9f79d74d8eda59466e0d0be48ffe0956f80f6e41",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_vm_interface.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cb904924261d3e7e3e815dd73aa1d29c96c29d7e1d0ce4af324058023e7c9a30",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_fhrp_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c4111d64926c954d64ecfa36bf0b19609b11ed079d181edcceaa7040efc04460",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_rack_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "38a8451d8064030aea164f006ef382c20f92f34909571eb3fd5f6e545c76b025",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_vlan.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "24675cf58ccbc62e103e2b12d58b1879626fdc4060e10883fcc0221654e4d57c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_ipam_role.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7ceb5fbc06093cfb74e70b9890cd7ee2a63400abde4859c232ae2696ed8c4a8e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_service_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3de123df2afca03aabda0c72df05dbe648539bd85dafa557e0e9875a3d187c88",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_asn.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e166e0e9b57f80051a393c89d84e217aa3749040f9779b58bcfd0c6668756b42",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_rack_role.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f38ea66d9f75164b06ad3d3da8b7a4826dc03a3c22dd2dc20e6a1ab76c5d3446",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_provider_network.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9b0cad326050fd05d658114529543fd266660b18c56ac1dafdc645304c7c82ca",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_service.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "284ba7a8c0c4289324906f530321a35d97ea04881d12b11dd72da2e187fa97aa",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_site_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0dc3566f5851e868d35dd673565b243652f09cfe2de7089f0b605241c11ab5c1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_location.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eb2c983ee5af371a527fca7e20de968debb8cb00ab00a3288e91530d0e95edf1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_provider.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9d0e8dcec59fd43ad5c4fd25e8b5cc3402f11d31981e4ef183a19be5cd204141",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_device_type.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b59c642074bb81a361367906f132fda8bd32479418a35d8c0aa56ff1831e80b8",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_custom_field.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "059b52971a9beac0b9197eca68e2adf37094244b7e9141c0a329a617cce6a8b4",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_virtual_machine.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dcb63cfbe1c5e4bc03fd99c2acc5748166b17f9b515e74722a14a707a35af52c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v4.0/tasks/netbox_tag.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0dd53a692f8af842a04c746f97259aefa6b9e33a02ac66f979a35616d0348043",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_rack.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bab9c5fe6d207a0e8cf593fc3b83f98c2538053c8def4f22421abacb12b01eb3",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_virtual_chassis.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a6e10d83c29843e16136c44d1c83e59f5710af722516ee1a50a50d01ada9936c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_cable.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "949d8b64df5d75dd5aef8c8a4cb6fd2130a545bf3f2c4dff3b555d585bfbcf2f",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_export_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "25758f818b6c78e918db571c0e88e8e8472e62ef2eea93e739f552b6c3df8a62",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_lookup.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "72696bdd3be84fa6a7a2af55a69c8febb5acba9ce9e92797cc476b5421261ffb",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_device.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8bf622400692606b11595726a5bdf15d8c3698d3cd3fb576389c953a3aed8cda",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_ip_address.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0eefd696969ede9ce7708ffceca830598936edd409af86e0d392b49279cf647c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_device_role.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ce033d9508643e8c49526a974501176855693695ec4df51fa939158759ee2f51",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_cluster.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8a792917906c74e992cdbf619a5e4b21f262e19cf2608ada8c525816c88d0b6f",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_power_panel.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "17165ceb389769d30297e5d28cd61517f1753a3b1f0f86eea7b3dc2b698a66ba",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_inventory_item_role.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f7fee772a4a9b6f48163ffec16cfee663e8e6747e2c26f9698b5074e97af1442",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_platform.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e331ca0e2444f971c11d74ecbc724d6ccc60a6ed4fad06dcad4abe4e8575f7e7",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_aggregate.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0ac4b09ba8fc47cbbdb3b5d4fc4830e6ab5325c5e283ea5424bb5665fea1bb97",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_journal_entry.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3a6524c6a048a0282c890f8216ca1eb19d40fa377842f2a5afcac395f11bf53a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_l2vpn.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3d0f64ef7ae2061a2447205db494ed8367c9646d2b10ae5549c3f10cccda6503",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_vrf.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3f1a5dab109569be7a5aa4a7b7b568d8bfbd7d5b17fc0e2424a4d47f0b321866",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_contact_role.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d7a5644fe75789ad3cc615de2c5d23aaa262763b80e078757e1a2247f64de617",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_circuit.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5a4518332beaffdecd006ea6f56082c0091990ecd6e1e07acaaf3f364a879a30",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_wireless_lan.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "64f26adbd0e58e8ade42fded522650f129b94ca54b85e0e19ecbf2c742a37f9c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_module_bay.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4003a39a5132206a0f4b256bb466fbef857bcadbceedcd43a6fe9042be30619a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_circuit_type.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2ba7477427c6e0c5e4fb95f8731cf9134e0ae1ea7830de9c4d9aa930ab647508",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_console_port.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "97a3b6773243884f57fdeb3f8e5b7759a774bdd49a5245edbf879ba158985370",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_rear_port_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c447858ce56b010ade5e270a4946c136f55ce62f1acf537794bf5ecfd0bd764c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_cluster_type.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7540de23db3cbc7fdb0fdf7ee8b401d1329a06ce86406b6af8149f527c497434",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_module_type.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3390662b64aa51fd25c120ba98815eba45eb2a7389dc828eb2eb985e791a7cce",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_l2vpn_termination.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "72993bb4e4c7519b83e30babedd32dabb4d90a9768d00d6b70f274aeac3ee45b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_fhrp_group_assignment.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9dd8966d59ed6d3b9ed7250956715a6b79116e38851df7d4fd77c549490d5356",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_route_target.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9142507b1fc0cf09182ce2a2df17a5ba4b10e02f4aef5e8221181d8a6ea4fe92",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_console_server_port_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9995e0004b5473922fd605b5734a2bacb4a8ee28bd7d1a329a71081c6368fdeb",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_rir.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "11e4da868d00d8de767f052be4d103d8cc5c3bb36b999f369a46db3456d15a58",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_device_interface.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "09129e207163d826de851d3f9db9cb7a3fadcad76000691d1806acf6477ce11b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_console_port_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "34f6827b41414f45567db756890c96017801791620a0f5f3fd34957d52cea41e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_webhook.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e6f3c29c240fec28b69d6bea5d9db984d2ed6a4ee54ac4b51078d2060c0ce895",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_tenant_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c6013a1c956d588d0f927d7c513be42c8fc1a91e4deb016ddc23a251a9067245",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_manufacturer.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "602806156756634f7b9ca2d8b2a24364ef8385aa68f85a0cbe56ae6fed45be90",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_vlan_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cf6717d7f30ef367d4049c7d8087b88032e56c5041093e50dde12e3cc323fd82",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_contact.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b0a3264d210d7a3fecb8edca38167f8615b842a4b54995e141aa35f7eaff1e4c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_device_bay.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3d08ca60364615906bd685d55c4528058a507a37cab50378376e0b1cf356056c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_site.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "892a39c82540cf0ee8315ec090fc01f8f7c71b51b06340cb460efd008a5a9294",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_wireless_lan_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "25034eac8b5e4c8cf293055a90906e70d807d3fd5789ba9dc87adbf7861a55a5",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6628d276d3203da9eb781f395879ae93b0e3445ba92a9c60c7c63c80069e68fc",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_inventory_item.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fcc2f0371f0f8995d81aeff8a3703657ae4fc9aab338b7580141728588fae777",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_module.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "702abfdc17f0d47b34325b99870e63e2d0a74a3baa5e8a35d875b3c65fe27b05",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_rear_port.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "17e9b9eafcac50f2b934c23bfc94213f84fe4eb23f5c80ef8e651b021fac7550",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_front_port.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "234f840e4ccc8bf521f75e11089fa14656919a1a85d1e04a083c7b15cfb1925e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_tenant.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "374db9ef14a5ad3f28eb748e5a3e1a695ed622c89ecfe8c190264c934b2d3160",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_power_port_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "75a31cd47526a885482c3d44901674b3f33c8415978c343410b4897ed5423079",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_device_bay_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c942b0b528cea2de144b744e3d84b33223b9bd5c5b3110ffa9a4cbac926ee092",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_console_server_port.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9aea5c2b0b02bfcf481b23201853cd354d04452b17507b5b3fdc9cb494c81530",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_wireless_link.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "803d79b36bf3618e3283242d8dadae714c09913755288dc43c3bda9d19c1f6ac",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_custom_link.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a1594b8640a23cb5ab804b64906ac62161696276dd8467c1ee2cab380e11726c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_config_context.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "df4a1f9cd476ce57438b2c478667c9914e71923495fdebf489dd7811a51f55da",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_region.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ccd04021429ee77b69edb2e219cec7cb9d4ad291029bf735eb73860b70492c25",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_device_interface_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8cd6756a0407f04ab8790222293b3835ab242094ffb958a4c365ee6beffc93ba",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_power_feed.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9791bbf4cda16f4189caa2f9910d48a57790baf9f00c06b3b2de33d7f8ec148c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_power_outlet_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d68cfbb7e8d0efeb2c683bd1a6cdd891de8c00cab74af5ccd08493551cfb55ce",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_power_port.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfbebf7401c3d835bc8d2245803b093be89ab9747375704065a997713eef1865",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_cluster_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cf464a2bd2d8fe3338add9e782e37869ac573d2ca4b0070215cc6c5c18a53e82",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_power_outlet.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c2114d5a5403f08d7c8e805fc5f5deaaadff30f72dc41965a7869b513caa8a33",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_circuit_termination.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5f65f18257e67029d5c7bb97aa06a8c3f2a75d662c0d3135333007e11db87dc8",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_front_port_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fc0477e2d1e41c7364e3afad1a0f880284ab4dca487d3a1dd8af8614de0c872c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_prefix.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "aeb27e31ec707d92e3c6702c9f79d74d8eda59466e0d0be48ffe0956f80f6e41",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_vm_interface.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d1502b94dac2f7d32bf66caa19f82fe273f7caa1044034d0d8ea5c5db4db715b",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_fhrp_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c4111d64926c954d64ecfa36bf0b19609b11ed079d181edcceaa7040efc04460",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_rack_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "38a8451d8064030aea164f006ef382c20f92f34909571eb3fd5f6e545c76b025",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_vlan.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "24675cf58ccbc62e103e2b12d58b1879626fdc4060e10883fcc0221654e4d57c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_ipam_role.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7ceb5fbc06093cfb74e70b9890cd7ee2a63400abde4859c232ae2696ed8c4a8e",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_service_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3de123df2afca03aabda0c72df05dbe648539bd85dafa557e0e9875a3d187c88",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_asn.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e166e0e9b57f80051a393c89d84e217aa3749040f9779b58bcfd0c6668756b42",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_rack_role.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f38ea66d9f75164b06ad3d3da8b7a4826dc03a3c22dd2dc20e6a1ab76c5d3446",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_provider_network.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9b0cad326050fd05d658114529543fd266660b18c56ac1dafdc645304c7c82ca",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_service.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "284ba7a8c0c4289324906f530321a35d97ea04881d12b11dd72da2e187fa97aa",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_site_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0dc3566f5851e868d35dd673565b243652f09cfe2de7089f0b605241c11ab5c1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_location.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eb2c983ee5af371a527fca7e20de968debb8cb00ab00a3288e91530d0e95edf1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_provider.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9d0e8dcec59fd43ad5c4fd25e8b5cc3402f11d31981e4ef183a19be5cd204141",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_device_type.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b59c642074bb81a361367906f132fda8bd32479418a35d8c0aa56ff1831e80b8",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_custom_field.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "13b999462bc7082e25e787402f2b31734e9ed509bef4c90f13870e4f698c5d39",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_virtual_machine.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dcb63cfbe1c5e4bc03fd99c2acc5748166b17f9b515e74722a14a707a35af52c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/v3.5/tasks/netbox_tag.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0dd53a692f8af842a04c746f97259aefa6b9e33a02ac66f979a35616d0348043",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/regression-v3.7",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/regression-v3.7/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/regression-v3.7/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d353cfb6cab6f4a778a9fcbb44ab5730d1150d866c96bdea997014d39fc1c831",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3efbf182d151ffe527a8a250a044a83997eec84d250c8651dcdfe6f62c60a97d",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/runme.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f2d26a7388590de5e1126420c402289975eded15a914293329f046406a82ed1d",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/files",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/files/test-inventory.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "19ede9a14420befc0ac1168f21c6d2c5dcaf16bef094d6c20cf766dacce2c1ba",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/files/test-inventory-legacy.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "71f03a61506d106d1985bf9c237f78b900dcbd1f360558a23e6bf5fac6e77e17",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/files/test-inventory-jinja2-filter.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "65f7c6327d4cbfd7c59d903100681fd668b50e441fb280d3ad38c26d0d03d915",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/files/test-inventory-plurals.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4ba0e5ede35b7822fd1658b50fd9bc80fa259bee9989b0818c8af95b53577999",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/files/test-inventory-options.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c17f5eef88e43f08288f480719439acd00330c5196d1c14134fa6194103c1519",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/files/test-inventory-options-flatten.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cd27110ff787e21cddc8beaa564db9b7e29a8ac77ce10c99ed1c166006708802",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/files/test-inventory.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d1009b6685415e91a9a11dfaa939cacb03fd5f3efd6adff0eb7fa2958ddbdbee",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/files/test-inventory-jinja2.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "45f7aba5d2f5500f7b43dc461a91140c4069910b2ba7c54a126aceb082d0c9d9",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/files/test-inventory-plurals-flatten.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a1240c3ef4e6fca185f723107c089e3079996b23e8d630e25a48623a1b77b706",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/files/test-inventory-jinja2.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c17f5eef88e43f08288f480719439acd00330c5196d1c14134fa6194103c1519",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/files/test-inventory-options-flatten.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fa8fa9856a8cb16c7e5fbe45826e20fa319f62a0f2672aa907285d6f81940f4f",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/files/test-inventory-noracks.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d2f73a8cf0695c20b2d1b47bea80ecca284484c13da2e055e23f09fa9837dbd1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/files/test-inventory-options.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e1bb426120346d183fd6496e2d4db53ee3613e16bebd5ab804b322848ac4a318",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/files/test-inventory-legacy.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "83e2fb444512331c6bc9e0677cd7d71450dffcb2625dfa7c759612c254af5c81",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/files/test-inventory-jinja2-filter.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "07bf21906dd0fdad49a7da12b85dbe91bff6614b5205dc31c1514bdc4f684119",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/files/test-inventory-plurals-flatten.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b10179aa589cbcd92340b4dbfd4c816af473e22c2ca6b2edcd60ee9ade7c3b7a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/files/test-inventory-noracks.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7c504c26d63da38458f77027c0e542aa2bb34eef183829623de02086e79c031c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/files/test-inventory-bearer-token.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d1009b6685415e91a9a11dfaa939cacb03fd5f3efd6adff0eb7fa2958ddbdbee",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/files/test-inventory-bearer-token.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "132a27a2b7b0112317290b60310c7b651631af9769cf07e139bbb01bc7b8657a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/files/test-inventory-plurals.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3a53d46d9eafdedf2909441f1963e48bb986e07fbeacd96ceb1a337f85b2de65",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/.gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "deacc9eea815485333d506e5bd64fb0c4a4a9980a33ff1b443a2deb0ca488209",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/compare_inventory_json.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b124d3651bbc95d0f9a91bf941603d005fb84cc6732f092f10f5fdb7e0606cc7",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.6/runme_config.template",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "de40fd34a465f7da8925f1e9ba52359e10ac740e08f2dfa398691810fcc03bd7",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/aliases",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3efbf182d151ffe527a8a250a044a83997eec84d250c8651dcdfe6f62c60a97d",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/runme.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f2d26a7388590de5e1126420c402289975eded15a914293329f046406a82ed1d",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/files",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/files/test-inventory.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "19ede9a14420befc0ac1168f21c6d2c5dcaf16bef094d6c20cf766dacce2c1ba",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/files/test-inventory-legacy.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "71f03a61506d106d1985bf9c237f78b900dcbd1f360558a23e6bf5fac6e77e17",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/files/test-inventory-jinja2-filter.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "65f7c6327d4cbfd7c59d903100681fd668b50e441fb280d3ad38c26d0d03d915",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/files/test-inventory-plurals.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4ba0e5ede35b7822fd1658b50fd9bc80fa259bee9989b0818c8af95b53577999",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/files/test-inventory-options.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c17f5eef88e43f08288f480719439acd00330c5196d1c14134fa6194103c1519",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/files/test-inventory-options-flatten.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cd27110ff787e21cddc8beaa564db9b7e29a8ac77ce10c99ed1c166006708802",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/files/test-inventory.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d1009b6685415e91a9a11dfaa939cacb03fd5f3efd6adff0eb7fa2958ddbdbee",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/files/test-inventory-jinja2.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "45f7aba5d2f5500f7b43dc461a91140c4069910b2ba7c54a126aceb082d0c9d9",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/files/test-inventory-plurals-flatten.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a1240c3ef4e6fca185f723107c089e3079996b23e8d630e25a48623a1b77b706",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/files/test-inventory-jinja2.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c17f5eef88e43f08288f480719439acd00330c5196d1c14134fa6194103c1519",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/files/test-inventory-options-flatten.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fa8fa9856a8cb16c7e5fbe45826e20fa319f62a0f2672aa907285d6f81940f4f",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/files/test-inventory-noracks.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d2f73a8cf0695c20b2d1b47bea80ecca284484c13da2e055e23f09fa9837dbd1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/files/test-inventory-options.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e1bb426120346d183fd6496e2d4db53ee3613e16bebd5ab804b322848ac4a318",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/files/test-inventory-legacy.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "83e2fb444512331c6bc9e0677cd7d71450dffcb2625dfa7c759612c254af5c81",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/files/test-inventory-jinja2-filter.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "07bf21906dd0fdad49a7da12b85dbe91bff6614b5205dc31c1514bdc4f684119",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/files/test-inventory-plurals-flatten.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b10179aa589cbcd92340b4dbfd4c816af473e22c2ca6b2edcd60ee9ade7c3b7a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/files/test-inventory-noracks.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7c504c26d63da38458f77027c0e542aa2bb34eef183829623de02086e79c031c",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/files/test-inventory-bearer-token.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d1009b6685415e91a9a11dfaa939cacb03fd5f3efd6adff0eb7fa2958ddbdbee",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/files/test-inventory-bearer-token.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "132a27a2b7b0112317290b60310c7b651631af9769cf07e139bbb01bc7b8657a",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/files/test-inventory-plurals.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3a53d46d9eafdedf2909441f1963e48bb986e07fbeacd96ceb1a337f85b2de65",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/.gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "deacc9eea815485333d506e5bd64fb0c4a4a9980a33ff1b443a2deb0ca488209",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/compare_inventory_json.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b124d3651bbc95d0f9a91bf941603d005fb84cc6732f092f10f5fdb7e0606cc7",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/inventory-v3.5/runme_config.template",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "de40fd34a465f7da8925f1e9ba52359e10ac740e08f2dfa398691810fcc03bd7",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/inventory",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ba4658da440ac3efc0a81e148618c1c38eff956943329403bc863b8c26ab79fb",
+   "format": 1
+  },
+  {
+   "name": "tests/test_data.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b5c34afc0e8ddbb4fc388802015f63ff1628e2f3335f8cce280c0e38933acd60",
+   "format": 1
+  },
+  {
+   "name": "tests/unit",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/test_netbox_base_class.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b0dc56f4039832885f094fd6afe72322d991372b113e600ad2f52d0f60a54e74",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/fixtures",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/fixtures/choices",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/fixtures/choices/racks.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "710913087d5fe7c6250ac7a6bbdb378fd2a98f5425595ed92a452e6789ea62e1",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/fixtures/choices/virtual_machines.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8a019714226dd0208003a775d05c48aed8195b0f09a23ad4c5e976a31f2f4b91",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/fixtures/choices/interfaces.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "69edd276a4d6ff23a24aa290de80ed861b94cba637207a9edb481d7b4dfa9a59",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/fixtures/choices/circuits.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eef93b5c65458cac7b33b1e1365518d381d3e12bcc73b7afbdd163a42350a521",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/fixtures/choices/services.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1eee733c9069414f6294f64ecf0bd65c0afb42053c0ee8e1d9bf0ac48ca9e59c",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/fixtures/choices/devices.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d28c8ab2e5a53cf617e96c37caa10d4881e19f2756e59ce036610d3ac13935af",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/fixtures/choices/sites.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "31d58287f5b07e8aa0c0e1c1ca12b907f88d8ab987b98b5ef09beef01a49a090",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/fixtures/choices/device_types.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "065d95e75aa2b700f265e33133b94b5c9f93bd30d9be9a0fdcfe4a17671421ee",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/fixtures/choices/vlans.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c4b951095ee4c7443616cda2f26ed9e778226bf4b8e193e0f67cc5b0b96a6636",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/fixtures/choices/prefixes.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3a7f82c633273e126c2455161a1c832460b368d8e40677a0cb290ec9910e2bcf",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/test_data",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/test_data/build_query_params_no_child",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/test_data/build_query_params_no_child/data.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a2808a6706a4ba94c964b0bd5ccb27036fb6f4ae58402fc388c4a8a56229f758",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/test_data/build_query_params_user_query_params",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/test_data/build_query_params_user_query_params/data.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "362739ebc62d83999764392653b6347662f5fadf3f88b5b38a9ce0924db2acea",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/test_data/arg_spec_default",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/test_data/arg_spec_default/data.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f48dd7aea115db209d32d4ce0fc6b9836c877a08bf035ee588bbc3f436b4a076",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/test_data/find_app",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/test_data/find_app/data.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f57619e431da1db5f3459f0d390e0f98ed8422dd1dfaea0a322faa6689762e2f",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/test_data/build_query_params_child",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/test_data/build_query_params_child/data.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bb4a47f18fb6fcab7557a036a71612f65e75d22972139f8916012ebcbb8dcce0",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/test_data/slug",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/test_data/slug/data.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d38464486cef0b272cd7879626d2fbccaba6359c5166c2aed483fcd0c108645c",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/test_data/normalize_data",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/test_data/normalize_data/data.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fb8e60b069fb6b847cc286cf83c8df8ea5c8b19078f614be83983e85616036aa",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/test_data/choices_id",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/module_utils/test_data/choices_id/data.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0ef637ce49cb7fbf3fb67f39641b2db2ddddae41a4a5c772e65cb401fc21d595",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/inventory",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/inventory/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/inventory/test_nb_inventory.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2598c9a69dac190a21c54203db31729ee16acc0b4f08a62fe6130dea5230c2c8",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/inventory/test_data",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/inventory/test_data/refresh_url",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/inventory/test_data/refresh_url/data.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "26ce71fb70dc9b712c6c61495f8e03308f03a1d38efce476737100cde2664d93",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/inventory/test_data/group_extractors",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/inventory/test_data/group_extractors/data.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a70575200ab06266b0d57856884be9e187cb5fe4737bb93883024dcb66ac8849",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/inventory/test_data/filter_query_parameters",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/inventory/test_data/filter_query_parameters/data.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3ecebe7994f1acfae3e196b3f8bce30dab18114fa92f662a4e06a57f338870be",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/inventory/test_data/validate_query_parameter",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/inventory/test_data/validate_query_parameter/data.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c38afa75bd45672caa3cae3eef0306f045828f98f47f3ee8f41e2a51296e4f79",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/inventory/test_data/get_resource_list_chunked",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/inventory/test_data/get_resource_list_chunked/data.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "09bee34133057a8261ff63b1392f689076a161cefca45e489fe9ed0b9846dee4",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/inventory/test_data/extract_custom_fields",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/unit/inventory/test_data/extract_custom_fields/data.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b7b970702d1d2884cf0115bc7fef7a54a0c9b49c01d138e568e27902280afd21",
+   "format": 1
+  },
+  {
+   "name": "tests/unit/inventory/test_data/data.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3894903f8c1c89c1f679f9860e22dd3adb3d3e4c2de310e2b91ddcdf32673411",
+   "format": 1
+  },
+  {
+   "name": "tests/netbox-docker",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/netbox-docker/v3.7",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/netbox-docker/v3.7/docker-compose.override.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7fc06b91653afc69ad21714fb8ca94fdc4cc1e54314ab3e7181b697d63138ba8",
+   "format": 1
+  },
+  {
+   "name": "tests/netbox-docker/v3.6",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/netbox-docker/v3.6/docker-compose.override.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f4e3d8d388ffd7513cf75a361a9050ca073b86c426b3a8ca9197861186cc2bbf",
+   "format": 1
+  },
+  {
+   "name": "tests/netbox-docker/v4.0",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/netbox-docker/v4.0/docker-compose.override.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "27b3a14ab0d3014c101ed8fe6ecd6a8b366c166950c2cdee1cc3647a8ac41986",
+   "format": 1
+  },
+  {
+   "name": "tests/netbox-docker/v3.5",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/netbox-docker/v3.5/docker-compose.override.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4a01949c8618fc7aaa163441798292a3b6add189a351f7ac99731ce42d87d3b5",
+   "format": 1
+  }
+ ],
+ "format": 1
+}

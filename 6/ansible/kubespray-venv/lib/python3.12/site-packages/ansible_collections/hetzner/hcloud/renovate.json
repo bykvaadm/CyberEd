@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>hetznercloud/.github//renovate/default"],
+  "regexManagers": [
+    {
+      "fileMatch": ["^scripts/vendor.py$"],
+      "matchStrings": ["HCLOUD_VERSION = \"v(?<currentValue>.*)\""],
+      "datasourceTemplate": "pypi",
+      "depNameTemplate": "hcloud"
+    }
+  ]
+}

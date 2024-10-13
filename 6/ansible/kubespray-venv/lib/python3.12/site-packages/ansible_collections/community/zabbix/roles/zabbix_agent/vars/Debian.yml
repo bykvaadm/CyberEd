@@ -1,0 +1,48 @@
+---
+# vars file for zabbix_agent (Debian)
+
+zabbix_agent: zabbix-agent
+
+zabbix_valid_agent_versions:
+  # Debian
+  "12":
+    - 6.4
+    - 6.2
+    - 6.0
+
+  "11":
+    - 6.4
+    - 6.2
+    - 6.0
+
+  "10":
+    - 6.4
+    - 6.2
+    - 6.0
+
+  "9":
+    - 6.4
+    - 6.2
+    - 6.0
+  # Ubuntu
+  "24":
+    - 6.4
+    - 6.0
+
+  "22":
+    - 6.4
+    - 6.2
+    - 6.0
+
+  "20":
+    - 6.4
+    - 6.2
+    - 6.0
+
+  "18":
+    - 6.4
+    - 6.2
+    - 6.0
+
+debian_keyring_path: /etc/apt/keyrings/
+zabbix_gpg_key: "{{ debian_keyring_path }}zabbix-repo.asc"

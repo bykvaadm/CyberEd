@@ -1,0 +1,36 @@
+{
+ "collection_info": {
+  "namespace": "ieisystem",
+  "name": "inmanage",
+  "version": "2.0.0",
+  "authors": [
+   "Baoshan Wang <wangbaoshan@ieisystem.com>"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "ieisystem",
+   "inmanage",
+   "server",
+   "manager",
+   "tools"
+  ],
+  "description": "ieisystem Server supports ansible management device.",
+  "license": [
+   "GPL-2.0-or-later"
+  ],
+  "license_file": null,
+  "dependencies": {},
+  "repository": "https://github.com/ieisystem/ieisystem.inmanage",
+  "documentation": "https://ieisystem.github.io/ieisystem.inmanage-docs/index.html",
+  "homepage": "https://github.com/ieisystem/ieisystem.inmanage",
+  "issues": "https://github.com/ieisystem/ieisystem.inmanage/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "0bb56c1b70e10b4035ac5d0f93771aa095317a35e95b3ac42e8ecf042f40687a",
+  "format": 1
+ },
+ "format": 1
+}

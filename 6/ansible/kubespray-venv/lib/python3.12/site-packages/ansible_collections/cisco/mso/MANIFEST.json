@@ -1,0 +1,43 @@
+{
+ "collection_info": {
+  "namespace": "cisco",
+  "name": "mso",
+  "version": "2.9.0",
+  "authors": [
+   "Dag Wieers (@dagwieers)",
+   "Nirav Katarmal (@nkatarmal-crest)",
+   "Lionel Hercot (@lhercot)",
+   "Cindy Zhao (@cizhao)",
+   "Shreyas Srish (@shrsr)"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "cisco",
+   "aci",
+   "cloud",
+   "collection",
+   "networking",
+   "sdn",
+   "mso",
+   "multisite"
+  ],
+  "description": "An Ansible collection for managing Cisco ACI Multi-Site",
+  "license": [],
+  "license_file": "LICENSE",
+  "dependencies": {
+   "ansible.netcommon": "*"
+  },
+  "repository": "https://github.com/CiscoDevNet/ansible-mso",
+  "documentation": "https://docs.ansible.com/ansible/latest/scenario_guides/guide_aci.html",
+  "homepage": "https://cisco.com/go/aci",
+  "issues": "https://github.com/CiscoDevNet/ansible-mso/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "0e4ba41264207aae48d779fd9e89c0cd64dd76dd5ea4e04ff5d31b43404b4cb5",
+  "format": 1
+ },
+ "format": 1
+}

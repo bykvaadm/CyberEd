@@ -1,0 +1,72 @@
+---
+- name: "SELinux | RedHat | Install related SELinux package"
+  ansible.builtin.yum:
+    name:
+      - libsemanage-python
+    state: present
+  environment:
+    http_proxy: "{{ zabbix_http_proxy | default(None) | default(omit) }}"
+    https_proxy: "{{ zabbix_https_proxy | default(None) | default(omit) }}"
+  register: zabbix_web_dependencies_installed
+  until: zabbix_web_dependencies_installed is succeeded
+  become: true
+  when:
+    - ansible_os_family == "RedHat"
+    - ansible_selinux.status == "enabled"
+    - ansible_distribution_major_version == "7" or ansible_distribution_major_version == "6"
+  tags:
+    - install
+
+- name: "SELinux | RedHat | Install related SELinux package on RHEL9 and RHEL8"
+  ansible.builtin.yum:
+    name:
+      - python3-libsemanage
+    state: present
+  environment:
+    http_proxy: "{{ zabbix_http_proxy | default(None) | default(omit) }}"
+    https_proxy: "{{ zabbix_https_proxy | default(None) | default(omit) }}"
+  register: zabbix_web_dependencies_installed
+  until: zabbix_web_dependencies_installed is succeeded
+  become: true
+  when:
+    - ansible_os_family == "RedHat"
+    - ansible_selinux.status == "enabled"
+    - ansible_distribution_major_version|int >= 8
+  tags:
+    - install
+
+- name: "SELinux | Allow httpd to connect to db (SELinux)"
+  ansible.posix.seboolean:
+    name: httpd_can_network_connect_db
+    persistent: true
+    state: true
+  become: true
+  when:
+    - ansible_selinux.status == "enabled"
+    - selinux_allow_httpd_can_network_connect_db | bool
+  tags:
+    - config
+
+- name: "SELinux | Allow httpd to connect to zabbix (SELinux)"
+  ansible.posix.seboolean:
+    name: httpd_can_connect_zabbix
+    persistent: true
+    state: true
+  become: true
+  when:
+    - ansible_selinux.status == "enabled"
+    - selinux_allow_httpd_can_connect_zabbix | bool
+  tags:
+    - config
+
+- name: "SELinux | Allow httpd to connect to ldap (SELinux)"
+  ansible.posix.seboolean:
+    name: httpd_can_connect_ldap
+    persistent: true
+    state: true
+  become: true
+  when:
+    - ansible_selinux.status == "enabled"
+    - selinux_allow_httpd_can_connect_ldap | bool
+  tags:
+    - config

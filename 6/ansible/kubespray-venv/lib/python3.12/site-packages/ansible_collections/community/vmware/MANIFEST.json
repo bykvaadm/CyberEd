@@ -1,0 +1,35 @@
+{
+ "collection_info": {
+  "namespace": "community",
+  "name": "vmware",
+  "version": "4.7.0",
+  "authors": [
+   "Ansible (https://github.com/ansible)"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "cloud",
+   "vmware",
+   "virtualization"
+  ],
+  "description": null,
+  "license": [
+   "GPL-3.0-or-later",
+   "BSD-2-Clause"
+  ],
+  "license_file": null,
+  "dependencies": {},
+  "repository": "https://github.com/ansible-collections/community.vmware.git",
+  "documentation": null,
+  "homepage": "https://github.com/ansible-collections/community.vmware",
+  "issues": "https://github.com/ansible-collections/community.vmware/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "fb62a3449df59924572ae7a7864b440539d5781e8e47050aabb88bd086745a77",
+  "format": 1
+ },
+ "format": 1
+}

@@ -1,0 +1,37 @@
+{
+ "collection_info": {
+  "namespace": "ovirt",
+  "name": "ovirt",
+  "version": "3.2.0",
+  "authors": [
+   "Martin Necas <mnecas@redhat.com>"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "collection",
+   "infrastructure",
+   "linux",
+   "cloud",
+   "virtualization"
+  ],
+  "description": "The oVirt Ansible Collection.",
+  "license": [
+   "Apache-2.0",
+   "GPL-3.0-or-later"
+  ],
+  "license_file": null,
+  "dependencies": {},
+  "repository": "https://github.com/ovirt/ovirt-ansible-collection",
+  "documentation": null,
+  "homepage": "https://www.ovirt.org/",
+  "issues": "https://github.com/ovirt/ovirt-ansible-collection/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "8550f9af7df0ee9f02bd36424a8c4c43804ab428cfdce358f6ef422223ec1dc1",
+  "format": 1
+ },
+ "format": 1
+}

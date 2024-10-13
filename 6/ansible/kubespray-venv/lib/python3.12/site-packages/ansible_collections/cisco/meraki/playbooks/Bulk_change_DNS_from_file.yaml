@@ -1,0 +1,24 @@
+---
+# Notes:
+# The playbook can't make changes if the device is using DHCP for IP assignment, it will just run and report success
+# Works by imports the serial numbers of devices to use from a devices.yaml file
+
+- hosts: localhost
+  gather_facts: false
+  vars:
+    org_id: "XXXXXXX"
+  tasks:
+    - name: Include vars of devices.yaml into the 'devices' variable
+      include_vars:
+        file: devices.yaml
+        name: devices
+
+    - name: Change DNS management information
+      cisco.meraki.devices_management_interface:
+        state: present
+        serial: "{{ item.value.serial_no }}"
+        wan1:
+          staticDns:
+            - 192.168.20.2
+            - 8.8.8.8
+      loop: "{{ lookup('dict', devices) }}"

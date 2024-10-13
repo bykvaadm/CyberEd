@@ -1,0 +1,62 @@
+---
+#
+# Assign Server to Profile
+#
+# The hosts group used is provided by the group variable or defaulted to 'Intersight_Servers'.
+# You can specify a specific host (or host group) on the command line:
+#   ansible-playbook ... -e group=<your host group>
+#   e.g., ansible-playbook server_profiles.yml -e group=TME_Demo
+#
+- name: Deploy Server Profiles
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  vars:
+    # Create an anchor for api_info that can be used throughout the file
+    api_info: &api_info
+      # if api_key vars are omitted, INTERSIGHT_API_KEY_ID, INTERSIGHT_API_PRIVATE_KEY,
+      # and INTERSIGHT_API_URI environment variables used for API key data
+      api_private_key: "{{ api_private_key | default(omit) }}"
+      api_key_id: "{{ api_key_id | default(omit) }}"
+      api_uri: "{{ api_uri | default(omit) }}"
+      validate_certs: "{{ validate_certs | default(omit) }}"
+      state: "{{ state | default(omit) }}"
+    # Server Profile name default
+    profile_name: "DevNet-SJC07-R14-R15"
+    server_name: "SJC07-R14-FI-1-1-5"
+    profile_action: "Assign"
+  tasks:
+    - name: Get Server Moid
+      cisco.intersight.intersight_rest_api:
+        <<: *api_info
+        resource_path: /compute/PhysicalSummaries
+        query_params:
+          $filter: "Name eq '{{ server_name }}'"
+      register: server
+      delegate_to: localhost
+    - name: Assign Server to Profile
+      cisco.intersight.intersight_rest_api:
+        <<: *api_info
+        resource_path: /server/Profiles
+        query_params:
+          $filter: "Name eq '{{ profile_name }}'"
+        api_body: {
+          "AssignedServer": {
+            "Moid": "{{ server.api_response.Moid }}",
+            "ObjectType": "{{ server.api_response.SourceObjectType }}"
+          }
+        }
+      delegate_to: localhost
+      when: profile_action == 'Assign'
+    - name: Unassign Server Profile
+      cisco.intersight.intersight_rest_api:
+        <<: *api_info
+        resource_path: /server/Profiles
+        query_params:
+          $filter: "Name eq '{{ profile_name }}'"
+        api_body: {
+          "AssignedServer":null,
+          "ServerAssignmentMode":"None"
+        }
+      delegate_to: localhost
+      when: profile_action == 'Unassign'

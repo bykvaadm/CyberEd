@@ -1,0 +1,33 @@
+{
+ "collection_info": {
+  "namespace": "community",
+  "name": "network",
+  "version": "5.0.3",
+  "authors": [
+   "Ansible (https://github.com/ansible)"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "community",
+   "networking"
+  ],
+  "description": "This repository contains the `community.network` Ansible Collection. The collection is a part of the `ansible` package and includes many network modules and plugins supported by Ansible community which are not part of more specialized community collections.\n",
+  "license": [],
+  "license_file": "COPYING",
+  "dependencies": {
+   "ansible.netcommon": ">=1.0.0"
+  },
+  "repository": "https://github.com/ansible-collections/community.network",
+  "documentation": "https://docs.ansible.com/ansible/latest/collections/community/network/",
+  "homepage": "https://github.com/ansible-collections/community.network",
+  "issues": "https://github.com/ansible-collections/community.network/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "6d5b9f8a9bb56811ea84c47aa7f8a70d59ecc434486c83635f4bed458c7fe3ff",
+  "format": 1
+ },
+ "format": 1
+}

@@ -1,0 +1,68 @@
+---
+#
+# Configure Server Profiles
+#
+# The hosts group used is provided by the group variable or defaulted to 'Intersight_Servers'.
+# You can specify a specific host (or host group) on the command line:
+#   ansible-playbook ... -e group=<your host group>
+#   e.g., ansible-playbook server_profiles.yml -e group=TME_Demo
+#
+- name: Configure Server Profiles
+  hosts: "{{ group | default('Intersight_Servers') }}"
+  connection: local
+  gather_facts: false
+  vars:
+    # Create an anchor for api_info that can be used throughout the file
+    api_info: &api_info
+      # if api_key vars are omitted, INTERSIGHT_API_KEY_ID, INTERSIGHT_API_PRIVATE_KEY,
+      # and INTERSIGHT_API_URI environment variables used for API key data
+      api_private_key: "{{ api_private_key | default(omit) }}"
+      api_key_id: "{{ api_key_id | default(omit) }}"
+      api_uri: "{{ api_uri | default(omit) }}"
+      validate_certs: "{{ validate_certs | default(omit) }}"
+      state: "{{ state | default(omit) }}"
+    # Server Profile name default
+    profile_name: "SP-{{ inventory_hostname }}"
+  tasks:
+    #
+    # Configure profiles specific to server (run for each server in the inventory)
+    #
+    - name: Set management mode to Standalone
+      ansible.builtin.set_fact:
+        mode: Standalone
+      when: mode is not defined or mode == 'IntersightStandalone'
+    - name: Set management mode to FIAttached
+      ansible.builtin.set_fact:
+        mode: FIAttached
+      when: mode == 'Intersight'
+    - name: "Configure Server Profile"
+      cisco.intersight.intersight_server_profile:
+        <<: *api_info
+        organization: "{{ organization | default(omit) }}"
+        name: "{{ profile_name }}"
+        target_platform: "{{ mode | default(omit) }}"
+        description: "Updated Profile for server name {{ inventory_hostname }}"
+        tags:
+          - Key: Site
+            Value: RCDN
+        assigned_server: "{{ server_moid | default(omit) }}"
+        bios_policy: "{{ bios_policy | default(omit) }}"
+        boot_order_policy: "{{ boot_order_policy | default(omit) }}"
+        certificate_policy: "{{ certificate_policy | default(omit) }}"
+        drive_security_policy: "{{ drive_security_policy | default(omit) }}"
+        firmware_policy: "{{ firmware_policy | default(omit) }}"
+        imc_access_policy: "{{ imc_access_policy | default(omit) }}"
+        ipmi_over_lan_policy: "{{ ipmi_over_lan_policy | default(omit) }}"
+        lan_connectivity_policy: "{{ lan_connectivity_policy | default(omit) }}"
+        local_user_policy: "{{ local_user_policy | default(omit) }}"
+        ntp_policy: "{{ ntp_policy | default(omit) }}"
+        power_policy: "{{ power_policy | default(omit) }}"
+        san_connectivity_policy: "{{ san_connectivity_policy | default(omit) }}"
+        serial_over_lan_policy: "{{ serial_over_lan_policy | default(omit) }}"
+        snmp_policy: "{{ snmp_policy | default(omit) }}"
+        storage_policy: "{{ storage_policy | default(omit) }}"
+        syslog_policy: "{{ syslog_policy | default(omit) }}"
+        thermal_policy: "{{ thermal_policy | default(omit) }}"
+        virtual_kvm_policy: "{{ virtual_kvm_policy | default(omit) }}"
+        virtual_media_policy: "{{ virtual_media_policy | default(omit) }}"
+      delegate_to: localhost

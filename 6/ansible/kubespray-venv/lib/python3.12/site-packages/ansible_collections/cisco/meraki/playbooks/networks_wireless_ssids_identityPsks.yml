@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Create
+      cisco.meraki.networks_wireless_ssids_identity_psks:
+        meraki_suppress_logging: true
+        state: present
+        expiresAt: '2018-02-11T00:00:00.090210Z'
+        groupPolicyId: '101'
+        id: '1284392014819'
+        name: Sample Identity PSK
+        networkId: string
+        number: string
+        passphrase: secret

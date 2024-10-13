@@ -1,0 +1,35 @@
+{
+ "collection_info": {
+  "namespace": "cisco",
+  "name": "asa",
+  "version": "4.0.3",
+  "authors": [
+   "Ansible Security Community (ansible-security)"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "cisco",
+   "asa",
+   "networking",
+   "security"
+  ],
+  "description": "Ansible Security Collection for Cisco ASA devices.",
+  "license": [],
+  "license_file": "LICENSE",
+  "dependencies": {
+   "ansible.netcommon": ">=2.5.1"
+  },
+  "repository": "https://github.com/ansible-collections/cisco.asa",
+  "documentation": null,
+  "homepage": null,
+  "issues": "https://github.com/ansible-collections/cisco.asa/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "12ce03a7723c4c84e304c5ca4c2e1e909423ee63faecd32e9418d7e5ad7d0123",
+  "format": 1
+ },
+ "format": 1
+}

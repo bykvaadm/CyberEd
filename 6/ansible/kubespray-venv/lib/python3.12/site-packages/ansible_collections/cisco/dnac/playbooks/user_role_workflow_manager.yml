@@ -1,0 +1,72 @@
+---
+- name: Configure device credentials on Cisco Catalyst Center
+  hosts: localhost
+  vars_files:
+    - "credentials.yml"
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: User and Role Workflow Manager
+      cisco.dnac.user_role_workflow_manager:
+        dnac_host: "{{dnac_host}}"
+        dnac_username: "{{dnac_username}}"
+        dnac_password: "{{dnac_password}}"
+        dnac_verify: "{{dnac_verify}}"
+        dnac_port: "{{dnac_port}}"
+        dnac_version: "{{dnac_version}}"
+        dnac_debug: "{{dnac_debug}}"
+        dnac_log: True
+        dnac_log_level: DEBUG
+        config_verify: True
+        dnac_api_task_timeout: 1000
+        dnac_task_poll_interval: 1
+        state: merged
+        config:
+          user_details:
+            - first_name: "ajith"
+              last_name: "andrew"
+              username: "ajithandrewj"
+              email: "ajith.andrew@example.com"
+              password: "Ajith@123"
+              role_list: ["Super-Admin-role"]
+            - first_name: "syed"
+              last_name: "khadeer"
+              username: "syedkhadeer"
+              email: "syedkhadeer@example.com"
+              password: "Syedkhadeer@123"
+          role_details:
+            - role_name: "Test_Role_1"
+              description: "Default role creation"
+              assurance:
+                - overall: "read"
+                  troubleshooting_tools: "write"
+              network_analytics:
+                - overall: "deny"
+            - role_name: "Test_Role_2"
+              description: "Default role creation"
+              network_design:
+                - overall: "deny"
+                  image_repository: "read"
+              network_provision:
+                - overall: "read"
+                  eox: "write"
+                  image_update: "read"
+                  inventory_management:
+                    - overall: "write"
+                      port_management: "read"
+              network_services:
+                - overall: "deny"
+                  bonjour: "Write"
+              platform:
+                - overall: "deny"
+                  bundles: "read"
+              security:
+                - overall: "deny"
+                  ip_based_access_control: "read"
+                  security_advisories: "write"
+              system:
+                - overall: "deny"
+                  machine_reasoning: "write"
+              utilities: 
+                - overall: "deny"
+                  audit_log: "read"

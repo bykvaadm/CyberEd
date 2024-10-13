@@ -1,0 +1,223 @@
+---
+
+- hosts: localhost
+  vars:
+    network_id: "L_828099381482771185" # Branch-1234
+    org_id: "828099381482762270"
+  gather_facts: false
+  tasks:
+
+    # - name: Get all networks _appliance _ports
+    #   cisco.meraki.networks_appliance_ports_info:
+    #     networkId: L_828099381482771185
+    #   register: result
+    # - name: update port
+    #   cisco.meraki.devices_switch_ports:
+    #     meraki_suppress_logging: false
+    #     serial: QBSB-BNH2-KDXJ
+    #     portId: 3
+    #     vlan: 50
+    #     # type: access
+    #     state: present
+    #     poeEnabled: false 
+    # - name: Update appliance Vlans
+    #   cisco.meraki.networks_appliance_vlans:
+    #     state: present
+    #     applianceIp: 192.168.1.2
+    #     cidr: 192.168.1.0/24
+    #     id: '1234'
+    #     name: My VLAN
+    #     networkId: "{{network_id}}"
+    #     subnet: 192.168.1.0/24
+
+    # - name: Get all networks _appliance _ssids
+    #   cisco.meraki.networks_appliance_ssids_info:
+    #     networkId: "{{network_id}}"
+    #   register: result
+
+    # - name: Show result
+    #   ansible.builtin.debug:
+    #     msg: "{{ result }}"
+
+    # - name: Update appliance SSID
+    #   cisco.meraki.networks_appliance_ssids:
+    #     state: present
+    #     authMode: 8021x-radius
+    #     defaultVlanId: 10
+    #     enabled: true
+    #     name: My SSID
+    #     networkId: "{{network_id}}"
+    #     number: 1
+    #     radiusServers:
+    #     - host: 1.2.3.4
+    #       port: 1000
+    #       secret: secret
+    #     visible: true
+    #     wpaEncryptionMode: WPA2 only 
+
+
+# ################################################################
+
+    # - name: Update appliance traffic sharping
+    #   cisco.meraki.networks_appliance_traffic_shaping:
+    #     state: present
+    #     globalBandwidthLimits:
+    #       limitDown: 5120
+    #       limitUp: 2048
+    #     networkId: "{{network_id}}"
+
+    # - name: Enable Vlans on the MX
+    #   cisco.meraki.networks_appliance_vlans_settings:
+    #     state: present
+    #     networkId: "{{network_id}}"
+    #     vlansEnabled: true
+
+    # - name: Update appliance ports
+    #   cisco.meraki.networks_appliance_ports:
+    #     accessPolicy: "open"
+    #     allowedVlans: "all"
+    #     enabled: true
+    #     networkId: "{{network_id}}"
+    #     portId: "2"
+    #     type: "trunk"
+    #     vlan: 10
+    #     state: present
+    # - name: Get all networks
+    #   cisco.meraki.networks_info:
+    #     organizationId: "{{org_id}}"
+    #     total_pages: -1
+    #     direction: next
+    #   register: result
+
+    # - name: Show result
+    #   ansible.builtin.debug:
+    #     msg: "{{ result.meraki_response[0].id }}"
+    
+    # - name: Bind a template from a network
+    #   meraki_config_template:
+    #     auth_key: "{{ meraki_api_key }}"
+    #     state: present
+    #     org_id: "{{ org_name }}"
+    #     net_id: "{{ off_network.results.0.meraki_response.id }}"
+    #     config_template: "{{ item.value.template_name }}"
+    #   delegate_to: localhost
+    #   loop: "{{ lookup('dict', devices) }}"
+  
+  
+    # - name: Create
+    #   cisco.meraki.organizations_config_templates:
+    #     # meraki_api_key: "{{meraki_api_key}}"
+    #     state: present
+    #     name: My config template
+    #     organizationId: "{{ org_id }}"
+    #   register: result
+
+    # - name: Create
+    #   cisco.meraki.networks_bind:
+    #     autoBind: false
+    #     configTemplateId: "{{result.meraki_response.id}}"
+    #     networkId: "{{network_id}}"
+
+
+    # - name: change name of device
+    #   cisco.meraki.devices:
+    #     name: new name 4
+    #     serial: QBSB-D5ZD-9CXT
+    #     # organizationId: "{{org_id}}"
+    #     state: present 
+    #     meraki_suppress_logging: false
+
+    # - name: onboard order
+    #   cisco.meraki.organizations_inventory_claim:
+    #     # meraki_api_key: "{{ meraki_api }}"
+    #     # meraki_simulate: "{{ testpolicy }}"
+    #     organizationId: "{{ org_id }}"
+    #     orders: "1"
+    
+
+    # - name: Enable Vlans on the MX
+    #   cisco.meraki.networks_appliance_vlans_settings:
+    #     state: present
+    #     networkId: "{{network_id}}"
+    #     vlansEnabled: true
+
+    # - name: Create appliance Vlan 100
+    #   cisco.meraki.networks_appliance_vlans:
+    #     state: present
+    #     applianceIp: 192.168.1.2
+    #     cidr: 192.168.1.0/24
+    #     id: '100'
+    #     name: My VLAN
+    #     networkId: "{{network_id}}"
+    #     subnet: 192.168.1.0/24
+
+    # - name: Create appliance Vlan 200
+    #   cisco.meraki.networks_appliance_vlans:
+    #     state: present
+    #     applianceIp: 192.168.2.2
+    #     cidr: 192.168.2.0/24
+    #     id: '200'
+    #     name: My VLAN
+    #     networkId: "{{network_id}}"
+    #     subnet: 192.168.2.0/24
+
+    # - name: Create appliance Vlan 300
+    #   cisco.meraki.networks_appliance_vlans:
+    #     state: present
+    #     applianceIp: 192.168.3.2
+    #     cidr: 192.168.3.0/24
+    #     id: '300'
+    #     name: My VLAN
+    #     networkId: "{{network_id}}"
+    #     subnet: 192.168.3.0/24 
+
+
+    # - name: Enable Vlans on the MX
+    #   cisco.meraki.networks_appliance_vlans_settings:
+    #     state: present
+    #     networkId: "{{network_id}}"
+    #     vlansEnabled: true
+
+    # - name: Create appliance Vlan 100
+    #   cisco.meraki.networks_appliance_vlans:
+    #     state: present
+    #     meraki_suppress_logging: false
+    #     applianceIp: 10.1.0.2
+    #     cidr: 10.1.0.0/17
+    #     id: '100'
+    #     name: My VLAN
+    #     networkId: "{{network_id}}"
+    #     subnet: 10.1.0.0/17
+
+    # - name: Create appliance Vlan 200
+    #   cisco.meraki.networks_appliance_vlans:
+    #     state: present
+    #     meraki_suppress_logging: false
+    #     applianceIp: 172.200.0.2
+    #     cidr: 172.200.0.0/20
+    #     id: '200'
+    #     name: My VLAN
+    #     networkId: "{{network_id}}"
+    #     subnet: 172.200.0.0/20
+
+    # - name: Create appliance Vlan 300
+    #   cisco.meraki.networks_appliance_vlans:
+    #     state: present
+    #     meraki_suppress_logging: false
+    #     applianceIp: 172.16.0.2
+    #     cidr: 172.16.0.0/24
+    #     id: 300
+    #     name: My VLAN 2
+    #     networkId: "{{network_id}}"
+    #     subnet: 172.16.0.0/24
+
+  
+  # - name: Get all organizations _appliance _vpn _thirdpartyvpnpeers
+  #   cisco.meraki.organizations_appliance_vpn_third_party_vpnpeers_info:
+  #     meraki_suppress_logging: false
+  #     organizationId: "828099381482762270"
+  #   register: result
+
+  # - name: Show result
+  #   ansible.builtin.debug:
+  #     msg: "{{ result }}" 

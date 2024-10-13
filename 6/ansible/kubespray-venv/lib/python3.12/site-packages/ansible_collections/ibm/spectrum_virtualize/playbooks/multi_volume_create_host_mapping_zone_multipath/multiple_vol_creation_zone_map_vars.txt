@@ -1,0 +1,30 @@
+application_host_details:
+application_host_name: linux_host
+application_host_ip: a.b.c.d
+application_host_username: username
+application_host_password: password
+application_host_zone_name: test
+application_host_wwpns: ["10:00:00:90:fa:94:20:d0","10:00:00:90:fa:94:20:d2"]
+
+cluster_ip: x.x.x.x
+cluster_username: username1
+cluster_password: password1
+cluster_fcioportid: ['1']
+
+host_name: linux_ansible
+portset_name: portset_ansible
+portset_type: host
+port_type: fc
+brocade_switch_ip: z.z.z.z
+brocade_switch_username: username2
+brocade_switch_password: password2
+
+volume_details:
+  - vol_name: vdisk_3
+    mdiskgrp: "0"
+    size: "5"
+    unit: "gb"
+  - vol_name: vdisk_4
+    mdiskgrp: "0"
+    size: "5"
+    unit: "gb"

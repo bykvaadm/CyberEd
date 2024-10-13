@@ -1,0 +1,100 @@
+---
+#
+# Configure Fabric Port Policies
+#
+- name: Configure Fabric Port Policies
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  vars:
+    # Create an anchor for api_info that can be used throughout the file
+    api_info: &api_info
+      # if api_key vars are omitted, INTERSIGHT_API_KEY_ID, INTERSIGHT_API_PRIVATE_KEY,
+      # and INTERSIGHT_API_URI environment variables used for API key data
+      api_private_key: "{{ api_private_key | default(omit) }}"
+      api_key_id: "{{ api_key_id | default(omit) }}"
+      api_uri: "{{ api_uri | default(omit) }}"
+      validate_certs: "{{ validate_certs | default(omit) }}"
+    # Port Policy name
+    port_name: eth-pc
+    org_name: dsoper-DevNet
+  tasks:
+    # Get the Organization Moid
+    - name: "Get Organization Moid"
+      cisco.intersight.intersight_rest_api:
+        <<: *api_info
+        resource_path: /organization/Organizations
+        query_params:
+          $filter: "Name eq '{{ org_name }}'"
+      register: org_resp
+    # Config Port Policy
+    - name: "Configure Port Policy"
+      cisco.intersight.intersight_rest_api:
+        <<: *api_info
+        state: "{{ state | default('present') }}"
+        resource_path: /fabric/PortPolicies
+        query_params:
+          $filter: "Name eq '{{ port_name }}'"
+        api_body: {
+          "Name": "{{ port_name }}",
+          "DeviceModel": "UCS-FI-6454",
+          "Organization": {
+            "Moid": "{{ org_resp.api_response.Moid }}"
+          }
+        }
+      register: port_resp
+    # Config Uplink Port Channel Roles
+    - name: "Configure Uplink Port Channel Roles"
+      cisco.intersight.intersight_rest_api:
+        <<: *api_info
+        resource_path: /fabric/UplinkPcRoles
+        query_params:
+          $filter: "PortPolicy.Moid eq '{{ port_resp.api_response.Moid }}'"
+        api_body: {
+          "AdminSpeed": "Auto",
+          "PcId": 47,
+          "PortPolicy": {
+            "Moid": "{{ port_resp.api_response.Moid }}"
+          },
+          "Ports": [
+            {
+              "PortId": 47,
+              "SlotId": 1
+            }
+          ]
+        }
+      when: port_resp.api_response is defined and port_resp.api_response
+    # JSON Patch for Uplink Port Channel Roles
+    - name: "JSON Patch Uplink Port Channel Roles"
+      cisco.intersight.intersight_rest_api:
+        <<: *api_info
+        resource_path: /fabric/UplinkPcRoles
+        query_params:
+          $filter: "PortPolicy.Moid eq '{{ port_resp.api_response.Moid }}'"
+        update_method: json-patch
+        list_body: [
+          {
+            "op": "add",
+            "path": "/AdminSpeed",
+            "value": "Auto"
+          },
+          {
+            "op": "add",
+            "path": "/PcId",
+            "value": 47
+          },
+          {
+            "op": "add",
+            "path": "/PortPolicy/Moid",
+            "value": "{{ port_resp.api_response.Moid }}"
+          },
+          {
+            "op": "add",
+            "path": "/Ports/-",
+            "value": {
+              "PortId": 48,
+              "SlotId": 1
+            }
+          }
+        ]
+      when: port_resp.api_response is defined and port_resp.api_response

@@ -1,0 +1,22 @@
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Create
+      cisco.meraki.organizations:
+        meraki_suppress_logging: true
+        # meraki_username: "{{meraki_username}}"
+        # meraki_password: "{{meraki_password}}"
+        # meraki_verify: "{{meraki_verify}}"
+        # meraki_port: "{{meraki_port}}"
+        # meraki_version: "{{meraki_version}}"
+        # meraki_debug: "{{meraki_debug}}"
+        state: present
+        management:
+          details:
+          - name: MSP ID
+            value: '12345678'
+        name: Test Ansible
+        organizationId: "575334852396583071"
+        api:
+          enabled: false

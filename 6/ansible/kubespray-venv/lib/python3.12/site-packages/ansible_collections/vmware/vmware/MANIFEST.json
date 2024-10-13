@@ -1,0 +1,32 @@
+{
+ "collection_info": {
+  "namespace": "vmware",
+  "name": "vmware",
+  "version": "1.5.0",
+  "authors": [
+   "Ansible Cloud Content Team (@redhat-cop)"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "cloud",
+   "vmware",
+   "virtualization"
+  ],
+  "description": "Collection to manage VMware",
+  "license": [],
+  "license_file": "LICENSE",
+  "dependencies": {},
+  "repository": "https://github.com/ansible-collections/vmware.vmware",
+  "documentation": null,
+  "homepage": "https://github.com/ansible-collections/vmware.vmware",
+  "issues": "https://github.com/ansible-collections/vmware.vmware/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "30b0d4f434ad642ba972f4553d575cea1fa651b2357a73c51753a4cee1585a16",
+  "format": 1
+ },
+ "format": 1
+}

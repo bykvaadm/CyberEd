@@ -1,0 +1,32 @@
+{
+ "collection_info": {
+  "namespace": "community",
+  "name": "mysql",
+  "version": "3.10.3",
+  "authors": [
+   "Ansible community"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "database",
+   "mysql",
+   "mariadb"
+  ],
+  "description": "MySQL and MariaDB collection for Ansible",
+  "license": [],
+  "license_file": "COPYING",
+  "dependencies": {},
+  "repository": "https://github.com/ansible-collections/community.mysql",
+  "documentation": "https://github.com/ansible-collections/community.mysql",
+  "homepage": "https://github.com/ansible-collections/community.mysql",
+  "issues": "https://github.com/ansible-collections/community.mysql/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "d19183a91727b4f55e27a7470a9c1a53bcc58a8261c6da58cacac138cb24cf13",
+  "format": 1
+ },
+ "format": 1
+}

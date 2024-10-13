@@ -1,0 +1,68 @@
+---
+# - hosts: localhost
+#   gather_facts: false
+#   tasks:
+#     - name: Get all networks
+#       cisco.meraki.networks_info:
+#         # configTemplateId: string
+#         # isBoundToConfigTemplate: True
+#         # tags: []
+#         # tagsFilterType: string
+#         # perPage: 0
+#         # startingAfter: string
+#         # endingBefore: string
+#         organizationId: "828099381482762270"
+#       register: result
+#     - name: Get all networks2
+#       cisco.meraki.networks_clients_info:
+#         # configTemplateId: string
+#         # isBoundToConfigTemplate: True
+#         # tags: []
+#         # tagsFilterType: string
+#         # perPage: 0
+#         # startingAfter: string
+#         # endingBefore: string
+#         # organizationId: "828099381482762270"
+#         networkId: "{{item.id}}"
+#       loop: "{{result.meraki_response}}"
+#       register: result2
+
+#     - name: Show result
+#       ansible.builtin.debug:
+#         msg: "{{ result2 }}"
+
+
+    # - name: Create
+    #   cisco.meraki.networks:
+    #     meraki_suppress_logging: true
+    #     state: present
+    #     # copyFromNetworkId: N_24329156
+    #     name: Site 1
+    #     notes: Additional description of the network 212
+    #     organizationId: "828099381482762270"
+    #     productTypes:
+    #     - camera
+    #     - switch
+    #     - wireless
+    #     tags:
+    #     - tag1
+    #     - tag3
+    #     timeZone: America/Los_Angeles
+
+- hosts: localhost
+  vars:
+    org_id: 828099381482762270 
+  gather_facts: false
+  tasks:
+
+  - name: Createa a new network
+    cisco.meraki.networks:
+      meraki_suppress_logging: false
+      state: present
+      name: New network by Ansible
+      notes: Additional description of the network
+      organizationId: "{{ org_id }}"
+      productTypes:
+      - appliance
+      - switch
+      timeZone: America/Los_Angeles 

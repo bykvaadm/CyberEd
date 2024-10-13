@@ -1,0 +1,20 @@
+https://github.com/CiscoISE/ansible-ise/issues/54       Cerrar porque la doc no la pasa cisco                   Cerrar
+https://github.com/CiscoISE/ansible-ise/issues/56       Parent ID                                               Cerrar
+https://github.com/CiscoISE/ansible-ise/issues/67       trusted_certificate_export_info  need hostName no hay modulo Cerrar/ revisar
+https://github.com/CiscoISE/ansible-ise/issues/73       Cerrar ndgtype                                          Cerrar
+https://github.com/CiscoISE/ansible-ise/issues/84       Question                                                Cerrar
+https://github.com/CiscoISE/ansible-ise/issues/91       Close works                                             Cerrar
+https://github.com/CiscoISE/ansible-ise/issues/94       Cerrar Willian                                          Cerrar
+https://github.com/CiscoISE/ansible-ise/issues/97       hostName in export Solve                                Cerrar
+https://github.com/CiscoISE/ansible-ise/issues/108      Es error de ISE, name no cambia                         
+https://github.com/CiscoISE/ansible-ise/issues/109      Solve                                                   Cerrar
+https://github.com/CiscoISE/ansible-ise/issues/115      State
+https://github.com/CiscoISE/ansible-ise/issues/116      filterType a filtertype sdk                             Cerrar
+https://github.com/CiscoISE/ansible-ise/issues/117      sanity creo que solve                                   Cerrar
+https://github.com/CiscoISE/ansible-ise/issues/118      revisar si request puede ocultar sensitive data
+https://github.com/CiscoISE/ansible-ise/issues/119      childrens no se puede, work around
+https://github.com/CiscoISE/ansible-ise/issues/127      ask deployment /replication-status/{node} no existe
+https://github.com/CiscoISE/ansible-ise/issues/132      Pedir debug, yo no tengo error
+https://github.com/CiscoISE/ansible-ise/issues/133      clientID clientID                                       Cerrar
+https://github.com/CiscoISE/ansible-ise/issues/134      .response['activeList']['@noOfActiveSession']           Cerrar
+https://github.com/CiscoISE/ansible-ise/issues/136      "friendlyName ", "name"  ISE DOC                        Cerrar

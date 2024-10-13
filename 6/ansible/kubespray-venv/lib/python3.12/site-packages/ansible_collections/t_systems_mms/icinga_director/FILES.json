@@ -1,0 +1,1916 @@
+{
+ "files": [
+  {
+   "name": ".",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "CHANGELOG.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bff5fe11fc8ae937e8995748829f75bcddbd2520ce3830c4f86b2997ae23f69b",
+   "format": 1
+  },
+  {
+   "name": "roles",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b37f3b9d942e8ef665c760298b361ebf9b1ee62d0ca2f1c8c365b12649cdccef",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/tasks/icinga_endpoint.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e9bff8ec9f24722912d56fe4aef10678726f43171e75787044ede75fd922f8ed",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/tasks/icinga_serviceset.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "58759313dc7e005b8305061f763914db20a39d49b355d73d15cd216cd6891edf",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/tasks/icinga_host_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "df94796dfa810cdeebaedf6d6aff926a5dd561e92d620054edea2caff09bcc77",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/tasks/icinga_zone.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9f60ea308d382cbe5bff05ad356e83642a56311bcab056ab43d3f44bc05aa151",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/tasks/icinga_hostgroup.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ec9efa8c517983730ba94a9fb8b2887d7403b3f9a8a4472df659c393943a1fd5",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/tasks/icinga_command_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8557d9101cbc474d273d1a79b36b9267384e815d516c7dc624c259c8ec3c9137",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/tasks/icinga_service.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b1c45c43c43b4a9b5191bd82d7f7af12fea23b278f6824a47fbd92430d0e6b9f",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/tasks/icinga_servicegroup.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c2a6537dcf570c01b0174c1d2a3ec0617f6e2c3b88a3712f729179dbe042332f",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c78b9cb1b47b8fed5166803121a998d0f7cd44bc7840f2a5fb9074dfd7bae6e1",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/tasks/icinga_command.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c9dfd5df8e7f84087bfbb6ef993f49bb8db875c8b09496f4c1a62550ee430995",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/tasks/icinga_notification.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b070e387a00a888c727fded1c0e606071a3b17d330e2b804e09facf25b489b69",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/tasks/icinga_host.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cc7a01b09dbc8f55da467561db37a50597fe0f898ca4315b9be142436ed2adb1",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/tasks/icinga_service_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "42278e746dcc5a542cb09118c077bd7b09cf58c11c2bde8a1d2b97cd948b55be",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/tasks/icinga_service_apply.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3d698077d5a521445d4ffb3b99da0b00ca68f4949c74ce52a12c0d46a3dc035a",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/tasks/icinga_user.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d1a71b5185068e8547ba6b5d8b984a89bf2b9aef5a5570fb01187e3308c6be20",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/tasks/icinga_timeperiod.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d93eaf04ff4345e95f5442b8d65736936a65db5bb3bdbdd8c88dcaf800133b62",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/tasks/icinga_scheduled_downtime.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "78e3755dc97d04e11d42879ba76ca3d2ce77b726bb5bb8b08892a7f996ab746d",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/tasks/icinga_notification_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7b40258afda97cc0a454a143530b109c6859a5e4e18a525ab091c1b06075cc2f",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/tasks/icinga_user_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e08ecac2e205d4ff1a3824b2053f3c916b124f2c6607b53ae8d7a906e2aa0cde",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a1bbd5fb6ba8c97382aa71c8637fe65e8604e2200a3cbf7a444390f816e51b62",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "780a4de8019cec4270f3d69ea9b72cb2198e19efc1a1e48bf0a82306f1b6055c",
+   "format": 1
+  },
+  {
+   "name": "roles/ansible_icinga/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7c9b37861f350497997875e2d82293fee8d82b0ebb897e3cefa927b67ce50321",
+   "format": 1
+  },
+  {
+   "name": ".gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0cb2d7d561d8f1feb38146d6c58c6143c7568b624e2ab6cf03ebc6247e35c991",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/CACHEDIR.TAG",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5953156d7e0c564a427251316eaf26f8870e6483ae2197f916b630e4f93e31ae",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/.gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/.update-informer",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6973fbeada70e24697012fa61ab1bcea12ccce8a4a100228d9552debda751b7e",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/a8f43d2590da64e1",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f3c325152a597a5a2ae73297404436dc652b45334bc2c1afa31c18bdf72ce650",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/dea85dc79ce0a226",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "44d421c42d8596dc5284b44dc5cf943418d64206b276a6f37f63e7e97ac7c802",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/d10281405cf51132",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0d1ca4e2a481c8c465f077f42bf79e5653d11cc2659f5a774f473f7c94f48c55",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/99be4d61fe8cf68",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b15f64b5dcc39e233b6a963180f87ab10c6ee30f49a212b422aa1613aa9d109d",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/55c979d5e70d4bf7",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "247841e1bbeff434c978d83814dd3c5d45a3487c55a4a2e6f6997f6adcb2e7c0",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/af3dddb321c91c5",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "15637d162fd8e4fdd22e32f9283692dc820e0f1468a395b18acafe11490110ed",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/8bfcf01240b2f443",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "65a39d23f64b01b99544a21789bcf2a87f19a56da761fb903736dc2d4fafc798",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/88a6e4a9a4058510",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3a8a2824caba72d3117b0f9b252da15bce36bb75b853f314ddfac00de7f4e889",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/ef8ffda5fb8fdc1a",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9361d746afef9ca1487a244da510abda6fce9b5edc5ab6112bc24f46b70945ea",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/7ff02964873d2172",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1a1a5f266fcd3a59cda26e0a5b1170e5c3c7ab1ba26ba323f77d6d2b308edc3a",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/2ea9bb67c320bb7c",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cb7c14bf96529d15ee70c6c24e8265d6f28bd27b25a559e564ee6afc6c0f948c",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/e0022fef72fa2e45",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7503d3c90a5150de35675210c087e1534eee2c0344b863c87372081756ede969",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/71d56c00a68298a8",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "83204e6e041ea221beb6dc557fb68ab113f6fd340e0f44f1fc3fc4bdbf705bcb",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/80f32c78a07bf95e",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cf3f289e21c6fa0b2fe45bb2de7c2a7dfd130e5edb55ce9844a591fc57840a49",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/1f92080bb276fe23",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b31950127b20da96f28275720a8290d3aeaa310b9f84e5558e20a1ba1345651e",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/6b56aeea5022a672",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4eb2d86c0b34934afcedab28078fc9eebe193caa432d8a4cea5be682788c27ae",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/890e9922cd35474e",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2bb6343fbad6fcbcac6735bd36465a5e296cda29f18a3ef18838a872e15b51e9",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/480aeffc7827862",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f4342838c3dfd82a8c9d0a0182603e29221b0358d185e0d044e1a1f573a53c4f",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/b951b99f9db05f03",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eddd6c9097eb7443be36e7b20536d2bc4c0a6e2f5bd49b343ab561fb67101d46",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/2fe927627d70b0b1",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "62468712986220750e5e1726519a488a7375dd267c4be456deb87484497858a2",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/baff7f66b7d12f8b",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2f5dbc00997414a38fa964520658be6161d657457040502a6784fc01e0559091",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/46882997c46243fd",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0c6d4357e1b397cc7d827b416136e4f41ba4d1574ccb347d11a4fe0914deb5c1",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/c4c48aaa7df9af5e",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab05404d8eb94b92a3ebcaa4222e3454935326eff4662953d78f881427feb9ae",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/3c044dcd881c63be",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0ac5cf9e134675693d5e48f9a800d7bbed9820af8be9e2d5c6c0ebe0e9838065",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/801d535a384f67e8",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "335976c78bf1ec5b934c407d063728f93f63f4363108eb1a532c2a7aed26bd94",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/cf15e1404ff0aefc",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dc0309f2948e54f0beaea9f86290932a4d38bdff786ff3300bce23653643236d",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/f7441226972a3fb",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a427a7557692d922255b7b08857695bcf866b32ca15181f51fb886e9cd1e5fa3",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/c4a3d082385c03fa",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "62d1adb5d509279336bbd10178655038afb712febb8c3ce4e62bb2fcf4653fe0",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/340efa3b2c1a9f7a",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "19e135d5f1e24584b671d99d669c4bd56b44d359cb61b0bb80aa895c1d612252",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/610140e06004d4b",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "980b578cefd41d8b1fe0edcaddc234de6c1d109b970bef3048935dc8712f5688",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/fc3f3de7c559c9e1",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "00250c40f64946f70a49b1701d8934a5da780b3a3b4704803a7ed5d79119394f",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/c5188d16b72e41a4",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0f1b3c0b54b0d88fb1c59a3cd603ae4d1990b6cccd89591613fa06a1b19a0f00",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/7faa69fa64e82ca3",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "af81b11dae7fb540cc631662521e417befc66a091cd3bdf8adc8223ea1823473",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/a5de4e27544c23bd",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5c8a529c67ebece5e2d4329b13d246370c8963ffc005e5cd735324bca99f0122",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/c2c198a772236b14",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3b6701506d15705b5bdc107419ff5b176a53dcd63f49dff6d5e57dc2f3f66529",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/b5b1760e1d8ee041",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6e815158b7748c4975b43236a9a84872fd298c4e5722a09de5a2c53d0d52aace",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/97da97c0199136ff",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "78aa05f7038fd1b88c0e6f2e32039ed209aa3335eb081c7e3483469e79a9fdec",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/9e197e07eb519c0d",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6f931206e494fde61b9d357d003d45645913a757aef7a698cf86950ff6e4b217",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/52b1e19709e30830",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f5e3bbfd9d3a45e16e41d666dacbae8916b686a96c7bfdcc6cec3ec1b8d5c24a",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/e7c591da8ca68da4",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fc756b5738e597a5edd429724909f70f077aa7a7ab067ffa8c15e622ffd20a89",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/f5ba44afb6ba4b1d",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3de0ded3d972672f04e3074fe2a6fad88d0e0329ed63cee29c312e00ebb10628",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/4f6d36b779355f38",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5ab8c0197e1bc314874c586fd6ec256f318608aa78bbca1a4aebe6288f15e566",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/28601eb08eb822c",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eb95a14a7f79cb26755f317afab040b7c47fd93b773d0399168a2c62a9f6e0da",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/55fa7aecb0d284dc",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a5312a252ca06d2fc6e60d78c2084335a21e9019d49d4a4bab186a7bf7ce6c91",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/c994e2f45eca1545",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2c2e65fab0172e551223d77985087ea8e0ad31ab11dca0bba70af9977de15812",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/ffa223ffd3acf170",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "800f2cab59b4a6288c9dacff357a5b8b2c8a26d4995656719b8d28e96ea9fab2",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/88f99bd60b22fa15",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2346f668bae0a8eee3e66e156e5b0fcfc95b046e2e4dcb06580b383b7ae585ec",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/280d58269706d487",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3bb23745c124ecf05f872717ff5aa6cddf823c738c036b9dc3f1e14c6ca9ef6e",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/a50cdb40db608da2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0075d2cdc8ab8ea72294ccbb3cc9ffafa8a2eefd81f3023c05b4b6d4cab9d036",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/e8f919ee86b717f7",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "555d324821fb0fec6325a4d78a40e3b84c8fce5482915b1137dfdc3a58a4bcf9",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/b6180c680b7bf977",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "50c17f98fcfcef914d69542eae235c9724ea32750a557b726af8667896e58674",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/f6b43b4478a0a775",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c980645c83c5673e4c32a24eecee9449a3bc3e3f5891679c9a41c9fa8a216f7e",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/2a6949a233f3867f",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "10570109e047bc2b2cec07f4485f073d65ace5aeb9ac1186337b96564ecfd2a4",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/3e7d690b1e235f19",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8242e2c359de7e1e74acd099db5029ee9be6b7ea8056d246c7d3325432865f98",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/4e023a75d48ec090",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "578b80e9385a5c8fd0bc15daba6338e191417877cabddcab0cf99106a1f95e43",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/c9e897c6dd751424",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2389bf0f3c2e997f832254c2dc4694b3e0b21182bd40a29c76343e83d4e02488",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/d7c36ecb6bb3d36d",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7a5dc7f8b853bb65f3487de0b82ab0a856ff9e387b3b0f30beb48410af6700c1",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/30f53be7f48d500d",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5cc49302c2ac89f7135eb2e00d52890b6357c96287763fd9a80a4e1bab19d804",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/e3ec5feb927d46a7",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2883ad99542168ab968f7684250392f076c302ed99b003807bfa27be215561af",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/ff0ca6dd260458d1",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "aeccbd1644b9babece4a28aabc870c0df515f8927e59054501b595ede0601631",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/6e30d6524b6a0381",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0042846c530a5fd20649cc8d565fec1b470bb5389e6cbcf01961ba96dfa0a0bb",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/b7a4f2f859599da5",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b0b935e0b5874432e2f563379128ced3440544947189fad6014a7f918e86c8cb",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/685ce0451b2097bc",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e122da1882ed9d32c8f9f54bf1d310b3c0a85041a6bb0a1b5756f29f6844aaef",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/da21ed9ff85c7419",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9866a8a7f8b93666101975c9e4df2896f4570837a7886436c41b78b1f6bd410f",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/15995263e4698ea6",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ea356310fb569b692c910fd610e76fdd73c03ffbcba68e36cf85a33420c696db",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/d01376a87b7ab03e",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9a79a4b4471e1319195bc352f3efb81ff9ed2df3863c857c1079bb65b1f0f4e9",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/70ba48782534517a",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "82a333d0dea1509fc8182addc5afb02574e61b0df4d78c2504f6b3cf9b698100",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/a36ac91545a7cb86",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "aa2846e17c6df0c7f33c36bfb58403acc37fa0ce17e0f78a9862999f2d7b365c",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/a5b57ea8e028cef8",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "97bcebdab1c5b7b2c463304ccd028a5192f1c6c2182a17adf3ad74a7a0aff97c",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/a485e3d47e55eef4",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5461419f823a7057f6d072af9f0285857d5571d28e5e9b7119122404abafdbf1",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/1330542aeba66062",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3205ee96911ca4fea5b7ee4e7128426fed89d66e7513989e720d61ef991e2cc5",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/b7ee1b828318e2e6",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0a150ae69c5e11ad0a598a3fff085e70826f0ac767ecb61a164e9a01aa61dcee",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/279f0e735f233593",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "76b7504c517ee9a21f296ef1ab9b05663e9c3024f39094ac65799281a8205f99",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/7e0c03faf8b0a547",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9a79a4b4471e1319195bc352f3efb81ff9ed2df3863c857c1079bb65b1f0f4e9",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/54f0295539c6d48c",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "797612120a32f4956b907a579391652a47040f72a8d84352cdcb8643c0112832",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/e642649282d12aff",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "88312cb3c5232befe481559ba47f115941f402de173a6d1b7f6f6cac38a5bc3b",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/1e75fc17fb5d33bf",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8444700f3f54c2bcfab81275e052cce379315ccf51083a462c16b4157c80a16c",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/e0084dcb88d81ee9",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b7bc34ee57665e36c8adfbffd8b9df5d6eefc558e0f1f870198ce4971deddc07",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/53ecef28bf35910",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3d189f6effc71beba7a382c1531571057239b2d04b215f7b40b364c3fdcb45b2",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/1f41d74e300d35b4",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "60b150a77b7c27447586413b4388d5fe0f5484b44b521e9c5116c64642a27ecb",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/3c86de72ae397c0c",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "331cd89eab3ceb043f250c03c8d678e66faa3e6a026f8bbed00409d216da8323",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/e699ec6ca914da70",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4db344bebc4bc43b27d3b86fa1e94d6954b93349a82dadeeb26d5936811747b7",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/511dd20473787890",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6bdc9f92d4b92aec7533d46f9d6a9abe2e688fd2e334f8172ccf28efb1bf048a",
+   "format": 1
+  },
+  {
+   "name": ".ruff_cache/content/dcf4911b18980b22",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f8545cfead9d95f22a3aaaf71668e8a13731df41c873010ed88ee2d2e292ae1a",
+   "format": 1
+  },
+  {
+   "name": "CODE_OF_CONDUCT.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "14ec928234a7ed52bf8b458d31e4862335111e477e4dbe7fb543686c24115140",
+   "format": 1
+  },
+  {
+   "name": "changelogs",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "changelogs/config.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "533b067a4ca460ac9d8d401689b78360b8cb325ec06af332acc7e90a23517247",
+   "format": 1
+  },
+  {
+   "name": "changelogs/changelog.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f7c93b35261c98a97f73024f429268545ac02762152bf5824536dfbbfc77617a",
+   "format": 1
+  },
+  {
+   "name": "changelogs/.plugin-cache.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2df09f5208a836313789cbc89033a9980130fa4f079bb991c446369f16417e83",
+   "format": 1
+  },
+  {
+   "name": "LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+   "format": 1
+  },
+  {
+   "name": "CHANGELOG.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "89b9f064be870f73c4e46d1e8c274124dc095ccb1abbe45f0a0157b799d7aefe",
+   "format": 1
+  },
+  {
+   "name": "renovate.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "62c0ece7fb8333ae1ce74004a965d9251944b4c3b524c986739101d6c5e765cf",
+   "format": 1
+  },
+  {
+   "name": "tmp",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".gitattributes",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b2deb48e94193846f3933845436e4b28bd819b7e54f87f713c4e45925e84d645",
+   "format": 1
+  },
+  {
+   "name": "docs",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_zone.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7e3f3fe4b7e0a812d4743405745909d6481d851894dfd488eac6546a798695a9",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_endpoint_info.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "36722a073e303af866ecb3ad3364a665bf9e2740ae582afc3092b18faf8f4b87",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_host.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6378fef7589700f056c9d8a12fae5ea0d8c22b8b90a50c663df09d5a43e5129c",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_command_template_info.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3da218d0dbb27c20e690a14a74a414d0f401dc144d5b9389e66a6961261aa5c0",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_service_info.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "62c8fb18b4d7056aab913cb4a683b19e15eef08d5d14c913ae91226f4c5a0f74",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_service_template.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "37e36c740c7e6b3876947b04a3bf9cfcadcdae1c38f535ceb2d09f95b2056689",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_servicegroup_info.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9613ced26d88583c5e8b1dfe92f227dd37046e7ea32471a96ae2b3806aba1950",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_deploy_info.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3f9613e9a74589b3bae133354c2d1aa74958c49b738ac05d63a30024eaf25139",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_notification_info.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "02229ceb6c730e09bc322d92c73656774f0ef8a84dc0e428e481511331a81368",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_zone_info.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1f6ce177de5836a13bbbb6bfc67614e3b60c103e0ef90b41c1eeacf6793b4ccc",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_service.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6ebb05e2599e7209415f7c68c44beab0ffd61dcd15c8344b02371209356503dc",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_user_info.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c0291f369e984dc17fa24623ff8b77162356c612cd0a8512a10765b79545f72c",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_hostgroup_info.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d5a91b47c69a526750634e0535b73924a530a400b9b03fc62d5f6a707eb41636",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_endpoint.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "de70b5cb8556c3cb813bcaa80733c7809c1d996052bcec8b17eb551aa96ff59a",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_hostgroup.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9aa4678fe6a1a97725e5aa0781d81e80df90c8f75fb488efe7277dd0524decd4",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_timeperiod_template_info.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7fb423387c2a52d19197d33eadc49a73c86ed964ce0c4e21b8767aece81001dd",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_notification_template_info.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0ee812a78b0cbf2595fffa0a704d7587e651256b234b36719452bb139bd49255",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_user_template_info.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d29aef1b3f19b06b571c62213946914c0426aa1896e62f76f7ed4892ec988834",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_servicegroup.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "730dc65be0476a0dd23c8f658ad3e06294ca0804aa55ccb80a579b40574a58d6",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_user_group.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d70779f6814a1f580fd9d1ee0e8188c4e0487d0b9f0b0ccaaa93df8589b67242",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_service_apply.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eb67356f1f2437cc8e4f1a570f1735af27b0bbf2383c1a9f6dab8f1349e11f43",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_command_template.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "965461f36fa7c884d884030180a5a13ac408834673e639baa3964736fea691c6",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_user.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5bb8f0152e79d77afc4dbffc07b4170e705bfc1cd4ffef6e93ca6bdd8e502002",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_notification_template.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "42edb7ec5e43d8b559781060fabf1a4ceb4c692312750145947ee6271518241b",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_user_template.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "07b9a18acc6f205a46601c00c442e8c05706867f0735b8812aae3be6e249f41e",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_host_template.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "95980dc3cdaab2f1c10a1dfbd53323fc1b7f7682d8d2b91bc8e19f8319df8498",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_timeperiod_info.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f48309e84dc23054e2623f640eb58c0e937f10b92ba893708a6ce12e2c281869",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_command_info.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0d8a2361e5a037d449586897417aae9f7eecfd29335439cb4dbd5619d668e6c6",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_host_template_info.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "88afec87ba8621e00a84d4cdeee003bc589612e1fb2ba1d0743fc8cc3320607b",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_timeperiod_template.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a80be9677f278023576be473bd9a8550c17a211dc4d60c6bf2c3be20117a3d00",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_deploy.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "05b3b9b519d809a9d7985dd61abf23df540430b75be3583626723d0b89dfdd19",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_service_apply_info.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ff327b01ffecb5c3d8990ba10d8e25e41f1e62a96c8205ecc494312b1aa0d1f1",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_service_template_info.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5f3edc9fc3fd22b89b50feb1ab221127e414633c02b5e4facddbaee33f3741e3",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_director_inventory.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a18382d5309e18b5da7ae4fe1b8f2acd4a3b9c064457482dffa1893503ff09e6",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_user_group_info.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "07867ffe8441332164f54c86ec76a0bc39377d59e7ed15fe406ea7255c6fdeca",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_command.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "67fd79f6086e02db5a9805acd43a869d57cde2ae866e562c9d244dcfbb9f71e8",
+   "format": 1
+  },
+  {
+   "name": "docs/.gitkeep",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_serviceset.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5298423904950a41b5321ed36d86af594aaebb1b4fe1bb3fbed8940e477b5685",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_timeperiod.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5c0a37aa504901d3d9ebd52905be4741d72ed2efc168f0f6f568978cdc579892",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_scheduled_downtime.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b868e4f5daf0ae095173a718b0505d65ca9a30a369032672435be9b403b2fb9f",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_host_info.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a09868964d7e6300fd58a9054d2e560cf22e65be434724e6d5217830cd52a2b1",
+   "format": 1
+  },
+  {
+   "name": "docs/icinga_notification.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a12fd931deb174a2a4a243c935779885043c619619de57d0984279a89c945528",
+   "format": 1
+  },
+  {
+   "name": "plugins",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/module_utils/icinga.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a17012640e0de964ad91678334aafd451c37e18566e4bb852374c764f0e857d8",
+   "format": 1
+  },
+  {
+   "name": "plugins/inventory",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/inventory/icinga_director_inventory.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f6d677c32e90198359cc5fe42474bdd4cb25d82cb2556a3a7c5b737a6d08d947",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_command.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a8fa29d2cbb0f2ea67830d1f7cdd4217b760fe6d03ecc6f6066159ffdff87f9f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_service_template_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2303141e8b11edad9911a469551fdfc1e450d58cafe34b8b7e8dbf545f0ae180",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_service_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2e47b786b790b2c0b8c058df17dea739cc5cc45a0a4b6cc466734d9f345367db",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_user_template_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c3301dbc43e953c7cb9b56994cda9d4844884afd6114906f44db726860103055",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_host_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8b5081dcb6ae0149cf547607a6fb1be817ca87a079b651067176bf80fdc9af51",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_servicegroup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ce924104d8f52d50fa522138f2fc472e118f5525336bdddb52d4b32095275a10",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_scheduled_downtime.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "51642216001600626532d68ec2f04fe865282e76e16e3382823ee38af896c989",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_notification_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5f6374a12b9aab7e981e72b206381ee687410ca5ce7ca47b8e379f3f6c29f3f2",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_user_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4481367566184f3a2ba6e313111296e84cd4f0ad117dac397fbe2c4762261e65",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_service.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8f9813b1e0e344bca43e48a251fc8fac757c641a66db68906c8ab58bca35ca87",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_servicegroup_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ffbf1634660dbf0985234557743a4ab1a5d8567f9ee5343547635e7c211b5b97",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_hostgroup.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "46ff5b3be07866670ae785ee78caee7c6bc25fb6d62fd92d1c87d9472093b82f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_service_apply.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ebcc40c3a0203e675a6e663ddfa5a04f46163aacda9656c6b6506d4238991bd9",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_service_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cc9436d03bee2b17c26954f5d843e8150cc01c2c2224f837809a9a1047bcc142",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_endpoint_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a841dcf4afe8b8acc791235bbc7a0a1fa5a6b88807418b72b24ccdc797a78eae",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_timeperiod_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b6d7cc53a7f1bd68ecf83019500c00990564c94944bac5b4e97342fcf5d36a42",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_command_template_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b4cfa514901f2dfb2d856345e0a776259fc922ca1ac14a16f50c10cd78bf2e8c",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_user_group_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "56771b05f6f7eb9406e5aba91ab19fb7d967a9bcebb9077bdd0a88393c0db482",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_service_apply_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4bf0d6189211a3ba50d551d961ff2e63a21dbc2efa48d3b04c9e271fc6784a3d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_user_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f5737b37547dd21fd87d02e3f65015a79bb09281e1cb35e5c38f64f8c6eba601",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_zone_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fec38f17e6e958b627db3a2810325d5b58f617b7c3194387ff2b770a9f7e22f3",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_timeperiod_template_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "80fb935ce57b07246654bd4be07a6575a0e3dec9c049dadd8c5e72bc071a49bd",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_timeperiod_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "26590a34ea402025ca52922d935865064e16b0383c13ba80abcfa861d470aa8d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_command_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3a226fe05c53a2a918a26b05bdf1b68a0de18b960e193adf55250b0f9107dba6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_notification_template.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "45d0b6834b9f926c5836735d4abf6640697c137fa501a4fe448ab04762d28024",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_timeperiod.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e20a0bb37ca2465be7e258b6ad21b412da721dd535f769dce12a634ac579c8b3",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_deploy_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dd5a86d613ebec121074b7dbe31b3237aedc0ce9c2a5ff2a5bcb5b6cc06e7bcc",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_host_template_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "23d5209fec7f02ddc598ccbb7ce927576d6eaad210d87edf791df00726632c90",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_hostgroup_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7fa2c16ec9acdbc5d18903799b1f4e8a8546a2ebbd5d406e60affd4c33f2b9d6",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_notification_template_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c224a63595d463c69fe6e0b3bafc53ee65aa72274f8bca299bf0f99512f966c4",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_host.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0286704bb411b066f8edf3c58c5b758f7c31bfe87af58621dfa2d5bf7362e678",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_command_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0b40dde7bf4d6541a5cf34de42433c2b0f0b81b9af85c1e47bcd45eb72f03994",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_serviceset.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "caef2bc7c785776e783494ee6a7563413d5d6b4b41b0161f1993c0fdfb3bd964",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_zone.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d9d2d7e20330ac0ede0f2a94bcb472b043c216ded2fbefbc2669f9ab2608286f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_host_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "21135c64fe4175257e9b877fe7f18da25a5ef8789aa0cbe973d33b37b99fcc3f",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_user.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7709b327bab03b9b91a254f007a3a5ed0d9549ac7592b11cd4830c2b738bd50d",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_endpoint.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bc38ae18e1e782b536ed420c5132ddfe17bd68de80ed122af334d07a68d65828",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_deploy.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "579551614ce7e015a8a72dec6f8c86ea433b3bcdceeab2456b1ba4eccb6878b9",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_user_group.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1fc4773f70d8e731215c11067f7972f81be4c22c7dc4d177227774310a3305cb",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/icinga_notification.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d465de6fe446ad64a4fa918d5d01c23becf25f4fe455caf5dc63e82bdf2ec332",
+   "format": 1
+  },
+  {
+   "name": "plugins/doc_fragments",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/doc_fragments/common_options.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4636a41b3a10c7786474a983e2e95c4098b9134c4ea779322639c4907380714e",
+   "format": 1
+  },
+  {
+   "name": "meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "meta/runtime.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a3d924236d81bfe291b2bf16c86cf27dd471a52d73c17a5ba6562f92f658c065",
+   "format": 1
+  },
+  {
+   "name": ".mypy_cache",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".mypy_cache/CACHEDIR.TAG",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f1c13afc555358c9033b0f1f30aaa177fe88bda40f4b8a24598400d547876adc",
+   "format": 1
+  },
+  {
+   "name": ".mypy_cache/.gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6a69da670d11530d37f0f0cfdc7bed30b78ea6434e24f7a73208b982e29d322c",
+   "format": 1
+  },
+  {
+   "name": ".mypy_cache/3.10",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".mypy_cache/3.10/@plugins_snapshot.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+   "format": 1
+  },
+  {
+   "name": "styles",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "examples",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_notification_template_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2cec40152c403178b9160c94582f6b6bd95480dc190b121dc2c74a87c6036a96",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_service_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f64b725f3b36a8ebc84549982c7d451eaf7ccbd2dd564654e788c1093c9ef868",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_notification_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "da8a188dfe62b5afb5208cea0a0b147f934d6e28c720a07a2719c2f95dfdd0a6",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_endpoint.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "971aee42eab419fcf307a136e3518839bc10ac81650c67d77387fb5a638dc819",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_timeperiod_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "72d8aa80de89baf1469f8b2092709816eeb20d53da11542a74a07765d18cc398",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_host_template_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "441341d80fe2703c0be2a529072b30252164133b9af9e70db4fddf8b726ef36a",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_serviceset.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2021e4e10dc0b86f7b327844b9e898171b62bd55fc959bb519ba2afed5a1611e",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_user_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e8b33a987d52a95953397a2ca2d18400287bf34fff70729341da937b47a35593",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_host_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "832c3073baa33a489a3a05801383e7b287d864708827a3c2b59f974a0991bd2a",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_deploy_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bf8734951ae925f622941c4828fdb7e966ba3af164a00842d7b137f484117e9f",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_user_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1723d37491b4fd7c660635cc0b408f1aa4e9cf60f57263bb75e30681caa6fb47",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_zone.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ad5906f6dab6417bc12651627876988c60cc5d213af80154fac45a365064d1a1",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_user_group_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6e03996b374ca3272b16ffa95eccab306c3936807c02aade2d33fbb12fb4bd9a",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_servicegroup_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b34f0040ed5e1dacdbd6bfb6c16ceba94b8bb418b927f493e9e9bf88ebf12fe9",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_hostgroup.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e02bb643589ce7ca3e1eabeed37cd45f67874f42142aa599d484bbdeb0e139b2",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_command_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9a7c82dd3d60483fffae3ec661ced8659e63d93c7adef28235e7d86e622c01ba",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_command_template_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d3a9dbb74bb1263f63fffd6a369cd4ad7118ee3c10e5eee5fa3c63dc90c6285a",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_command_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ed334b6537dec4a946336d881fa4809e0f0994e8f95ae5ece59307386fa0524f",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_service.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1359e5f079dadd1d24c9d2e57d1187a426b11ea1340bd594c96d8775261129a4",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_host_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cea113a474d0dcafbc19e0932873b965ae3719072f5ce4d85ce3c82b9cf1a730",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_servicegroup.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1b2e7bd3e7f86fa5097893f9e8645c0df9637f21493564d134072da8d707a8f4",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_command.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a75c6867d1e87e94e3977e31e268f749116f587482bce1a6bdf6b93b871ff539",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_hostgroup_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "59834f05b1059d25503081eac4a9fc04340eb05be49daa2f091c57c1517196da",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_endpoint_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4be975be198bee1295143d018ba75ad3f3eed8100739ee682fc73223f78fa986",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_notification.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "db33c7cc5d894abcb65234ae72706cec7d3d2fe5d553621b6abc005917896bc1",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_deploy.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "519b2c5324aa06d18e955454873d6c8ab37f952d4f9608551f8aaeff4e8d9c22",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_host.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fc79d130d13a8893525d0bbd89779dd05e95d177f25d5c504b2f42521008b6e3",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_service_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "25d23c86e75ab3567a1f9400d29275d75673e29fc96d065af5fc15ab9b53cc45",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_service_template_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "36cc569afd00a513c2919aacd2d0a9991205d149a93701ff54da21d282f0d5bb",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_timeperiod_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "955f1307fe61e555de9af0024c0dd9b7d7f6082794b5b9b12fbfda8d96620525",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_user_template_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1c7951a4d17f9a64f9416d21101966f3bf571da02a936b266239a2e89ea40ff2",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_service_apply.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "115b28e14dda5fa6347d6c79982e2377a4ddbf2df70de5b3299d40605973f100",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_user.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "816381b16bfd619b2854bfd918bb28a8f18d8fc49babe9862d52bbb35eaa0135",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_timeperiod.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3274badeb1afebe1f951b5d9a44ec1f53beeae8f32b32df2dc7fa687e94035ba",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_zone_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b452657b89bc0f8a64efb44ff5abf745a140c3c110e763490faec07b8453cf90",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_scheduled_downtime.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b9c12a40331ebeb1e162ffd372765d58e5ba8a4e879008d8bf4d15c8c695dcef",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_notification_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7e82c7a810d5343e8a0b6d4be1b7ead92ecfc678f4b155fbd930b0751a0c1956",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_user_template.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3a72ee6a8f2ba46b18a9c40526a27c95beb272a7b574a3f6ebc4eceb54c5bcaf",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_timeperiod_template_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b727f5520baccc05780a18a68932c4f1d0df6225f8d8bb7c846cca8f4f8d3569",
+   "format": 1
+  },
+  {
+   "name": "examples/icinga_service_apply_info.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "92bc47cd164d3589016b8aa91632cdef7ca4ea6556d96276fc8e5243d7a07b20",
+   "format": 1
+  },
+  {
+   "name": "README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "146ceb746e1e0b9779454df59b49311b3ef09b08937e46f8f78bcdfd14a63a34",
+   "format": 1
+  },
+  {
+   "name": "CONTRIBUTING.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0df404e64cab70af27d307545d9c5352afead1e5d0ffe02a5681b0514368d99d",
+   "format": 1
+  }
+ ],
+ "format": 1
+}

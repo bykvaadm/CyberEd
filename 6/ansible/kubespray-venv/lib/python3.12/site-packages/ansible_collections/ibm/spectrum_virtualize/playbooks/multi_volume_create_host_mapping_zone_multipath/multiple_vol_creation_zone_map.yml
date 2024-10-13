@@ -1,0 +1,204 @@
+- name: Using Spectrum Virtualize collection to migrate given volumes
+  hosts: localhost
+  vars_files:
+    - multiple_vol_creation_zone_map_vars
+  collections:
+    - ibm.spectrum_virtualize
+    - brocade.fos
+  vars:
+    brocade_credentials:
+      fos_ip_addr: "{{ brocade_switch_ip }}"
+      fos_user_name: "{{ brocade_switch_username }}"
+      fos_password: "{{ brocade_switch_password }}"
+      https: False
+  gather_facts: no
+  connection: local
+  tasks:
+
+    - name: Fetch authorization token for source
+      register: specv_token
+      ibm_svc_auth:
+        clustername: "{{ cluster_ip }}"
+        username:  "{{ cluster_username }}"
+        password: "{{ cluster_password }}"
+
+    - name: Get deatils of the targetportfc
+      register: fcdetails
+      ibm.spectrum_virtualize.ibm_svc_info:
+        clustername: "{{ cluster_ip }}"
+        token: "{{ specv_token.token }}"
+        gather_subset: [targetportfc]
+        log_path: /tmp/fcdetails.debug
+
+    - name: get the WWPN list from lstargetportfc for given fc_port_id
+      set_fact:
+        specv_wwpn: "{{ specv_wwpn|default([]) + [item['WWPN']]}}"
+      when: (item.protocol == 'scsi' and item.host_io_permitted == 'yes' and item.fc_io_port_id in cluster_fcioportid)
+      loop: "{{ fcdetails.TargetPortFC  }}"
+
+    - name: modify specv wwpn the way switch want
+      set_fact:
+        specv_wwpn_switch_format: "{{ specv_wwpn_switch_format|default([]) +[item|map('join')|join(':')] }}"
+      loop: "{{ (specv_wwpn)|map('batch', 2)|map('list')|list|lower }}"
+
+    - name: get all zoning information from switch
+      brocade_facts:
+        credential: "{{brocade_credentials}}"
+        vfid: -1
+        gather_subset:
+          - brocade_zoning
+
+    - name: copy the active config in var active_switch_config
+      set_fact:
+        active_switch_config: "{{ ansible_facts.brocade_zoning['effective-configuration'].cfg_name }}"
+
+    - name: Create zones on Brocade switch
+      vars:
+        zone:
+          - name: "{{ application_host_zone_name }}"
+            members: "{{ application_host_wwpns + specv_wwpn_switch_format }}"
+      brocade.fos.brocade_zoning_zone:
+        credential: "{{ brocade_credentials }}"
+        vfid: -1
+        zones: "{{ zone }}"
+        members_add_only: True
+
+    - name: Add zone to active configuration
+      vars:
+        cfgs:
+          - name: "{{ active_switch_config }}"
+            members:
+              - "{{ application_host_zone_name }}"
+      brocade_zoning_cfg:
+        credential: "{{ brocade_credentials }}"
+        vfid: -1
+        members_add_only: True
+        cfgs: "{{ cfgs }}"
+        active_cfg: "{{ active_switch_config }}"
+
+    - name: create host list for specv without colon format
+      set_fact:
+        application_host_wwpns_specvformat_list: "{{ application_host_wwpns_specvformat_list | default([]) + [(item | replace(':',''))|upper]}}"
+      loop: "{{application_host_wwpns }}"
+
+    - name: create host list for specv without colon format
+      set_fact:
+        application_host_wwpns_specvformat: "{{application_host_wwpns_specvformat |default('')+item +':'}}"
+      loop: "{{application_host_wwpns_specvformat_list| select() }}"
+
+    - set_fact:
+        application_host_wwpns_specvformat: "{{ application_host_wwpns_specvformat[:-1]}}"
+
+    - name: Creating Host on specv
+      ibm_svc_host:
+        clustername: "{{ cluster_ip }}"
+        token: "{{ specv_token.token }}"
+        name: "{{ host_name }}"
+        state: present
+        fcwwpn: "{{ application_host_wwpns_specvformat }}"        
+
+    - name: Create a fc porset
+      ibm.spectrum_virtualize.ibm_svc_manage_portset:
+        clustername: "{{ cluster_ip }}"
+        token: "{{ specv_token.token }}"
+        name: "{{ portset_name }}"
+        porttype: fc
+        portset_type: host
+        state: present
+
+    - name: Add port ID to the portset
+      ibm.spectrum_virtualize.ibm_sv_manage_fcportsetmember:
+        clustername: "{{ cluster_ip }}"
+        token: "{{ specv_token.token }}"
+        name: "{{ portset_name }}"
+        fcportid: "{{item}}"
+        state: present
+      loop: "{{ cluster_fcioportid }}"
+
+    - name: Create vdisk
+      register: results_cvdisk
+      ibm_svc_vdisk:
+        clustername: "{{cluster_ip}}"
+        token: "{{ specv_token.token }}"
+        domain: 
+        state: present
+        name: "{{item.vol_name}}"
+        mdiskgrp: "{{item.mdiskgrp}}"
+        easytier: 'off'
+        size: "{{item.size}}"
+        unit: "{{item.unit}}"
+      loop: "{{ volume_details }}"
+
+    - name: map Host to Vdisk
+      ibm_svc_vol_map:
+        clustername: "{{cluster_ip}}"
+        token: "{{ specv_token.token }}"
+        domain: 
+        state: present
+        volname: "{{item.vol_name}}"
+        host: "{{host_name}}"
+      loop: "{{ volume_details }}"
+
+    - name: Rescan the paths on the host and run multipath
+      shell: "ssh {{application_host_username}}@{{application_host_ip}} rescan-scsi-bus.sh -i --forcerescan;sleep 40;"
+
+    - shell: "ssh {{application_host_username}}@{{application_host_ip}} multipath -ll"
+      register: ps
+
+    - name: Separate facts
+      set_fact:
+       multipath_var: "{{ ps.stdout.split('mpath') }}"
+
+    - debug:
+        msg: "{{ multipath_var}}"
+
+    - name: Get deatils of the given volume
+      register: volinfo
+      ibm.spectrum_virtualize.ibm_svc_info:
+        clustername: "{{ cluster_ip }}"
+        token: "{{ specv_token.token }}"
+        gather_subset: [vol]
+        log_path: /tmp/volinfo.debug
+
+    - name: create volume list
+      set_fact:
+        vol_name_list: "{{ vol_name_list|default([])+ [item['vol_name']] }}"
+      loop: "{{ volume_details }}" 
+
+    - debug:
+        msg: "{{ vol_name_list }}"
+
+    - name: find vollist data
+      set_fact: 
+        vol_list_full_data: "{{ vol_list_full_data|default([])+ [item] }}"
+        vol_name_uid: "{{ vol_name_uid|default([])+[[item['volume_name'],item['vdisk_UID']|lower]]}}"
+      when: (item.volume_name in vol_name_list )
+      loop: "{{ volinfo.Volume }}"
+
+    - debug:
+        msg: "{{ vol_name_uid }}"       
+
+    - name: Find vdisk UID present in host with path
+      set_fact:
+        dm_device: "{{dm_device| default([]) +[ [item.0] + [item.1] + [item.2]]}}"
+      when:  (item.1 in item.2) 
+      with_nested:
+        - "{{ vol_name_uid }}"
+        - "{{ multipath_var }}"
+        
+    - name: find unmapped volume
+      set_fact:
+        vdisk_mapped_multipath: "{{vdisk_mapped_multipath| default([]) + [item[0]]}}"
+      loop: "{{ dm_device }}"
+
+    - debug:
+        msg: "{{ vdisk_mapped_multipath }}"
+
+    - name: find unmapped volume
+      set_fact:
+        unmaped_vol_name_list: "{{ unmaped_vol_name_list|default([])+ [item] }}"
+      when: (item not in vdisk_mapped_multipath)
+      loop: "{{ vol_name_list }}"
+
+    - debug:
+        msg: "{{ unmaped_vol_name_list }}"         

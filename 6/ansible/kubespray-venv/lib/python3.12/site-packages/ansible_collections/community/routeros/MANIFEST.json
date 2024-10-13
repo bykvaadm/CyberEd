@@ -1,0 +1,38 @@
+{
+ "collection_info": {
+  "namespace": "community",
+  "name": "routeros",
+  "version": "2.19.0",
+  "authors": [
+   "Egor Zaitsev (github.com/heuels)",
+   "Nikolay Dachev (github.com/NikolayDachev)",
+   "Felix Fontein (github.com/felixfontein)"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "network",
+   "mikrotik",
+   "routeros"
+  ],
+  "description": "Modules and plugins for MikroTik RouterOS",
+  "license": [
+   "GPL-3.0-or-later"
+  ],
+  "license_file": null,
+  "dependencies": {
+   "ansible.netcommon": ">=1.0.0"
+  },
+  "repository": "https://github.com/ansible-collections/community.routeros",
+  "documentation": "https://docs.ansible.com/ansible/devel/collections/community/routeros/",
+  "homepage": "https://github.com/ansible-collections/community.routeros",
+  "issues": "https://github.com/ansible-collections/community.routeros/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "38911a343bf5934792337290a0d12af45214513e1e6930ba15cdbffd6c1afcb1",
+  "format": 1
+ },
+ "format": 1
+}
