@@ -12,7 +12,11 @@
     ```
 3. git clone https://github.com/kubernetes-sigs/kubespray.git
 4. cd kubespray
-4. ../kubespray-venv/bin/ansible-playbook -i inventory/mycluster/hosts.yaml  --become --become-user=root cluster.yml
-5. cd ../kubernetes-goat
-6. ./setup-kubernetes-goat.sh
-7. ./access-kubernetes-goat.sh
+5../kubespray-venv/bin/ansible-playbook -i inventory/mycluster/hosts.yaml  --become --become-user=root cluster.yml
+6. cd ../
+7. git clone https://github.com/madhuakula/kubernetes-goat.git
+8. cd kubernetes-goat
+9. chmod +x setup-kubernetes-goat.sh
+10. chmod +x access-kubernetes-goat.sh
+11. ./setup-kubernetes-goat.sh
+12. ./access-kubernetes-goat.sh
