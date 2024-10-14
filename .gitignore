@@ -2,3 +2,5 @@
 .idea
 terraform.*
 hosts
+temp
+venv
