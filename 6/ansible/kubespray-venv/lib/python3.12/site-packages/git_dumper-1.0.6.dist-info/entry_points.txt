@@ -1,0 +1,2 @@
+[console_scripts]
+git-dumper = git_dumper:main
