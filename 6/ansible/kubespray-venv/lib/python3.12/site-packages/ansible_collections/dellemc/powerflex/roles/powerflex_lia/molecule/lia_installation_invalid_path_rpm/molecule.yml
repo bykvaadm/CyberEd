@@ -1,4 +1,0 @@
----
-scenario:
-  test_sequence:
-    - converge

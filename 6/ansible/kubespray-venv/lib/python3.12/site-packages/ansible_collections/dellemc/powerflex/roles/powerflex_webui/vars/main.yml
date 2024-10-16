@@ -1,5 +1,0 @@
----
-file_glob_name: mgmt-server
-powerflex_role_environment:
-  MDM_IP: "{{ powerflex_webui_mdm_ips }}"
-file_gpg_name: RPM-GPG-KEY-ScaleIO

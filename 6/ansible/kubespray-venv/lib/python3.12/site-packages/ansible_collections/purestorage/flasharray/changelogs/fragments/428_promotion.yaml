@@ -1,4 +1,0 @@
-minor_changes:
- - purefa_info - Add promotion status information for volumes
-bugfixes:
- - purefa_info - Fix serial number generation issue for vVols

@@ -1,2 +1,0 @@
-bugfixes:
-  - purefa_info - Resolved issue with KeyError when LACP bonds are in use

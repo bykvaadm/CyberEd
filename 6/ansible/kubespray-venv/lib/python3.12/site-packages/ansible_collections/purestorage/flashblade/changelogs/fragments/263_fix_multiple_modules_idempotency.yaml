@@ -1,4 +1,0 @@
-minor_changes:
-  - purefb_ds - Add `force_bind_password` parameter to allow module to be idempotent.
-bugfixes:
-  - purefb_timeout - Fixed arithmetic error that resulted in module incorrectly reporting changed when no change was required.

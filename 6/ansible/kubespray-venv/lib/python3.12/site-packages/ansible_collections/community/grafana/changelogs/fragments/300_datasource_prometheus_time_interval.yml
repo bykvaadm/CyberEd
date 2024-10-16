@@ -1,2 +1,0 @@
-minor_changes:
-  - Enable datasource option `time_interval` for prometheus

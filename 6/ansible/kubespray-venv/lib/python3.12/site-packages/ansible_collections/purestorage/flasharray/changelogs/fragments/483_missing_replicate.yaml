@@ -1,2 +1,0 @@
-bugfixes:
- - purefa_pgsnap - Ensure that `now` and `remote` are mutually exclusive.

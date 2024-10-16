@@ -1,2 +1,0 @@
-minor_changes:
- - purefb_bucket - Add ``safemode`` option for ``retention_mode``

@@ -1,5 +1,0 @@
----
-- name: Restart scini
-  ansible.builtin.service:
-    name: "scini"
-    state: "restarted"

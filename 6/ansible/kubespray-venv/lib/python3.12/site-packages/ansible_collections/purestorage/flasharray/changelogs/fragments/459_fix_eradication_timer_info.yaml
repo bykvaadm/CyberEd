@@ -1,2 +1,0 @@
-bugfixes:
- - purefa_info - Fixed parameter error when enabled and disabled timers are different values on purity 6.4.10+ arrays.

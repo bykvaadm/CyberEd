@@ -1,3 +1,0 @@
----
-bugfixes:
-  - Fixed orgId handling in diff comparison for `grafana_datasource` if using org_name

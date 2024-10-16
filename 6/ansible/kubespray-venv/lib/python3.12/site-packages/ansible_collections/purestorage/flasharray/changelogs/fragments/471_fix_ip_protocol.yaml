@@ -1,3 +1,0 @@
-bugfixes:
- - purefa_subnet - Fixed IPv6 support issues.
- - purefa_subnet - Fixed IPv4 gateway removal issue.

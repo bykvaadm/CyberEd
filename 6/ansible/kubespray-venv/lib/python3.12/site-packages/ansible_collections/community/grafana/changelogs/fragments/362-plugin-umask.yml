@@ -1,2 +1,0 @@
-bugfixes:
-  - Set umask for `grafana_plugin` command

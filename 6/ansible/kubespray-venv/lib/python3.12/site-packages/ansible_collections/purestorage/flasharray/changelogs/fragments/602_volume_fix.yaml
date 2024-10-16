@@ -1,2 +1,0 @@
-bugfixes:
- - purefa_volume - Fix issue with creating volume using old Purity version (6.1.19)

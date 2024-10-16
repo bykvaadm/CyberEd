@@ -1,2 +1,0 @@
-bugfixes:
-  - na_ontap_volume - fix invalid field error with 'space.snapshot.autodelete' in REST.

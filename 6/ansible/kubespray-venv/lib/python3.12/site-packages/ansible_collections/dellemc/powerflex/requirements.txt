@@ -1,2 +1,0 @@
-PyPowerFlex
-python-dateutil>=2.8.2

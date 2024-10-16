@@ -1,4 +1,0 @@
-pytest-ansible
-pytest-cov
-pytest-forked
-pytest-xdist

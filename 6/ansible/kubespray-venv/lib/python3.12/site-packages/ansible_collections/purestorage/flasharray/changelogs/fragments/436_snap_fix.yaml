@@ -1,2 +1,0 @@
-bugfixes:
- - purefa_snap - Fixed issue with remote snapshot retrieve. Mainly a workaround to an issue with Purity REST 1.x when remote snapshots are searched.

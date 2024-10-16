@@ -1,4 +1,0 @@
----
-
-minor_changes:
-  - added `community.grafana.notification_channel` to role

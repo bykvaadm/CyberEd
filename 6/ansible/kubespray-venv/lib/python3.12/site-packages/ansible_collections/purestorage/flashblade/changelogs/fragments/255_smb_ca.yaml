@@ -1,2 +1,0 @@
-minor_changes:
- - purefb_fs - Added SMB Continuous Availability parameter. Requires REST 2.12 or higher.

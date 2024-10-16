@@ -1,2 +1,0 @@
-bugfixes:
- - purefb_fs - Fix error checking for SMB parameter in non-SMB filesystem

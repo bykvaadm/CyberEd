@@ -1,2 +1,0 @@
-bugfixes:
-  - na_ontap_quotas - fixed issue with idempotency in REST.

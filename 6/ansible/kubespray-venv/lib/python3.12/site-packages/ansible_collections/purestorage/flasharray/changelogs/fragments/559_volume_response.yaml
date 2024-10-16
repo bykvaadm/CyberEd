@@ -1,2 +1,0 @@
-bugfixes:
- - purefa_volume - Ensure module response for creation of volume and rerun are the same

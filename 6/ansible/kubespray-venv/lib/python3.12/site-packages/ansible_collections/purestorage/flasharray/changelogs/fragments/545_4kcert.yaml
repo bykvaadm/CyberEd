@@ -1,2 +1,0 @@
-bugfixes:
- - purefa_certs - Allow certificates of over 3000 characters to be imported.

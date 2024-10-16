@@ -1,2 +1,0 @@
-bugfixes:
- - purefa_pgsnap - Update the accepted suffixes to include also numbers only. Fixed the logic to retrieve the latest completed snapshot

@@ -1,2 +1,0 @@
-bugfixes:
-  - na_ontap_dns - fix DNS not working with Cluster mode.

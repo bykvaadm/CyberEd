@@ -1,2 +1,0 @@
-minor_changes:
-  - Add support for Grafana Tempo datasource type (https://grafana.com/docs/grafana/latest/datasources/tempo/)

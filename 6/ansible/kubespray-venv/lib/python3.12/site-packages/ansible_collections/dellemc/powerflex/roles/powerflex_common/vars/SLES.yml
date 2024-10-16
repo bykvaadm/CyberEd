@@ -1,4 +1,0 @@
----
-powerflex_common_packages:
-        - python3
-        - libapr1

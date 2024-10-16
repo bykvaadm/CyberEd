@@ -1,5 +1,0 @@
----
-file_glob_name: sds
-file_gpg_name: RPM-GPG-KEY-ScaleIO
-powerflex_role_environment:
-  MDM_IP: "{{ powerflex_sds_mdm_ips }}"

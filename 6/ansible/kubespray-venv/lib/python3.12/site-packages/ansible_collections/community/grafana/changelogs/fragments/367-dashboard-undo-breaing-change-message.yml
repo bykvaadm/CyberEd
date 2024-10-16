@@ -1,3 +1,0 @@
----
-bugfixes:
-  - undo removed deprecated `message` argument in `grafana_dashboard`

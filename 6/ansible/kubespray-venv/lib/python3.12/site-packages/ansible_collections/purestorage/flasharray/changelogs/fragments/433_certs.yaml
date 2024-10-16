@@ -1,2 +1,0 @@
-bugfixes:
- - purefa_certs - Resolved CSR issue and require export_file for state sign.

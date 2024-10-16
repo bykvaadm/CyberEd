@@ -1,5 +1,0 @@
----
-powerflex_common_packages:
-        - numactl
-        - libaio1
-        - ldap-utils

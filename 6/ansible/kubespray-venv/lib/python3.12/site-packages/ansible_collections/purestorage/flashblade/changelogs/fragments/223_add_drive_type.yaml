@@ -1,2 +1,0 @@
-minor_changes:
- - purefb_info - Add drive type in drives subset for //S and //E platforms. Only available from REST 2.9.

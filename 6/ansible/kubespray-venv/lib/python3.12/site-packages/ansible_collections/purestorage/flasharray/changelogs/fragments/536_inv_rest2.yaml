@@ -1,4 +1,0 @@
-minor_changes:
- - purefa_inventory - Convert to REST v2
-bugfixes:
- - purefa_inventory - Fix issue with iSCSI-only FlashArrays

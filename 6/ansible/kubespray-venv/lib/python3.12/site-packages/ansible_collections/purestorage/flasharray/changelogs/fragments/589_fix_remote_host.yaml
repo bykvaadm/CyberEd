@@ -1,2 +1,0 @@
-bugfixes:
- - purefa_info - Resolve issue with performance stats trying to report for remote hosts

@@ -1,2 +1,0 @@
-bugfixes:
-  - na_ontap_vserver_peer - fix issue with peering multiple clusters with same vserver name in REST.

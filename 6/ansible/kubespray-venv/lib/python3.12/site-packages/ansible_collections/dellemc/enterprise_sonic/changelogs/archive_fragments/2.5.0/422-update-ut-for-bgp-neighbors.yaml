@@ -1,3 +1,0 @@
----
-trivial:
-  - sonic_bgp_neighbors - Update UT for bgp_neighbors (https://github.com/ansible-collections/dellemc.enterprise_sonic/pull/422).

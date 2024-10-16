@@ -1,2 +1,0 @@
-bugfixes:
- - purefa_info - Fixed py39 specific bug with multiple DNS entries

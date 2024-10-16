@@ -1,2 +1,0 @@
-minor_changes:
- - purefa_info - Add ``is_local`` parameter for snapshots

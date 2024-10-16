@@ -1,2 +1,0 @@
-bugfixes:
-  - na_ontap_svm - fix REST version warning for `ndmp` under `services`.

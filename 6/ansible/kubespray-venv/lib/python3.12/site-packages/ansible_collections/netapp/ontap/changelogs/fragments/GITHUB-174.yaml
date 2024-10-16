@@ -1,2 +1,0 @@
-minor_changes:
-  - na_ontap_ems_destination - new option ``certificate``, ``ca`` added.

@@ -1,2 +1,0 @@
-bugfixes:
- - purefa_ds - Fixes issue with creating a new ds configuration while setting force_bind_password as "false".

@@ -1,2 +1,0 @@
-bugfixes:
- - purefa_volume - Fixed bug with NULL suffix for multiple volume creation.

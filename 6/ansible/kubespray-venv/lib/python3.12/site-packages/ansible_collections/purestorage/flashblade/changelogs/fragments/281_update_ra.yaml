@@ -1,3 +1,0 @@
-minor_changes:
- - purefb_ra - Update to REST2
- - purefb_ra - Add ``duration`` option from REST 2.14

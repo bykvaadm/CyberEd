@@ -1,3 +1,0 @@
-minor_changes:
- - purefa_info - Add `hosts_balance` subset
- - purefa_info - Add `port_connectivity` information for hosts

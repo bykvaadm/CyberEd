@@ -1,2 +1,0 @@
-minor_changes:
- - purefa_pg - Enhance ``state absent`` to work on volumes, hosts and hostgroups
