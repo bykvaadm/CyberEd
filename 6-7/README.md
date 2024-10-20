@@ -11,8 +11,8 @@
     pip install -U -r requirements.txt 
     ```
 4. git clone https://github.com/kubernetes-sigs/kubespray.git
-4. cd kubespray
-5. ./kubespray-venv/bin/ansible-playbook -i inventory/mycluster/hosts.yaml  --become --become-user=root cluster.yml
+5. cd kubespray
+5. ../kubespray-venv/bin/ansible-playbook -i inventory/mycluster/hosts.yaml  --become --become-user=root cluster.yml
 6. cd ../
 7. git clone https://github.com/madhuakula/kubernetes-goat.git
 8. cd kubernetes-goat

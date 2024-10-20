@@ -3,4 +3,4 @@
 terraform.*
 hosts
 temp
-kubespray-venv
+kubespray*
