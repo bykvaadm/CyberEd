@@ -5,4 +5,4 @@ users:
     shell: /bin/bash
     sudo: 'ALL=(ALL) NOPASSWD:ALL'
     ssh-authorized-keys:
-      - ssh-rsa XXXXX
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDWDDm3FFVvvV5rkecmGXAmOokKyD1JC6VnQv0T7RQgW9SQzamxFv+KzuxAsGRmDT+yTHUxRrBXIw+DDMJ77yTib1b64rOJOBEChErXvXxbkNY3ukSS+xB4aUcAUH6iq5dx/beqrvl/rz9jDY+6xDSaGQ5CMtYIc1qyO+jiMw0Npo8p5ghX+qiHQPFjpKISwb5k6z2vDvWkZQYb7d1oyZE1kceoKBST8pDB79JNE6+Uuy4KkkXbTBl13ovO0/LJRr/s2sr9N22PM5rK8HclduEyXRxHRDWiv9to+WsEzL36dzBj3oBGMxYqA2dzSG03zwFD/KDyFwuC9Ztypzy364Al

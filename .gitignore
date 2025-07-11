@@ -4,3 +4,4 @@ terraform.*
 hosts
 temp
 kubespray*
+key.json
