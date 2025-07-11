@@ -1,6 +1,6 @@
 1. подключиться к яндекс облаку и создать базовую структуру облако-каталог default
 2. активировать грант
-3. устнаовить и настроить [yc](https://yandex.cloud/ru/docs/cli/quickstart)
+3. установить и настроить [yc](https://yandex.cloud/ru/docs/cli/quickstart)
 4. установить и
    настроить [terraform](https://yandex.cloud/ru/docs/tutorials/infrastructure-management/terraform-quickstart)
 
