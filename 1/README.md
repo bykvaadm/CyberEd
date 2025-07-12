@@ -54,3 +54,19 @@ This message shows that your installation appears to be working correctly.
 Если вы получили сообщение с приветствием от docker - всё настроено корректно и лабораторная работа считается выполненой
 
 В качестве отчета следует представить скриншот с "Apply complete!" и "Hello from Docker!" - этого будет достаточно.
+
+# Прочее, не относящееся к лабе
+
+Для экономии гранта мы используем автовыключаемые вм. они на 30% дешевле и выключаются яндексом раз в сутки, и далее
+играют по модели "pay as you go" - за вычислительные ресурсы не платим пока она выключена, только за диск, но там
+копейки.
+
+чтобы вручную убить всё - нужно ввести 
+```bash
+terraform destroy
+```
+
+если у кого-то будет ошибка при terraform init, что мол провайдер не существует, то есть 2 варианта:
+
+1. https://yandex.cloud/ru/docs/tutorials/infrastructure-management/terraform-quickstart#configure-provider
+2. включите впн на время terraform init
