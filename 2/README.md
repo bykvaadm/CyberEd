@@ -335,3 +335,15 @@
         Storage=none
         ProcessSizeMax=0
         ```
+      
+# Ресурсы, использованные на лекции
+
+https://github.com/rebootuser/LinEnum
+https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS
+
+https://www.cisecurity.org/cis-benchmarks
+https://github.com/ansible-lockdown
+
+https://github.com/bykvaadm/fleet-osquery-in-a-box/tree/production
+
+https://gtfobins.github.io
