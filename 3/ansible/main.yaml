@@ -28,7 +28,7 @@
       when: nginx_ssl_certs is defined
       notify: restart nginx
       copy:
-        dest: "etc/nginx/ssl/{{ item.name }}"
+        dest: "/etc/nginx/ssl/{{ item.name }}"
         content: "{{ item.value }}"
         owner: root
         group: root
