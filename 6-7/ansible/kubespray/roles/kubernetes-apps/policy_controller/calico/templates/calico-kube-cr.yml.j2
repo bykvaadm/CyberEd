@@ -6,27 +6,21 @@ metadata:
   namespace: kube-system
 rules:
 {% if calico_datastore == "etcd"  %}
-  - apiGroups:
-    - ""
-    - extensions
+  # Pods are monitored for changing labels.
+  # The node controller monitors Kubernetes nodes.
+  # Namespace and serviceaccount labels are used for policy.
+  - apiGroups: [""]
     resources:
       - pods
-      - namespaces
-      - networkpolicies
       - nodes
+      - namespaces
       - serviceaccounts
     verbs:
       - watch
       - list
       - get
-  - apiGroups:
-    - ""
-    resources:
-      - nodes
-    verbs:
-      - get
-  - apiGroups:
-    - networking.k8s.io
+  # Watch for changes to Kubernetes NetworkPolicies.
+  - apiGroups: ["networking.k8s.io"]
     resources:
       - networkpolicies
     verbs:
@@ -67,6 +61,7 @@ rules:
       - blockaffinities
       - ipamblocks
       - ipamhandles
+      - tiers
     verbs:
       - get
       - list
@@ -101,6 +96,7 @@ rules:
     verbs:
       # read its own config
       - get
+      - list
       # create a default if none exists
       - create
       # update status

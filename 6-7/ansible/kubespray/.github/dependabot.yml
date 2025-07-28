@@ -7,3 +7,15 @@ updates:
     labels:
       - dependencies
       - release-note-none
+    groups:
+      molecule:
+        patterns:
+          - molecule
+          - molecule-plugins*
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    labels:
+      - release-note-none
+      - ci-short
+    schedule:
+      interval: "weekly"

@@ -24,22 +24,11 @@
   delegate_to: "{{ groups['kube_control_plane'][0] }}"
 
 
-- name: Stop if incompatible network plugin and cloudprovider
-  assert:
-    that:
-      - calico_ipip_mode == 'Never'
-      - calico_vxlan_mode in ['Always', 'CrossSubnet']
-    msg: "When using cloud_provider azure and network_plugin calico calico_ipip_mode must be 'Never' and calico_vxlan_mode 'Always' or 'CrossSubnet'"
-  when:
-    - cloud_provider is defined and cloud_provider == 'azure'
-  run_once: true
-  delegate_to: "{{ groups['kube_control_plane'][0] }}"
-
 - name: Stop if supported Calico versions
   assert:
     that:
-      - "calico_version in calico_crds_archive_checksums.keys()"
-    msg: "Calico version not supported {{ calico_version }} not in {{ calico_crds_archive_checksums.keys() }}"
+      - "calico_version in calico_crds_archive_checksums.no_arch.keys()"
+    msg: "Calico version not supported {{ calico_version }} not in {{ calico_crds_archive_checksums.no_arch.keys() }}"
   run_once: true
   delegate_to: "{{ groups['kube_control_plane'][0] }}"
 
@@ -76,7 +65,7 @@
     - name: Assert that current calico version is enough for upgrade
       assert:
         that:
-          - calico_version_on_server.stdout is version(calico_min_version_required, '>=')
+          - calico_version_on_server.stdout.removeprefix('v') is version(calico_min_version_required, '>=')
         msg: >
           Your version of calico is not fresh enough for upgrade.
           Minimum version is {{ calico_min_version_required }} supported by the previous kubespray release.
@@ -157,12 +146,16 @@
   check_mode: false
   register: calico
   run_once: true
+  when: ipv4_stack | bool
   delegate_to: "{{ groups['kube_control_plane'][0] }}"
 
 - name: "Set calico_pool_conf"
   set_fact:
     calico_pool_conf: '{{ calico.stdout | from_json }}'
-  when: calico.rc == 0 and calico.stdout
+  when:
+    - ipv4_stack | bool
+    - calico is defined
+    - calico.rc == 0 and calico.stdout
   run_once: true
   delegate_to: "{{ groups['kube_control_plane'][0] }}"
 
@@ -175,7 +168,42 @@
       - not calico_pool_conf.spec.vxlanMode is defined or calico_pool_conf.spec.vxlanMode == calico_vxlan_mode
     msg: "Your inventory doesn't match the current cluster configuration"
   when:
+    - ipv4_stack | bool
     - calico_pool_conf is defined
+  run_once: true
+  delegate_to: "{{ groups['kube_control_plane'][0] }}"
+
+- name: "Get Calico {{ calico_pool_name }}-ipv6 configuration"
+  command: "{{ bin_dir }}/calicoctl.sh get ipPool {{ calico_pool_name }}-ipv6 -o json"
+  failed_when: false
+  changed_when: false
+  check_mode: false
+  register: calico_ipv6
+  run_once: true
+  when: ipv6_stack | bool
+  delegate_to: "{{ groups['kube_control_plane'][0] }}"
+
+- name: "Set calico_pool_ipv6_conf"
+  set_fact:
+    calico_pool_conf: '{{ calico_ipv6.stdout | from_json }}'
+  when:
+    - ipv6_stack | bool
+    - alico_ipv6 is defined
+    - calico_ipv6.rc == 0 and calico_ipv6.stdout
+  run_once: true
+  delegate_to: "{{ groups['kube_control_plane'][0] }}"
+
+- name: "Check if ipv6 inventory match current cluster configuration"
+  assert:
+    that:
+      - calico_pool_conf.spec.blockSize | int == calico_pool_blocksize_ipv6 | int
+      - calico_pool_conf.spec.cidr == (calico_pool_cidr_ipv6 | default(kube_pods_subnet_ipv6))
+      - not calico_pool_conf.spec.ipipMode is defined or calico_pool_conf.spec.ipipMode == calico_ipip_mode_ipv6
+      - not calico_pool_conf.spec.vxlanMode is defined or calico_pool_conf.spec.vxlanMode == calico_vxlan_mode_ipv6
+    msg: "Your ipv6 inventory doesn't match the current cluster configuration"
+  when:
+    - ipv6_stack | bool
+    - calico_pool_ipv6_conf is defined
   run_once: true
   delegate_to: "{{ groups['kube_control_plane'][0] }}"
 
@@ -202,7 +230,6 @@
     that:
       - "calico_ipip_mode_ipv6 in ['Never']"
     msg: "Calico doesn't support ipip tunneling for the IPv6"
-  when:
-    - enable_dual_stack_networks
+  when: ipv6_stack | bool
   run_once: true
   delegate_to: "{{ groups['kube_control_plane'][0] }}"

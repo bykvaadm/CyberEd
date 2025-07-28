@@ -82,13 +82,13 @@ vault operator init
 ```
 OUTPUT
 ```text
-Unseal Key 1: mZljOvtXn+NR8Wi3dvsXfDBK+BvAXbfjK93DJGozS4SD
-Unseal Key 2: W+6RBxCEPfYR32FnX87+Pi2Z2eg9Njmo28nDp1EdAYQ5
-Unseal Key 3: XmAKBP4Vm8c44aGxW02CArOl5S3VuUTxORfZ9J4kLwHv
-Unseal Key 4: dP9qm+8GeciRCiraKu71d2/So1wy5dZE74blcd+zs/aZ
-Unseal Key 5: CEcp7+WHKGJjyFQiTrNPtbTlQze7XKD52KZMhf10wx13
+Unseal Key 1: wqblZhgfgU5gBxH09aa4XboCQm/ZREtvhsV94umU/hga
+Unseal Key 2: 7x94Tv3UomGBaIAq9IXTZTAawr3o6NWWIg9egkBmS6uv
+Unseal Key 3: Rm2oE3Ihemj01ylF1rajoBkGra3SLbANRfSYXs+rDM3J
+Unseal Key 4: sKAJfZYKZwygstJyEqTiCOBOEWI11kRmIfeZc/mxuXsJ
+Unseal Key 5: OWiddM51FluoFkkH6NEcHTxHbfM6n6dDcViCzAyOZmGQ
 
-Initial Root Token: hvs.HZ52ZxoxLFcS2vRjB0cwqErS
+Initial Root Token: hvs.9wljF0O1VrsceJkwL29brqoR
 ```
 unseal
 ```bash
@@ -119,11 +119,22 @@ vault-agent-injector-bdbbcb8cf-d9djn   1/1     Running   0          8m18s
 
 ```bash
 kubectl --insecure-skip-tls-verify -n vault exec -ti vault-0 -- sh
-vault login token=hvs.HZ52ZxoxLFcS2vRjB0cwqErS
+vault login token=hvs.9wljF0O1VrsceJkwL29brqoR
 vault secrets enable -path=kv kv
 vault kv  enable-versioning kv/
 vault auth enable approle
 # Jenkins
+### создадим политику
+cat > ~/jenkins.hcl << EOF
+path "auth/approle/login" {
+  capabilities = [ "create", "read" ]
+}
+
+path "kv/data/thp/*" {
+  capabilities = [ "read", "update" ]
+}
+EOF
+vault policy write jenkins ~/jenkins.hcl
 ### создать роль jenkins и связать с политикой
 vault write auth/approle/role/jenkins policies=jenkins
 ```
@@ -136,7 +147,7 @@ OUTPUT
 ```text
 Key        Value
 ---        -----
-role_id    63eeafc0-5c18-eeca-fcc5-93390f976f2e
+role_id    ce3c1387-17fd-75b1-dda2-cf15c986f3cc
 ```
 
 прочитать secret id
@@ -147,8 +158,8 @@ OUTPUT
 ```text
 Key                   Value
 ---                   -----
-secret_id             92c0b030-1341-30b4-169e-327a5e6e85d5
-secret_id_accessor    16483a8d-a74e-1662-7dc9-656e5fd0c030
+secret_id             a3bb74ab-6e73-b65e-99b3-ebcadf82771f
+secret_id_accessor    59cf0447-9735-3b4f-a67d-ea64c5be9405
 secret_id_num_uses    0
 secret_id_ttl         0s
 ```
@@ -156,20 +167,6 @@ secret_id_ttl         0s
 создадим секреты
 ```bash
 vault kv put -mount=kv thp/logstash-kube keystore=ololo redis=azaza truststore=purumpurum
-```
-
-создадим политику
-```bash
-cat > ~/jenkins.hcl << EOF
-path "auth/approle/login" {
-  capabilities = [ "create", "read" ]
-}
-
-path "kv/data/thp/*" {
-  capabilities = [ "read", "update" ]
-}
-EOF
-vault policy write jenkins ~/jenkins.hcl
 ```
 
 # jenkins job
@@ -180,7 +177,7 @@ kubectl --insecure-skip-tls-verify exec --namespace jenkins -it svc/jenkins -c j
 ```
 OUTPUT
 ```text
-65xiP2qKPnbjGZ480y3Cso
+SLR7F8ViJw9rdBbXOkrdlZ
 ```
 пробрасываем порт
 ```bash
@@ -217,7 +214,7 @@ node {
     // optional configuration, if you do not provide this the next higher configuration
     // (e.g. folder or global) will be used
     def configuration = [vaultUrl: 'http://vault-ui.vault.svc.cluster.local:8200',
-                         vaultCredentialId: '68217d90-14e3-445d-b551-d377a209996b',
+                         vaultCredentialId: '2b56d6f5-bc9c-4f21-b8eb-a943834b5451',
                          skipSslVerification: 'true',
                          engineVersion: 2]
     

@@ -1,9 +1,21 @@
 ---
+- name: Validate nodes for removal
+  hosts: localhost
+  gather_facts: false
+  become: false
+  tasks:
+    - name: Assert that nodes are specified for removal
+      assert:
+        that:
+          - node is defined
+          - node | length > 0
+        msg: "No nodes specified for removal. The `node` variable must be set explicitly."
+
 - name: Common tasks for every playbooks
   import_playbook: boilerplate.yml
 
 - name: Confirm node removal
-  hosts: "{{ node | default('etcd:k8s_cluster:calico_rr') }}"
+  hosts: "{{ node | default('this_is_unreachable') }}"
   gather_facts: false
   tasks:
     - name: Confirm Execution
@@ -24,21 +36,25 @@
   when: reset_nodes | default(True) | bool
 
 - name: Reset node
-  hosts: "{{ node | default('kube_node') }}"
+  hosts: "{{ node | default('this_is_unreachable') }}"
   gather_facts: false
   environment: "{{ proxy_disable_env }}"
+  pre_tasks:
+    - name: Gather information about installed services
+      service_facts:
+      when: reset_nodes | default(True) | bool
   roles:
-    - { role: kubespray-defaults, when: reset_nodes | default(True) | bool }
-    - { role: remove-node/pre-remove, tags: pre-remove }
+    - { role: kubespray_defaults, when: reset_nodes | default(True) | bool }
+    - { role: remove_node/pre_remove, tags: pre-remove }
     - role: remove-node/remove-etcd-node
       when: "'etcd' in group_names"
     - { role: reset, tags: reset, when: reset_nodes | default(True) | bool }
 
 # Currently cannot remove first control plane node or first etcd node
 - name: Post node removal
-  hosts: "{{ node | default('kube_control_plane[1:]:etcd[1:]') }}"
+  hosts: "{{ node | default('this_is_unreachable') }}"
   gather_facts: false
   environment: "{{ proxy_disable_env }}"
   roles:
-    - { role: kubespray-defaults, when: reset_nodes | default(True) | bool }
+    - { role: kubespray_defaults, when: reset_nodes | default(True) | bool }
     - { role: remove-node/post-remove, tags: post-remove }

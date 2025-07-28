@@ -1,31 +1,4 @@
 ---
-- name: Fail containerd setup if distribution is not supported
-  fail:
-    msg: "{{ ansible_distribution }} is not supported by containerd."
-  when:
-    - not (allow_unsupported_distribution_setup | default(false)) and (ansible_distribution not in containerd_supported_distributions)
-
-- name: Containerd | Remove any package manager controlled containerd package
-  package:
-    name: "{{ containerd_package }}"
-    state: absent
-  when:
-    - not (is_ostree or (ansible_distribution == "Flatcar Container Linux by Kinvolk") or (ansible_distribution == "Flatcar"))
-
-- name: Containerd | Remove containerd repository
-  file:
-    path: "{{ yum_repo_dir }}/containerd.repo"
-    state: absent
-  when:
-    - ansible_os_family in ['RedHat']
-
-- name: Containerd | Remove containerd repository
-  apt_repository:
-    repo: "{{ item }}"
-    state: absent
-  with_items: "{{ containerd_repo_info.repos }}"
-  when: ansible_pkg_mgr == 'apt'
-
 - name: Containerd | Download containerd
   include_tasks: "../../../download/tasks/download_file.yml"
   vars:
@@ -40,21 +13,6 @@
     extra_opts:
       - --strip-components=1
   notify: Restart containerd
-
-- name: Containerd | Remove orphaned binary
-  file:
-    path: "/usr/bin/{{ item }}"
-    state: absent
-  when:
-    - containerd_bin_dir != "/usr/bin"
-    - not (is_ostree or (ansible_distribution == "Flatcar Container Linux by Kinvolk") or (ansible_distribution == "Flatcar"))
-  ignore_errors: true  # noqa ignore-errors
-  with_items:
-    - containerd
-    - containerd-shim
-    - containerd-shim-runc-v1
-    - containerd-shim-runc-v2
-    - ctr
 
 - name: Containerd | Generate systemd service for containerd
   template:
@@ -108,14 +66,15 @@
 
 - name: Containerd | Copy containerd config file
   template:
-    src: config.toml.j2
+    src: "{{ 'config.toml.j2' if containerd_version is version('2.0.0', '>=') else 'config-v1.toml.j2' }}"
     dest: "{{ containerd_cfg_dir }}/config.toml"
     owner: "root"
     mode: "0640"
   notify: Restart containerd
 
 - name: Containerd | Configure containerd registries
-  when: containerd_registries_mirrors is defined
+  # mirror configuration can contain sensitive information on headers configuration
+  no_log: "{{ not (unsafe_show_logs | bool) }}"
   block:
     - name: Containerd | Create registry directories
       file:

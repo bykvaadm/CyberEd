@@ -4,6 +4,8 @@
 # For help on using kubespray with vagrant, check out docs/developers/vagrant.md
 
 require 'fileutils'
+require 'ipaddr'
+require 'socket'
 
 Vagrant.require_version ">= 2.0.0"
 
@@ -26,13 +28,14 @@ SUPPORTED_OS = {
   "centos8-bento"       => {box: "bento/centos-8",             user: "vagrant"},
   "almalinux8"          => {box: "almalinux/8",                user: "vagrant"},
   "almalinux8-bento"    => {box: "bento/almalinux-8",          user: "vagrant"},
+  "almalinux9"          => {box: "almalinux/9",                user: "vagrant"},
   "rockylinux8"         => {box: "rockylinux/8",               user: "vagrant"},
   "rockylinux9"         => {box: "rockylinux/9",               user: "vagrant"},
   "fedora39"            => {box: "fedora/39-cloud-base",       user: "vagrant"},
   "fedora40"            => {box: "fedora/40-cloud-base",       user: "vagrant"},
   "fedora39-arm64"      => {box: "bento/fedora-39-arm64",      user: "vagrant"},
   "fedora40-arm64"      => {box: "bento/fedora-40",            user: "vagrant"},
-  "opensuse"            => {box: "opensuse/Leap-15.4.x86_64",  user: "vagrant"},
+  "opensuse"            => {box: "opensuse/Leap-15.6.x86_64",  user: "vagrant"},
   "opensuse-tumbleweed" => {box: "opensuse/Tumbleweed.x86_64", user: "vagrant"},
   "oraclelinux"         => {box: "generic/oracle7",            user: "vagrant"},
   "oraclelinux8"        => {box: "generic/oracle8",            user: "vagrant"},
@@ -57,18 +60,27 @@ $subnet ||= "172.18.8"
 $subnet_ipv6 ||= "fd3c:b398:0698:0756"
 $os ||= "ubuntu2004"
 $network_plugin ||= "flannel"
-$inventory ||= "inventory/sample"
-$inventories ||= [$inventory]
+$inventories ||= []
 # Setting multi_networking to true will install Multus: https://github.com/k8snetworkplumbingwg/multus-cni
 $multi_networking ||= "False"
 $download_run_once ||= "True"
 $download_force_cache ||= "False"
+# Modify those to have separate groups (for instance, to test separate etcd:)
+# first_control_plane = 1
+# first_etcd = 4
+# control_plane_instances = 3
+# etcd_instances = 3
+$first_node ||= 1
+$first_control_plane ||= 1
+$first_etcd ||= 1
+
 # The first three nodes are etcd servers
 $etcd_instances ||= [$num_instances, 3].min
 # The first two nodes are kube masters
-$kube_master_instances ||= [$num_instances, 2].min
+$control_plane_instances ||= [$num_instances, 2].min
 # All nodes are kube nodes
-$kube_node_instances ||= $num_instances
+$kube_node_instances ||= $num_instances - $first_node + 1
+
 # The following only works when using the libvirt provider
 $kube_node_instances_with_disks ||= false
 $kube_node_instances_with_disks_size ||= "20G"
@@ -88,6 +100,33 @@ $playbook ||= "cluster.yml"
 $extra_vars ||= {}
 
 host_vars = {}
+
+def collect_networks(subnet, subnet_ipv6)
+  Socket.getifaddrs.filter_map do |iface|
+    next unless iface&.netmask&.ip_address && iface.addr
+
+    is_ipv6 = iface.addr.ipv6?
+    ip      = IPAddr.new(iface.addr.ip_address.split('%').first)
+    ip_test = is_ipv6 ? IPAddr.new("#{subnet_ipv6}::0") : IPAddr.new("#{subnet}.0")
+
+    prefix  = IPAddr.new(iface.netmask.ip_address).to_i.to_s(2).count('1')
+    network = ip.mask(prefix)
+
+    [IPAddr.new("#{network}/#{prefix}"), ip_test]
+  end
+end
+
+def subnet_in_use?(network_ips)
+  network_ips.any? { |net, test_ip| net.include?(test_ip) && test_ip != net }
+end
+
+network_ips = collect_networks($subnet, $subnet_ipv6)
+
+if subnet_in_use?(network_ips)
+  puts "Invalid subnet provided, subnet is already in use: #{$subnet}.0"
+  puts "Subnets in use: #{network_ips.inspect}"
+  exit 1
+end
 
 # throw error if os is not supported
 if ! SUPPORTED_OS.key?($os)
@@ -210,13 +249,19 @@ Vagrant.configure("2") do |config|
       end
 
       ip = "#{$subnet}.#{i+100}"
+      ip6 = "#{$subnet_ipv6}::#{i+100}"
       node.vm.network :private_network,
         :ip => ip,
         :libvirt__guest_ipv6 => 'yes',
-        :libvirt__ipv6_address => "#{$subnet_ipv6}::#{i+100}",
+        :libvirt__ipv6_address => ip6,
         :libvirt__ipv6_prefix => "64",
         :libvirt__forward_mode => "none",
         :libvirt__dhcp_enabled => false
+
+      # libvirt__ipv6_address does not work as intended, the address is obtained with the desired prefix, but auto-generated(like fd3c:b398:698:756:5054:ff:fe48:c61e/64)
+      # add default route for detect ansible_default_ipv6
+      # TODO: fix libvirt__ipv6 or use $subnet in shell
+      config.vm.provision "shell", inline: "ip -6 r a fd3c:b398:698:756::/64 dev eth1;ip -6 r add default via fd3c:b398:0698:0756::1 dev eth1 || true"
 
       # Disable swap for each vm
       node.vm.provision "shell", inline: "swapoff -a"
@@ -291,9 +336,9 @@ Vagrant.configure("2") do |config|
             ansible.tags = [$ansible_tags]
           end
           ansible.groups = {
-            "etcd" => ["#{$instance_name_prefix}-[1:#{$etcd_instances}]"],
-            "kube_control_plane" => ["#{$instance_name_prefix}-[1:#{$kube_master_instances}]"],
-            "kube_node" => ["#{$instance_name_prefix}-[1:#{$kube_node_instances}]"],
+            "etcd" => ["#{$instance_name_prefix}-[#{$first_etcd}:#{$etcd_instances + $first_etcd - 1}]"],
+            "kube_control_plane" => ["#{$instance_name_prefix}-[#{$first_control_plane}:#{$control_plane_instances + $first_control_plane - 1}]"],
+            "kube_node" => ["#{$instance_name_prefix}-[#{$first_node}:#{$kube_node_instances + $first_node - 1}]"],
             "k8s_cluster:children" => ["kube_control_plane", "kube_node"],
           }
         end

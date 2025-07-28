@@ -5,7 +5,7 @@
 If you have questions, check the documentation at [kubespray.io](https://kubespray.io) and join us on the [kubernetes slack](https://kubernetes.slack.com), channel **\#kubespray**.
 You can get your invite [here](http://slack.k8s.io/)
 
-- Can be deployed on **[AWS](docs/cloud_providers/aws.md), GCE, [Azure](docs/cloud_providers/azure.md), [OpenStack](docs/cloud_providers/openstack.md), [vSphere](docs/cloud_providers/vsphere.md), [Equinix Metal](docs/cloud_providers/equinix-metal.md) (bare metal), Oracle Cloud Infrastructure (Experimental), or Baremetal**
+- Can be deployed on **[AWS](docs/cloud_providers/aws.md), GCE, [Azure](docs/cloud_providers/azure.md), [OpenStack](docs/cloud_controllers/openstack.md), [vSphere](docs/cloud_controllers/vsphere.md), [Equinix Metal](docs/cloud_providers/equinix-metal.md) (bare metal), Oracle Cloud Infrastructure (Experimental), or Baremetal**
 - **Highly available** cluster
 - **Composable** (Choice of the network plugin for instance)
 - Supports most popular **Linux distributions**
@@ -15,74 +15,23 @@ You can get your invite [here](http://slack.k8s.io/)
 
 Below are several ways to use Kubespray to deploy a Kubernetes cluster.
 
+### Docker
+
+Ensure you have installed Docker then
+
+```ShellSession
+docker run --rm -it --mount type=bind,source="$(pwd)"/inventory/sample,dst=/inventory \
+  --mount type=bind,source="${HOME}"/.ssh/id_rsa,dst=/root/.ssh/id_rsa \
+  quay.io/kubespray/kubespray:v2.28.0 bash
+# Inside the container you may now run the kubespray playbooks:
+ansible-playbook -i /inventory/inventory.ini --private-key /root/.ssh/id_rsa cluster.yml
+```
+
 ### Ansible
 
 #### Usage
 
-Install Ansible according to [Ansible installation guide](/docs/ansible/ansible.md#installing-ansible)
-then run the following steps:
-
-```ShellSession
-# Copy ``inventory/sample`` as ``inventory/mycluster``
-cp -rfp inventory/sample inventory/mycluster
-
-# Update Ansible inventory file with inventory builder
-declare -a IPS=(10.10.1.3 10.10.1.4 10.10.1.5)
-CONFIG_FILE=inventory/mycluster/hosts.yaml python3 contrib/inventory_builder/inventory.py ${IPS[@]}
-
-# Review and change parameters under ``inventory/mycluster/group_vars``
-cat inventory/mycluster/group_vars/all/all.yml
-cat inventory/mycluster/group_vars/k8s_cluster/k8s-cluster.yml
-
-# Clean up old Kubernetes cluster with Ansible Playbook - run the playbook as root
-# The option `--become` is required, as for example cleaning up SSL keys in /etc/,
-# uninstalling old packages and interacting with various systemd daemons.
-# Without --become the playbook will fail to run!
-# And be mind it will remove the current kubernetes cluster (if it's running)!
-ansible-playbook -i inventory/mycluster/hosts.yaml  --become --become-user=root reset.yml
-
-# Deploy Kubespray with Ansible Playbook - run the playbook as root
-# The option `--become` is required, as for example writing SSL keys in /etc/,
-# installing packages and interacting with various systemd daemons.
-# Without --become the playbook will fail to run!
-ansible-playbook -i inventory/mycluster/hosts.yaml  --become --become-user=root cluster.yml
-```
-
-Note: When Ansible is already installed via system packages on the control node,
-Python packages installed via `sudo pip install -r requirements.txt` will go to
-a different directory tree (e.g. `/usr/local/lib/python2.7/dist-packages` on
-Ubuntu) from Ansible's (e.g. `/usr/lib/python2.7/dist-packages/ansible` still on
-Ubuntu). As a consequence, the `ansible-playbook` command will fail with:
-
-```raw
-ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
-```
-
-This likely indicates that a task depends on a module present in ``requirements.txt``.
-
-One way of addressing this is to uninstall the system Ansible package then
-reinstall Ansible via ``pip``, but this not always possible and one must
-take care regarding package versions.
-A workaround consists of setting the `ANSIBLE_LIBRARY`
-and `ANSIBLE_MODULE_UTILS` environment variables respectively to
-the `ansible/modules` and `ansible/module_utils` subdirectories of the ``pip``
-installation location, which is the ``Location`` shown by running
-`pip show [package]` before executing `ansible-playbook`.
-
-A simple way to ensure you get all the correct version of Ansible is to use
-the [pre-built docker image from Quay](https://quay.io/repository/kubespray/kubespray?tab=tags).
-You will then need to use [bind mounts](https://docs.docker.com/storage/bind-mounts/)
-to access the inventory and SSH key in the container, like this:
-
-```ShellSession
-git checkout v2.26.0
-docker pull quay.io/kubespray/kubespray:v2.26.0
-docker run --rm -it --mount type=bind,source="$(pwd)"/inventory/sample,dst=/inventory \
-  --mount type=bind,source="${HOME}"/.ssh/id_rsa,dst=/root/.ssh/id_rsa \
-  quay.io/kubespray/kubespray:v2.26.0 bash
-# Inside the container you may now run the kubespray playbooks:
-ansible-playbook -i /inventory/inventory.ini --private-key /root/.ssh/id_rsa cluster.yml
-```
+See [Getting started](/docs/getting_started/getting-started.md)
 
 #### Collection
 
@@ -123,12 +72,9 @@ vagrant up
 - [Fedora CoreOS bootstrap](docs/operating_systems/fcos.md)
 - [openSUSE setup](docs/operating_systems/opensuse.md)
 - [Downloaded artifacts](docs/advanced/downloads.md)
-- [Cloud providers](docs/cloud_providers/cloud.md)
-- [OpenStack](docs/cloud_providers/openstack.md)
-- [AWS](docs/cloud_providers/aws.md)
-- [Azure](docs/cloud_providers/azure.md)
-- [vSphere](docs/cloud_providers/vsphere.md)
 - [Equinix Metal](docs/cloud_providers/equinix-metal.md)
+- [OpenStack](docs/cloud_controllers/openstack.md)
+- [vSphere](docs/cloud_controllers/vsphere.md)
 - [Large deployments](docs/operations/large-deployments.md)
 - [Adding/replacing a node](docs/operations/nodes.md)
 - [Upgrades basics](docs/operations/upgrades.md)
@@ -142,58 +88,61 @@ vagrant up
 
 - **Flatcar Container Linux by Kinvolk**
 - **Debian** Bookworm, Bullseye
-- **Ubuntu** 20.04, 22.04, 24.04
-- **CentOS/RHEL** [8, 9](docs/operating_systems/centos.md#centos-8)
+- **Ubuntu** 22.04, 24.04
+- **CentOS/RHEL** [8, 9](docs/operating_systems/rhel.md#rhel-8)
 - **Fedora** 39, 40
 - **Fedora CoreOS** (see [fcos Note](docs/operating_systems/fcos.md))
 - **openSUSE** Leap 15.x/Tumbleweed
-- **Oracle Linux** [8, 9](docs/operating_systems/centos.md#centos-8)
-- **Alma Linux** [8, 9](docs/operating_systems/centos.md#centos-8)
-- **Rocky Linux** [8, 9](docs/operating_systems/centos.md#centos-8)
+- **Oracle Linux** [8, 9](docs/operating_systems/rhel.md#rhel-8)
+- **Alma Linux** [8, 9](docs/operating_systems/rhel.md#rhel-8)
+- **Rocky Linux** [8, 9](docs/operating_systems/rhel.md#rhel-8)
 - **Kylin Linux Advanced Server V10** (experimental: see [kylin linux notes](docs/operating_systems/kylinlinux.md))
 - **Amazon Linux 2** (experimental: see [amazon linux notes](docs/operating_systems/amazonlinux.md))
 - **UOS Linux** (experimental: see [uos linux notes](docs/operating_systems/uoslinux.md))
 - **openEuler** (experimental: see [openEuler notes](docs/operating_systems/openeuler.md))
 
-Note: Upstart/SysV init based OS types are not supported.
+Note:
+
+- Upstart/SysV init based OS types are not supported.
+- [Kernel requirements](docs/operations/kernel-requirements.md) (please read if the OS kernel version is < 4.19).
 
 ## Supported Components
 
+<!-- BEGIN ANSIBLE MANAGED BLOCK -->
+
 - Core
-  - [kubernetes](https://github.com/kubernetes/kubernetes) v1.31.1
-  - [etcd](https://github.com/etcd-io/etcd) v3.5.16
-  - [docker](https://www.docker.com/) v26.1
-  - [containerd](https://containerd.io/) v1.7.22
-  - [cri-o](http://cri-o.io/) v1.31.0 (experimental: see [CRI-O Note](docs/CRI/cri-o.md). Only on fedora, ubuntu and centos based OS)
+  - [kubernetes](https://github.com/kubernetes/kubernetes) 1.33.3
+  - [etcd](https://github.com/etcd-io/etcd) 3.5.21
+  - [docker](https://www.docker.com/) 28.0
+  - [containerd](https://containerd.io/) 2.1.3
+  - [cri-o](http://cri-o.io/) 1.33.2 (experimental: see [CRI-O Note](docs/CRI/cri-o.md). Only on fedora, ubuntu and centos based OS)
 - Network Plugin
-  - [cni-plugins](https://github.com/containernetworking/plugins) v1.2.0
-  - [calico](https://github.com/projectcalico/calico) v3.28.1
-  - [cilium](https://github.com/cilium/cilium) v1.15.9
-  - [flannel](https://github.com/flannel-io/flannel) v0.22.0
-  - [kube-ovn](https://github.com/alauda/kube-ovn) v1.12.21
-  - [kube-router](https://github.com/cloudnativelabs/kube-router) v2.0.0
-  - [multus](https://github.com/k8snetworkplumbingwg/multus-cni) v3.8
-  - [weave](https://github.com/rajch/weave) v2.8.7
-  - [kube-vip](https://github.com/kube-vip/kube-vip) v0.8.0
+  - [cni-plugins](https://github.com/containernetworking/plugins) 1.4.1
+  - [calico](https://github.com/projectcalico/calico) 3.29.4
+  - [cilium](https://github.com/cilium/cilium) 1.17.3
+  - [flannel](https://github.com/flannel-io/flannel) 0.26.7
+  - [kube-ovn](https://github.com/alauda/kube-ovn) 1.12.21
+  - [kube-router](https://github.com/cloudnativelabs/kube-router) 2.1.1
+  - [multus](https://github.com/k8snetworkplumbingwg/multus-cni) 4.1.0
+  - [kube-vip](https://github.com/kube-vip/kube-vip) 0.8.0
 - Application
-  - [cert-manager](https://github.com/jetstack/cert-manager) v1.14.7
-  - [coredns](https://github.com/coredns/coredns) v1.11.1
-  - [ingress-nginx](https://github.com/kubernetes/ingress-nginx) v1.11.2
-  - [krew](https://github.com/kubernetes-sigs/krew) v0.4.4
-  - [argocd](https://argoproj.github.io/) v2.11.0
-  - [helm](https://helm.sh/) v3.15.4
-  - [metallb](https://metallb.universe.tf/)  v0.13.9
-  - [registry](https://github.com/distribution/distribution) v2.8.1
+  - [cert-manager](https://github.com/jetstack/cert-manager) 1.15.3
+  - [coredns](https://github.com/coredns/coredns) 1.12.0
+  - [ingress-nginx](https://github.com/kubernetes/ingress-nginx) 1.12.1
+  - [argocd](https://argoproj.github.io/) 2.14.5
+  - [helm](https://helm.sh/) 3.18.4
+  - [metallb](https://metallb.universe.tf/) 0.13.9
+  - [registry](https://github.com/distribution/distribution) 2.8.1
 - Storage Plugin
-  - [cephfs-provisioner](https://github.com/kubernetes-incubator/external-storage) v2.1.0-k8s1.11
-  - [rbd-provisioner](https://github.com/kubernetes-incubator/external-storage) v2.1.1-k8s1.11
-  - [aws-ebs-csi-plugin](https://github.com/kubernetes-sigs/aws-ebs-csi-driver) v0.5.0
-  - [azure-csi-plugin](https://github.com/kubernetes-sigs/azuredisk-csi-driver) v1.10.0
-  - [cinder-csi-plugin](https://github.com/kubernetes/cloud-provider-openstack/blob/master/docs/cinder-csi-plugin/using-cinder-csi-plugin.md) v1.30.0
-  - [gcp-pd-csi-plugin](https://github.com/kubernetes-sigs/gcp-compute-persistent-disk-csi-driver) v1.9.2
-  - [local-path-provisioner](https://github.com/rancher/local-path-provisioner) v0.0.24
-  - [local-volume-provisioner](https://github.com/kubernetes-sigs/sig-storage-local-static-provisioner) v2.5.0
-  - [node-feature-discovery](https://github.com/kubernetes-sigs/node-feature-discovery) v0.16.4
+  - [aws-ebs-csi-plugin](https://github.com/kubernetes-sigs/aws-ebs-csi-driver) 0.5.0
+  - [azure-csi-plugin](https://github.com/kubernetes-sigs/azuredisk-csi-driver) 1.10.0
+  - [cinder-csi-plugin](https://github.com/kubernetes/cloud-provider-openstack/blob/master/docs/cinder-csi-plugin/using-cinder-csi-plugin.md) 1.30.0
+  - [gcp-pd-csi-plugin](https://github.com/kubernetes-sigs/gcp-compute-persistent-disk-csi-driver) 1.9.2
+  - [local-path-provisioner](https://github.com/rancher/local-path-provisioner) 0.0.24
+  - [local-volume-provisioner](https://github.com/kubernetes-sigs/sig-storage-local-static-provisioner) 2.5.0
+  - [node-feature-discovery](https://github.com/kubernetes-sigs/node-feature-discovery) 0.16.4
+
+<!-- END ANSIBLE MANAGED BLOCK -->
 
 ## Container Runtime Notes
 
@@ -201,7 +150,7 @@ Note: Upstart/SysV init based OS types are not supported.
 
 ## Requirements
 
-- **Minimum required version of Kubernetes is v1.29**
+- **Minimum required version of Kubernetes is v1.30**
 - **Ansible v2.14+, Jinja 2.11+ and python-netaddr is installed on the machine that will run Ansible commands**
 - The target servers must have **access to the Internet** in order to pull docker images. Otherwise, additional configuration is required (See [Offline Environment](docs/operations/offline-environment.md))
 - The target servers are configured to allow **IPv4 forwarding**.
@@ -215,10 +164,10 @@ Note: Upstart/SysV init based OS types are not supported.
 Hardware:
 These limits are safeguarded by Kubespray. Actual requirements for your workload can differ. For a sizing guide go to the [Building Large Clusters](https://kubernetes.io/docs/setup/cluster-large/#size-of-master-and-master-components) guide.
 
-- Master
-  - Memory: 1500 MB
-- Node
-  - Memory: 1024 MB
+- Control Plane
+  - Memory: 2 GB
+- Worker Node
+  - Memory: 1 GB
 
 ## Network Plugins
 
@@ -232,9 +181,6 @@ You can choose among ten network plugins. (default: `calico`, except Vagrant use
     pods, and (if using Istio and Envoy) applications at the service mesh layer.
 
 - [cilium](http://docs.cilium.io/en/latest/): layer 3/4 networking (as well as layer 7 to protect and secure application protocols), supports dynamic insertion of BPF bytecode into the Linux kernel to implement security services, networking and visibility logic.
-
-- [weave](docs/CNI/weave.md): Weave is a lightweight container overlay network that doesn't require an external K/V database cluster.
-    (Please refer to `weave` [troubleshooting documentation](https://www.weave.works/docs/net/latest/troubleshooting/)).
 
 - [kube-ovn](docs/CNI/kube-ovn.md): Kube-OVN integrates the OVN-based Network Virtualization with Kubernetes. It offers an advanced Container Network Fabric for Enterprises.
 

@@ -10,12 +10,6 @@ dependencies:
     tags:
       - helm
 
-  - role: kubernetes-apps/krew
-    when:
-      - krew_enabled
-    tags:
-      - krew
-
   - role: kubernetes-apps/registry
     when:
       - registry_enabled
@@ -103,20 +97,12 @@ dependencies:
     tags:
       - container_engine_accelerator
 
-  - role: kubernetes-apps/cloud_controller/oci
+  - role: kubernetes-apps/kubelet-csr-approver
     when:
-      - cloud_provider is defined
-      - cloud_provider == "oci"
+      - kubelet_csr_approver_enabled
       - inventory_hostname == groups['kube_control_plane'][0]
     tags:
-      - oci
-
-  - role: kubernetes-apps/gateway_api
-    when:
-      - gateway_api_enabled
-      - inventory_hostname == groups['kube_control_plane'][0]
-    tags:
-      - gateway_api
+      - kubelet-csr-approver
 
   - role: kubernetes-apps/metallb
     when:
@@ -135,7 +121,7 @@ dependencies:
   - role: kubernetes-apps/scheduler_plugins
     when:
       - scheduler_plugins_enabled
-      - kube_major_version is version('v1.29', '<')
+      - kube_major_version is version('1.29', '<')
       - inventory_hostname == groups['kube_control_plane'][0]
     tags:
       - scheduler_plugins

@@ -1,12 +1,4 @@
 ---
-- name: Ensure NTP package
-  package:
-    name:
-      - "{{ ntp_package }}"
-    state: present
-  when:
-    - not is_fedora_coreos
-    - not ansible_os_family in ["Flatcar", "Flatcar Container Linux by Kinvolk"]
 
 - name: Disable systemd-timesyncd
   service:
@@ -21,6 +13,8 @@
     ntp_config_file: >-
       {% if ntp_package == "ntp" -%}
       /etc/ntp.conf
+      {%- elif ntp_package == "ntpsec" -%}
+      /etc/ntpsec/ntp.conf
       {%- elif ansible_os_family in ['RedHat', 'Suse'] -%}
       /etc/chrony.conf
       {%- else -%}
@@ -56,10 +50,10 @@
   # noqa: jinja[spacing]
   command: >-
       timeout -k 60s 60s
-      {% if ntp_package == "ntp" -%}
-      ntpd -gq
-      {%- else -%}
+      {% if ntp_package == "chrony" -%}
       chronyd -q
+      {%- else -%}
+      ntpd -gq
       {%- endif -%}
   when:
     - ntp_force_sync_immediately

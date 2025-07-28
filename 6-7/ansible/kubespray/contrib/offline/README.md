@@ -31,7 +31,7 @@ manage-offline-container-images.sh   register
 
 ## generate_list.sh
 
-This script generates the list of downloaded files and the list of container images by `roles/kubespray-defaults/defaults/main/download.yml` file.
+This script generates the list of downloaded files and the list of container images by `roles/kubespray_defaults/defaults/main/download.yml` file.
 
 Run this script will execute `generate_list.yml` playbook in kubespray root directory and generate four files,
 all downloaded files url in files.list, all container images in images.list, jinja2 templates in *.template.
@@ -67,3 +67,23 @@ Step(2) download files and run nginx container
 ```
 
 when nginx container is running, it can be accessed through <http://127.0.0.1:8080/>.
+
+## upload2artifactory.py
+
+After the steps above, this script can recursively upload each file under a directory to a generic repository in Artifactory.
+
+Environment Variables:
+
+- USERNAME -- At least permissions'Deploy/Cache' and 'Delete/Overwrite'.
+- TOKEN -- Generate this with 'Set Me Up' in your user.
+- BASE_URL -- The URL including the repository name.
+
+Step(3) (optional) upload files to Artifactory
+
+```shell
+cd kubespray/contrib/offline/offline-files
+export USERNAME=admin
+export TOKEN=...
+export BASE_URL=https://artifactory.example.com/artifactory/a-generic-repo/
+./upload2artifactory.py
+```

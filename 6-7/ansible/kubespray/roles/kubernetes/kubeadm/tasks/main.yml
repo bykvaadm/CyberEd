@@ -4,7 +4,7 @@
     # noqa: jinja[spacing]
     kubeadm_discovery_address: >-
       {%- if "127.0.0.1" in kube_apiserver_endpoint or "localhost" in kube_apiserver_endpoint -%}
-      {{ first_kube_control_plane_address }}:{{ kube_apiserver_port }}
+      {{ first_kube_control_plane_address | ansible.utils.ipwrap }}:{{ kube_apiserver_port }}
       {%- else -%}
       {{ kube_apiserver_endpoint | replace("https://", "") }}
       {%- endif %}
@@ -29,17 +29,15 @@
   delegate_to: "{{ groups['kube_control_plane'][0] }}"
   run_once: true
 
-- name: Calculate kubeadm CA cert hash
-  shell: set -o pipefail && openssl x509 -pubkey -in {{ kube_cert_dir }}/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | openssl dgst -sha256 -hex | sed 's/^.* //'
-  args:
-    executable: /bin/bash
-  register: kubeadm_ca_hash
+- name: Fetch CA certificate from control plane node
+  slurp:
+    src: "{{ kube_cert_dir }}/ca.crt"
+  register: ca_cert_content
   when:
     - kubeadm_ca_stat.stat is defined
     - kubeadm_ca_stat.stat.exists
   delegate_to: "{{ groups['kube_control_plane'][0] }}"
   run_once: true
-  changed_when: false
 
 - name: Create kubeadm token for joining nodes with 24h expiration (default)
   command: "{{ bin_dir }}/kubeadm token create"
@@ -53,16 +51,17 @@
     kubeadm_token: "{{ temp_token.stdout }}"
   when: kubeadm_token is not defined
 
-- name: Set kubeadm api version to v1beta3
-  set_fact:
-    kubeadmConfig_api_version: v1beta3
-
 - name: Get kubeconfig for join discovery process
   command: "{{ kubectl }} -n kube-public get cm cluster-info -o jsonpath='{.data.kubeconfig}'"
   register: kubeconfig_file_discovery
   run_once: true
   delegate_to: "{{ groups['kube_control_plane'] | first }}"
   when: kubeadm_use_file_discovery
+
+- name: Check if discovery kubeconfig exists
+  stat:
+    path: "{{ kube_config_dir }}/cluster-info-discovery-kubeconfig.yaml"
+  register: cluster_info_discovery_kubeconfig
 
 - name: Copy discovery kubeconfig
   copy:
@@ -72,15 +71,16 @@
     mode: "0644"
   when:
     - ('kube_control_plane' not in group_names)
-    - not kubelet_conf.stat.exists
+    - not kubelet_conf.stat.exists or not cluster_info_discovery_kubeconfig.stat.exists
     - kubeadm_use_file_discovery
 
 - name: Create kubeadm client config
   template:
-    src: "kubeadm-client.conf.{{ kubeadmConfig_api_version }}.j2"
+    src: "kubeadm-client.conf.j2"
     dest: "{{ kube_config_dir }}/kubeadm-client.conf"
     backup: true
     mode: "0640"
+    validate: "{{ kubeadm_config_validate_enabled | ternary(bin_dir + '/kubeadm config validate --config %s', omit) }}"
   when: ('kube_control_plane' not in group_names)
 
 - name: Join to cluster if needed
@@ -89,38 +89,16 @@
   when:
     - ('kube_control_plane' not in group_names)
     - not kubelet_conf.stat.exists
-  block:
-
-    - name: Join to cluster
-      command: >-
-        timeout -k {{ kubeadm_join_timeout }} {{ kubeadm_join_timeout }}
-        {{ bin_dir }}/kubeadm join
-        --config {{ kube_config_dir }}/kubeadm-client.conf
-        --ignore-preflight-errors=DirAvailable--etc-kubernetes-manifests
-        --skip-phases={{ kubeadm_join_phases_skip | join(',') }}
-      register: kubeadm_join
-      changed_when: kubeadm_join is success
-
-  rescue:
-
-    - name: Join to cluster with ignores
-      command: >-
-        timeout -k {{ kubeadm_join_timeout }} {{ kubeadm_join_timeout }}
-        {{ bin_dir }}/kubeadm join
-        --config {{ kube_config_dir }}/kubeadm-client.conf
-        --ignore-preflight-errors=all
-        --skip-phases={{ kubeadm_join_phases_skip | join(',') }}
-      register: kubeadm_join
-      changed_when: kubeadm_join is success
-
-  always:
-
-    - name: Display kubeadm join stderr if any
-      when: kubeadm_join is failed
-      debug:
-        msg: |
-          Joined with warnings
-          {{ kubeadm_join.stderr_lines }}
+  vars:
+    ignored:
+      - DirAvailable--etc-kubernetes-manifests
+      - "{{ kubeadm_ignore_preflight_errors }}"
+  command: >-
+    timeout -k {{ kubeadm_join_timeout }} {{ kubeadm_join_timeout }}
+    {{ bin_dir }}/kubeadm join
+    --config {{ kube_config_dir }}/kubeadm-client.conf
+    --ignore-preflight-errors={{ ignored | flatten | join(',') }}
+    --skip-phases={{ kubeadm_join_phases_skip | join(',') }}
 
 - name: Update server field in kubelet kubeconfig
   lineinfile:
@@ -228,5 +206,5 @@
   when:
     - etcd_deployment_type == "kubeadm"
     - inventory_hostname not in groups['kube_control_plane']
-    - kube_network_plugin in ["calico", "flannel", "cilium"] or cilium_deploy_additionally | default(false) | bool
+    - kube_network_plugin in ["calico", "flannel", "cilium"] or cilium_deploy_additionally
     - kube_network_plugin != "calico" or calico_datastore == "etcd"

@@ -1,7 +1,12 @@
-1. подключиться к яндекс облаку и создать базовую структуру облако-каталог default
-2. активировать грант
-3. установить и настроить [yc](https://yandex.cloud/ru/docs/cli/quickstart)
-4. установить и
+1. установить git
+2. слонировать репозиторий с лабами
+```bash
+git clone https://github.com/bykvaadm/CyberEd.git
+```
+3. подключиться к яндекс облаку и создать базовую структуру облако-каталог default
+4. активировать грант
+5. установить и настроить [yc](https://yandex.cloud/ru/docs/cli/quickstart)
+6. установить и
    настроить [terraform](https://yandex.cloud/ru/docs/tutorials/infrastructure-management/terraform-quickstart)
 
 ```bash
@@ -25,7 +30,7 @@ yc config set cloud-id <идентификатор_облака, i.e. b1gu8iam2n
 yc config set folder-id <идентификатор_каталога, i.e. b1g468ndv61u9tkh3f17>
 ```
 
-5. пишем скрипт или добавляем в автозапуск строки
+6. пишем скрипт или добавляем в автозапуск строки
 
 ```bash
 export YC_TOKEN=$(yc iam create-token)
@@ -33,10 +38,10 @@ export YC_CLOUD_ID=$(yc config get cloud-id)
 export YC_FOLDER_ID=$(yc config get folder-id) 
 ```
 
-6. запускаем эти команды выбранным способом и проверяем: env | grep YC. Переменные должны быть не пустыми
-7. terraform init
-8. в файле meta.txt укажите ваш ssh ключ в 8й строчке
-9. terraform apply -> yes # должны создаться объекты. можно их посмотреть в облаке
+7. запускаем эти команды выбранным способом и проверяем: env | grep YC. Переменные должны быть не пустыми
+8. terraform init
+9. в файле meta.txt укажите ваш ssh ключ в 8й строчке
+10. terraform apply -> yes # должны создаться объекты. можно их посмотреть в облаке
 
 Если всё сделано правильно и приватный ключ ssh лежит по стандартному пути или добавлен в ssh-agent, то после запуска vm
 начнется установка docker, как описано в main.tf в строках 84-95. И также если у вм есть выход в интернет, то установка

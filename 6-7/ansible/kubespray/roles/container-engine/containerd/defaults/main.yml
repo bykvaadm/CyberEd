@@ -17,8 +17,8 @@ containerd_runc_runtime:
   root: ""
   base_runtime_spec: cri-base.json
   options:
-    systemdCgroup: "{{ containerd_use_systemd_cgroup | ternary('true', 'false') }}"
-    binaryName: "{{ bin_dir }}/runc"
+    SystemdCgroup: "{{ containerd_use_systemd_cgroup | ternary('true', 'false') }}"
+    BinaryName: "{{ bin_dir }}/runc"
 
 containerd_additional_runtimes: []
 # Example for Kata Containers as additional runtime:
@@ -62,7 +62,10 @@ containerd_registries_mirrors:
       - host: https://registry-1.docker.io
         capabilities: ["pull", "resolve"]
         skip_verify: false
-
+#        ca: ["/etc/certs/mirror.pem"]
+#        client: [["/etc/certs/client.pem", ""],["/etc/certs/client.cert", "/etc/certs/client.key"]]
+#        header:
+#          Authorization: "Basic XXX"
 containerd_max_container_log_line_size: 16384
 
 # If enabled it will allow non root users to use port numbers <1024
@@ -90,11 +93,8 @@ containerd_registry_auth: []
 # Configure containerd service
 containerd_limit_proc_num: "infinity"
 containerd_limit_core: "infinity"
-containerd_limit_open_file_num: "infinity"
+containerd_limit_open_file_num: 1048576
 containerd_limit_mem_lock: "infinity"
-
-# If enabled it will use config_path and config to be put in {{ containerd_cfg_dir }}/certs.d/
-containerd_use_config_path: false
 
 # OS distributions that already support containerd
 containerd_supported_distributions:
@@ -123,7 +123,7 @@ enable_cdi: false
 # For containerd tracing configuration please check out the official documentation:
 # https://github.com/containerd/containerd/blob/main/docs/tracing.md
 containerd_tracing_enabled: false
-containerd_tracing_endpoint: "0.0.0.0:4317"
+containerd_tracing_endpoint: "[::]:4317"
 containerd_tracing_protocol: "grpc"
 containerd_tracing_sampling_ratio: 1.0
 containerd_tracing_service_name: "containerd"

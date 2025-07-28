@@ -20,7 +20,7 @@
     - "'Amazon' not in ansible_distribution"
     - slc.stat.exists
   tags:
-    - bootstrap-os
+    - bootstrap_os
 
 - name: Disable IPv6 DNS lookup
   lineinfile:
@@ -28,13 +28,13 @@
     line: "precedence ::ffff:0:0/96  100"
     state: present
     create: true
-    backup: true
+    backup: "{{ leave_etc_backup_files }}"
     mode: "0644"
   when:
     - disable_ipv6_dns
     - not ansible_os_family in ["Flatcar", "Flatcar Container Linux by Kinvolk"]
   tags:
-    - bootstrap-os
+    - bootstrap_os
 
 - name: Clean previously used sysctl file locations
   file:
@@ -52,7 +52,7 @@
     get_mime: false
   register: sysctl_file_stat
   tags:
-    - bootstrap-os
+    - bootstrap_os
 
 - name: Change sysctl file path to link source if linked
   set_fact:
@@ -61,7 +61,7 @@
     - sysctl_file_stat.stat.islnk is defined
     - sysctl_file_stat.stat.islnk
   tags:
-    - bootstrap-os
+    - bootstrap_os
 
 - name: Make sure sysctl file path folder exists
   file:
@@ -76,6 +76,7 @@
     value: "1"
     state: present
     reload: true
+  when: ipv4_stack | bool
 
 - name: Enable ipv6 forwarding
   ansible.posix.sysctl:
@@ -84,7 +85,7 @@
     value: "1"
     state: present
     reload: true
-  when: enable_dual_stack_networks | bool
+  when: ipv6_stack | bool
 
 - name: Check if we need to set fs.may_detach_mounts
   stat:

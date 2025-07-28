@@ -68,8 +68,8 @@ containerd_runc_runtime:
   engine: ""
   root: ""
   options:
-    systemdCgroup: "false"
-    binaryName: /usr/local/bin/my-runc
+    SystemdCgroup: "false"
+    BinaryName: /usr/local/bin/my-runc
   base_runtime_spec: cri-base.json
 ```
 
@@ -96,7 +96,7 @@ You can tune many more [settings][runtime-spec] by supplying your own file name 
 containerd_base_runtime_specs:
   cri-spec-custom.json: |
     {
-      "ociVersion": "1.0.2-dev",
+      "ociVersion": "1.1.0",
       "process": {
         "user": {
           "uid": 0,
@@ -148,4 +148,12 @@ following configuration:
 
 ```yaml
 nri_enabled: true
+```
+
+### Optional : Static Binary
+
+To ensure compatibility with older distributions (such as Debian 11), you can use a static containerd binary. By default, this is static binary if the system's glibc version is less than 2.34; otherwise, it is the default binary.
+
+```yaml
+containerd_static_binary: true
 ```

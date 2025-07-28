@@ -4,7 +4,7 @@
     # noqa: jinja[spacing]
     kubeadm_discovery_address: >-
       {%- if "127.0.0.1" in kube_apiserver_endpoint or "localhost" in kube_apiserver_endpoint -%}
-      {{ first_kube_control_plane_address }}:{{ kube_apiserver_port }}
+      {{ first_kube_control_plane_address | ansible.utils.ipwrap }}:{{ kube_apiserver_port }}
       {%- else -%}
       {{ kube_apiserver_endpoint | regex_replace('https://', '') }}
       {%- endif %}
@@ -24,26 +24,16 @@
 
 - name: Parse certificate key if not set
   set_fact:
-    kubeadm_certificate_key: "{{ hostvars[groups['kube_control_plane'][0]]['kubeadm_upload_cert'].stdout_lines[-1] | trim }}"
+    kubeadm_certificate_key: "{{ hostvars[first_kube_control_plane]['kubeadm_upload_cert'].stdout_lines[-1] | trim }}"
   run_once: true
   when:
-    - hostvars[groups['kube_control_plane'][0]]['kubeadm_upload_cert'] is defined
-    - hostvars[groups['kube_control_plane'][0]]['kubeadm_upload_cert'] is not skipped
-
-- name: Create kubeadm ControlPlane config
-  template:
-    src: "kubeadm-controlplane.{{ kubeadmConfig_api_version }}.yaml.j2"
-    dest: "{{ kube_config_dir }}/kubeadm-controlplane.yaml"
-    mode: "0640"
-    backup: true
-  when:
-    - inventory_hostname != first_kube_control_plane
-    - not kubeadm_already_run.stat.exists
+    - hostvars[first_kube_control_plane]['kubeadm_upload_cert'] is defined
+    - hostvars[first_kube_control_plane]['kubeadm_upload_cert'] is not skipped
 
 - name: Wait for k8s apiserver
   wait_for:
-    host: "{{ kubeadm_discovery_address.split(':')[0] }}"
-    port: "{{ kubeadm_discovery_address.split(':')[1] }}"
+    host: "{{ kubeadm_discovery_address | regex_replace('\\]?:\\d+$', '') | regex_replace('^\\[', '') }}"
+    port: "{{ kubeadm_discovery_address.split(':')[-1] }}"
     timeout: 180
 
 
@@ -83,11 +73,22 @@
     - kubeadm_use_file_discovery
     - kubeadm_already_run is not defined or not kubeadm_already_run.stat.exists
 
+- name: Create kubeadm ControlPlane config
+  template:
+    src: "kubeadm-controlplane.yaml.j2"
+    dest: "{{ kube_config_dir }}/kubeadm-controlplane.yaml"
+    mode: "0640"
+    backup: true
+    validate: "{{ kubeadm_config_validate_enabled | ternary(bin_dir + '/kubeadm config validate --config %s', omit) }}"
+  when:
+    - inventory_hostname != first_kube_control_plane
+    - not kubeadm_already_run.stat.exists
+
 - name: Joining control plane node to the cluster.
   command: >-
     {{ bin_dir }}/kubeadm join
     --config {{ kube_config_dir }}/kubeadm-controlplane.yaml
-    --ignore-preflight-errors=all
+    --ignore-preflight-errors={{ kubeadm_ignore_preflight_errors | join(',') }}
     --skip-phases={{ kubeadm_join_phases_skip | join(',') }}
   environment:
     PATH: "{{ bin_dir }}:{{ ansible_env.PATH }}"
