@@ -7,7 +7,7 @@
     python3.12 -m venv $VENVDIR
     source $VENVDIR/bin/activate
     ```
-3. cd ansible && git clone https://github.com/kubernetes-sigs/kubespray.git
+3. git clone https://github.com/kubernetes-sigs/kubespray.git
 4. cd $KUBESPRAYDIR && pip install -U -r requirements.txt
 5. cd ../../ && terraform apply
 6. cd ansible/$KUBESPRAYDIR && ../kubespray-venv/bin/ansible-playbook -i inventory/mycluster/hosts.yaml  --become --become-user=root cluster.yml
@@ -16,7 +16,10 @@
 9. cd kubernetes-goat
 10. chmod +x setup-kubernetes-goat.sh
 11. chmod +x access-kubernetes-goat.sh
-12. ./setup-kubernetes-goat.sh
+12. install helm, kubectl;
+12. ssh debian@89.169.159.219 sudo cat /etc/kubernetes/admin.conf > ~/.kube/config_TEMP
+13. переименовать ~/.kube/config_TEMP в ~/.kube/config
+13. ./setup-kubernetes-goat.sh
 13. ./access-kubernetes-goat.sh
 
 # scenarios
