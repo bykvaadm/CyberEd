@@ -11,16 +11,17 @@
 4. cd $KUBESPRAYDIR && pip install -U -r requirements.txt
 5. cd ../../ && terraform apply
 6. cd ansible/$KUBESPRAYDIR && ../kubespray-venv/bin/ansible-playbook -i inventory/mycluster/hosts.yaml  --become --become-user=root cluster.yml
-7. cd ../
-8. git clone https://github.com/madhuakula/kubernetes-goat.git
-9. cd kubernetes-goat
-10. chmod +x setup-kubernetes-goat.sh
-11. chmod +x access-kubernetes-goat.sh
-12. install helm, kubectl;
-12. ssh debian@89.169.159.219 sudo cat /etc/kubernetes/admin.conf > ~/.kube/config_TEMP
-13. переименовать ~/.kube/config_TEMP в ~/.kube/config
-13. ./setup-kubernetes-goat.sh
-13. ./access-kubernetes-goat.sh
+7. kubectl --insecure-skip-tls-verify get no
+8. cd ../
+9. git clone https://github.com/madhuakula/kubernetes-goat.git
+10. cd kubernetes-goat
+11. chmod +x setup-kubernetes-goat.sh
+12. chmod +x access-kubernetes-goat.sh
+13. install helm, kubectl;
+14. ssh debian@89.169.159.219 sudo cat /etc/kubernetes/admin.conf > ~/.kube/config_TEMP
+15. переименовать ~/.kube/config_TEMP в ~/.kube/config
+16. ./setup-kubernetes-goat.sh
+17. ./access-kubernetes-goat.sh
 
 # scenarios
 https://madhuakula.com/kubernetes-goat/docs/scenarios
