@@ -39,7 +39,7 @@ kubectl --insecure-skip-tls-verify apply -f scenarios/insecure-rbac/setup.yaml
 
 # deploying helm chart to verify the setup
 echo "deploying helm chart metadata-db scenario"
-helm --insecure-skip-tls-verify install metadata-db scenarios/metadata-db/
+helm --kube-insecure-skip-tls-verify install metadata-db scenarios/metadata-db/
 
 # setup the scenarios/configurations
 echo 'deploying the vulnerable scenarios manifests'
