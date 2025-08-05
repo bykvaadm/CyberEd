@@ -67,11 +67,19 @@ helm --kube-insecure-skip-tls-verify --namespace jenkins upgrade --install jenki
 helm --kube-insecure-skip-tls-verify --namespace etcd upgrade --install etcd \
   --set persistence.enabled="false" --set replicaCount="3" --set auth.rbac.create=false \
   --create-namespace oci://registry-1.docker.io/bitnamicharts/etcd -f etcd_values.yaml
+sleep 15s  
+kubectl --insecure-skip-tls-verify -n etcd edit statefulset.apps/etcd  
+# Добавить после env ETCD_INITIAL_CLUSTER_STATE:
+#       - env:
+#         - name: ETCD_INITIAL_CLUSTER_STATE
+#           value: new
+          
 # vault
 sleep 70s
 helm repo add hashicorp https://helm.releases.hashicorp.com
 helm repo update
 helm --kube-insecure-skip-tls-verify --namespace vault upgrade --install vault --create-namespace hashicorp/vault -f vault_values.yaml
+kubectl --insecure-skip-tls-verify -n vault apply -f vault-security-policy.yaml
 ```
 
 # prepare vault
@@ -82,13 +90,13 @@ vault operator init
 ```
 OUTPUT
 ```text
-Unseal Key 1: wqblZhgfgU5gBxH09aa4XboCQm/ZREtvhsV94umU/hga
-Unseal Key 2: 7x94Tv3UomGBaIAq9IXTZTAawr3o6NWWIg9egkBmS6uv
-Unseal Key 3: Rm2oE3Ihemj01ylF1rajoBkGra3SLbANRfSYXs+rDM3J
-Unseal Key 4: sKAJfZYKZwygstJyEqTiCOBOEWI11kRmIfeZc/mxuXsJ
-Unseal Key 5: OWiddM51FluoFkkH6NEcHTxHbfM6n6dDcViCzAyOZmGQ
+Unseal Key 1: 7HWDOKVhN/sXJk5sxm85jUDtWbE7tc2L8+M9J/WapI3+
+Unseal Key 2: VPHtAWPiSp1Pqcrtm4WhQV2h3I/HYRFEjQ05wTuIRD3I
+Unseal Key 3: kjK8lyKOjhtOnNsS2VSdYKDM+HUq1qMIAhSlDZCvxtus
+Unseal Key 4: hnxmiouNJ0wHnmYjWTfYHX7A8KC7wsmYUEWRrEYv62mR
+Unseal Key 5: r4EKhfp7mp95bkHKKjcsFFeLRRgtH3GQOHNEKQZTOfs7
 
-Initial Root Token: hvs.9wljF0O1VrsceJkwL29brqoR
+Initial Root Token: hvs.f6jiHnNdAs9SdctrG4PUf6Zx
 ```
 unseal
 ```bash
@@ -119,7 +127,7 @@ vault-agent-injector-bdbbcb8cf-d9djn   1/1     Running   0          8m18s
 
 ```bash
 kubectl --insecure-skip-tls-verify -n vault exec -ti vault-0 -- sh
-vault login token=hvs.9wljF0O1VrsceJkwL29brqoR
+vault login token=hvs.f6jiHnNdAs9SdctrG4PUf6Zx
 vault secrets enable -path=kv kv
 vault kv  enable-versioning kv/
 vault auth enable approle
@@ -147,7 +155,7 @@ OUTPUT
 ```text
 Key        Value
 ---        -----
-role_id    ce3c1387-17fd-75b1-dda2-cf15c986f3cc
+role_id    e6a4a672-bd27-7ebd-e61f-a6bab052f04f
 ```
 
 прочитать secret id
@@ -158,8 +166,8 @@ OUTPUT
 ```text
 Key                   Value
 ---                   -----
-secret_id             a3bb74ab-6e73-b65e-99b3-ebcadf82771f
-secret_id_accessor    59cf0447-9735-3b4f-a67d-ea64c5be9405
+secret_id             aa169070-0137-faba-9cd8-6c3d0b9cacb6
+secret_id_accessor    9b07aba2-5007-a758-b0b2-e9605e25bf2d
 secret_id_num_uses    0
 secret_id_ttl         0s
 ```
@@ -174,10 +182,11 @@ vault kv put -mount=kv thp/logstash-kube keystore=ololo redis=azaza truststore=p
 получаем пароль от jenkins
 ```bash
 kubectl --insecure-skip-tls-verify exec --namespace jenkins -it svc/jenkins -c jenkins -- /bin/cat /run/secrets/additional/chart-admin-password && echo
+# kubectl --insecure-skip-tls-verify -n jenkins logs -f jenkins-0 -c init
 ```
 OUTPUT
 ```text
-SLR7F8ViJw9rdBbXOkrdlZ
+3cdGI9a6cdaSnL7qH2PlhC
 ```
 пробрасываем порт
 ```bash
@@ -194,7 +203,7 @@ kubectl --insecure-skip-tls-verify --namespace jenkins port-forward svc/jenkins 
 7. http://127.0.0.1:8080/manage/credentials/store/system/domain/_/newCredentials
 8. выбираем Vault app role credential
 9. заполняем role_id, secret_id жмем create 
-10. сохраняем себе id/name (они одинаковые) // 68217d90-14e3-445d-b551-d377a209996b
+10. сохраняем себе id/name (они одинаковые) // 8cc5136e-1526-41e0-a057-204fe0863712
 11. dashboard -> new item
 12. имя - vault, тип - pipeline -> ok
 13. скрипт:
@@ -214,7 +223,7 @@ node {
     // optional configuration, if you do not provide this the next higher configuration
     // (e.g. folder or global) will be used
     def configuration = [vaultUrl: 'http://vault-ui.vault.svc.cluster.local:8200',
-                         vaultCredentialId: '2b56d6f5-bc9c-4f21-b8eb-a943834b5451',
+                         vaultCredentialId: '8cc5136e-1526-41e0-a057-204fe0863712',
                          skipSslVerification: 'true',
                          engineVersion: 2]
     
