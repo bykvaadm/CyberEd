@@ -9,6 +9,9 @@ metadata:
     addonmanager.kubernetes.io/mode: Reconcile
     kubernetes.io/name: "coredns{{ coredns_ordinal_suffix }}"
 spec:
+{% if not enable_dns_autoscaler %}
+  replicas: {{ coredns_replicas }}
+{% endif %}
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -23,6 +26,7 @@ spec:
         k8s-app: kube-dns{{ coredns_ordinal_suffix }}
       annotations:
         createdby: 'kubespray'
+        checksum/config: "{{ lookup('template', 'coredns-config.yml.j2') | checksum }}"
     spec:
       securityContext:
         seccompProfile:
