@@ -81,6 +81,9 @@ resource "null_resource" "baz" {
     # если ключ лежит по нестандартному пути, указываем путь к этому файлу.
     # генерируем командой ssh-keygen
     # private_key=""
+
+    # Для Windows:
+    # private_key = file("путь/до/файла/в/Windows") на швиндовс
     host = yandex_compute_instance.vm-1.network_interface.0.nat_ip_address
   }
 
