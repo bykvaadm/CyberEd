@@ -1,5 +1,0 @@
----
-# We keep these variables around to allow migration from package
-# manager controlled installs to direct download ones.
-containerd_package: 'containerd.io'
-yum_repo_dir: /etc/yum.repos.d

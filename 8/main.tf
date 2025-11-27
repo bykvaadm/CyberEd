@@ -233,5 +233,5 @@ resource "local_file" "hosts" {
       calico_rr:
         hosts: {}
   EOT
-  filename = "ansible/kubespray/inventory/mycluster/hosts.yaml"
+  filename = "../kubernetes/kubespray/inventory/mycluster/hosts.yaml"
 }

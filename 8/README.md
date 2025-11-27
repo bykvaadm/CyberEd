@@ -1,72 +1,26 @@
-# install VM's
-```bash
-# [cyberED/8]
-git clone https://github.com/kubernetes-sigs/kubespray.git ansible/kubespray
-cp -r ansible/kubespray/inventory/sample ansible/kubespray/inventory/mycluster
-terraform init
-terraform apply
-```
-
-# prepare environment
-
-use strongly python 3.10-3.12!!!!!!
-
-```bash
-# [cyberED/8]
-python3.12 -m venv ansible/kubespray-venv
-source ansible/kubespray-venv/bin/activate
-cd ansible/kubespray
-# [cyberED/8/ansible/kubespray]
-pip install -U -r requirements.txt 
-```
-
-install additional requirements if you don't have ones:
-- helm
-- kubectl
-
-# install kubernetes   
-
-```bash
-# [cyberED/8/ansible/kubespray]
-../kubespray-venv/bin/ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root cluster.yml
-```
-
-Копируем себе конфиг с мастер ноды
-```bash
-export NODE_1=$(grep ansible_host inventory/mycluster/hosts.yaml | head -n1 | awk '{print $2}')
-ssh debian@${NODE_1} sudo cat /etc/kubernetes/admin.conf > ~/.kube/config
-# MAC
-sed -i'' -e "s/127.0.0.1/${NODE_1}/g" ~/.kube/config
-# Linux
-sed -i "s/127.0.0.1/${NODE_1}/g" ~/.kube/config 
-```
-TEST
-```bash
-kubectl --insecure-skip-tls-verify get no
-```
-OUTPUT
-```text
-NAME    STATUS   ROLES           AGE   VERSION
-node1   Ready    control-plane   14m   v1.31.1
-node2   Ready    <none>          13m   v1.31.1
-node3   Ready    <none>          13m   v1.31.1
-node4   Ready    <none>          13m   v1.31.1
-```
+# подготовка лабораторной среды 
+1. подготовьте среду kubernetes (см. инструкцию в папке "kubernetes")
+    ```bash
+    cd ../kubernetes
+    ```
+2. terraform init
+3. terraform apply
+4. вернитесь в инструкцию kubernetes (ПУНКТ 2.6) для запуска ansible и установке kubernetes на сервера
+    ```bash
+    cd ../kubernetes
+    ```
 
 # install apps
 
 ```bash
-# [cyberED/8/ansible/kubespray]
-cd ../../helm
-# [cyberED/8/helm]
 ## jenkins
 helm repo add jenkins https://charts.jenkins.io
 helm repo update
-helm --kube-insecure-skip-tls-verify --namespace jenkins upgrade --install jenkins --create-namespace jenkins/jenkins -f jenkins_values.yaml
+helm --kube-insecure-skip-tls-verify --namespace jenkins upgrade --install jenkins --create-namespace jenkins/jenkins -f helm/jenkins_values.yaml
 # etcd
 helm --kube-insecure-skip-tls-verify --namespace etcd upgrade --install etcd \
   --set persistence.enabled="false" --set replicaCount="3" --set auth.rbac.create=false \
-  --create-namespace oci://registry-1.docker.io/bitnamicharts/etcd -f etcd_values.yaml
+  --create-namespace oci://registry-1.docker.io/bitnamicharts/etcd -f helm/etcd_values.yaml
 sleep 15s  
 kubectl --insecure-skip-tls-verify -n etcd edit statefulset.apps/etcd  
 # Добавить после env ETCD_INITIAL_CLUSTER_STATE:
@@ -78,8 +32,8 @@ kubectl --insecure-skip-tls-verify -n etcd edit statefulset.apps/etcd
 sleep 70s
 helm repo add hashicorp https://helm.releases.hashicorp.com
 helm repo update
-helm --kube-insecure-skip-tls-verify --namespace vault upgrade --install vault --create-namespace hashicorp/vault -f vault_values.yaml
-kubectl --insecure-skip-tls-verify -n vault apply -f vault-security-policy.yaml
+helm --kube-insecure-skip-tls-verify --namespace vault upgrade --install vault --create-namespace hashicorp/vault -f helm/vault_values.yaml
+kubectl --insecure-skip-tls-verify -n vault apply -f helm/vault-security-policy.yaml
 ```
 
 # prepare vault
@@ -90,13 +44,14 @@ vault operator init
 ```
 OUTPUT
 ```text
-Unseal Key 1: 7HWDOKVhN/sXJk5sxm85jUDtWbE7tc2L8+M9J/WapI3+
-Unseal Key 2: VPHtAWPiSp1Pqcrtm4WhQV2h3I/HYRFEjQ05wTuIRD3I
-Unseal Key 3: kjK8lyKOjhtOnNsS2VSdYKDM+HUq1qMIAhSlDZCvxtus
-Unseal Key 4: hnxmiouNJ0wHnmYjWTfYHX7A8KC7wsmYUEWRrEYv62mR
-Unseal Key 5: r4EKhfp7mp95bkHKKjcsFFeLRRgtH3GQOHNEKQZTOfs7
+Unseal Key 1: 9O8HuGSKQLI+oqWbGSfzz+up7drM0UrcNh2q6KRT0gmi
+Unseal Key 2: ePrknQICGArB8pk4GA6RVhDAX6FjMjvm3Xg6KwVAF/ci
+Unseal Key 3: 8z4zrpgGm1l+0ZQgLxoRHQgjfuAfUf4VJ7YE6ZrPXJ80
+Unseal Key 4: J6+TQuGYfDlea4P/9v+vVwTjRDT2QboDdeszasSqqhXC
+Unseal Key 5: Pn5iqFdFGX1VTjr5VbDIAm68QWBpzQLysvP3DeOi4gx8
 
-Initial Root Token: hvs.f6jiHnNdAs9SdctrG4PUf6Zx
+Initial Root Token: hvs.pythjDn2XEhvnLweVKP5VnXW
+
 ```
 unseal
 ```bash
@@ -127,12 +82,15 @@ vault-agent-injector-bdbbcb8cf-d9djn   1/1     Running   0          8m18s
 
 ```bash
 kubectl --insecure-skip-tls-verify -n vault exec -ti vault-0 -- sh
-vault login token=hvs.f6jiHnNdAs9SdctrG4PUf6Zx
-vault secrets enable -path=kv kv
-vault kv  enable-versioning kv/
+vault login token=hvs.pythjDn2XEhvnLweVKP5VnXW
 vault auth enable approle
-# Jenkins
-### создадим политику
+vault secrets enable -path=kv kv
+vault kv enable-versioning kv/
+
+# создадим секреты
+vault kv put -mount=kv thp/logstash-kube keystore=ololo redis=azaza truststore=purumpurum
+
+# создадим политику
 cat > ~/jenkins.hcl << EOF
 path "auth/approle/login" {
   capabilities = [ "create", "read" ]
@@ -143,11 +101,12 @@ path "kv/data/thp/*" {
 }
 EOF
 vault policy write jenkins ~/jenkins.hcl
-### создать роль jenkins и связать с политикой
+
+# создаём роль jenkins и связать с политикой jenkins
 vault write auth/approle/role/jenkins policies=jenkins
 ```
 
-прочитать role id
+Прочитаем данные для последующей авторизации, сначала role id (грубо говоря логин)
 ```bash
 vault read auth/approle/role/jenkins/role-id
 ```
@@ -155,10 +114,10 @@ OUTPUT
 ```text
 Key        Value
 ---        -----
-role_id    e6a4a672-bd27-7ebd-e61f-a6bab052f04f
+role_id    81eda87a-ac1b-d937-089a-94734f91139c
 ```
 
-прочитать secret id
+прочитаем secret id (грубо говоря пароль)
 ```bash
 vault write -f auth/approle/role/jenkins/secret-id
 ```
@@ -166,15 +125,8 @@ OUTPUT
 ```text
 Key                   Value
 ---                   -----
-secret_id             aa169070-0137-faba-9cd8-6c3d0b9cacb6
-secret_id_accessor    9b07aba2-5007-a758-b0b2-e9605e25bf2d
-secret_id_num_uses    0
-secret_id_ttl         0s
-```
-
-создадим секреты
-```bash
-vault kv put -mount=kv thp/logstash-kube keystore=ololo redis=azaza truststore=purumpurum
+secret_id             86cc0273-bc66-5ab2-f4c2-388558ed874a
+...
 ```
 
 # jenkins job
@@ -186,7 +138,7 @@ kubectl --insecure-skip-tls-verify exec --namespace jenkins -it svc/jenkins -c j
 ```
 OUTPUT
 ```text
-3cdGI9a6cdaSnL7qH2PlhC
+bwhWH5CxiMe9jP4uFTD1rM
 ```
 пробрасываем порт
 ```bash
@@ -203,7 +155,7 @@ kubectl --insecure-skip-tls-verify --namespace jenkins port-forward svc/jenkins 
 7. http://127.0.0.1:8080/manage/credentials/store/system/domain/_/newCredentials
 8. выбираем Vault app role credential
 9. заполняем role_id, secret_id жмем create 
-10. сохраняем себе id/name (они одинаковые) // 8cc5136e-1526-41e0-a057-204fe0863712
+10. сохраняем себе id/name (они одинаковые) // 3115eae8-f7bd-4af2-a6b8-0f2f2e229c58
 11. dashboard -> new item
 12. имя - vault, тип - pipeline -> ok
 13. скрипт:

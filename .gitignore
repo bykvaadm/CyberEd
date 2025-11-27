@@ -4,4 +4,6 @@ terraform.*
 hosts
 temp
 kubespray*
+kubernetes-goat
 key*.json
+.venv

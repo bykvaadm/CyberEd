@@ -1,31 +1,24 @@
-# Requrements
-1. install helm https://helm.sh/docs/intro/install/
-2. install kubectl https://kubernetes.io/docs/tasks/tools/#kubectl
-3. install python 3.10-3.13
+# подготовка лабораторной среды
 
-# Steps to install LAB
-1. cd ansible
-2. setup venv (python 3.10-3.13!!!!!!)
+1. подготовьте среду kubernetes (см. инструкцию в папке "kubernetes")
     ```bash
-    VENVDIR=kubespray-venv
-    KUBESPRAYDIR=kubespray
-    python3.13 -m venv $VENVDIR
-    source $VENVDIR/bin/activate
+    cd ../kubernetes
     ```
-3. [OPTIONAL] git clone https://github.com/kubernetes-sigs/kubespray.git
-4. cd $KUBESPRAYDIR && python3.13 -m pip install -U -r requirements.txt
-5. cd ../../ && terraform apply
-6. cd ansible/$KUBESPRAYDIR && ../kubespray-venv/bin/ansible-playbook -i inventory/mycluster/hosts.yaml  --become --become-user=root cluster.yml
-7. cd ../
-8. [OPTIONAL] git clone https://github.com/madhuakula/kubernetes-goat.git
-9. cd kubernetes-goat
-10. [OPTIONAL] chmod +x setup-kubernetes-goat.sh && chmod +x access-kubernetes-goat.sh
-11. HOST=$(grep ansible_host ../kubespray/inventory/mycluster/hosts.yaml | awk '{print $2}' |head -n1)
-12. ssh debian@$HOST sudo 2>/dev/null cat /etc/kubernetes/admin.conf>~/.kube/cybered
-13. sed -i '' '"s/127.0.0.1/$HOST/g" ~/.kube/cybered
-14. kubectl --insecure-skip-tls-verify --kubeconfig ~/.kube/cybered get no
-15. ./setup-kubernetes-goat.sh --insecure --kubeconfig ~/.kube/cybered
-16. ./access-kubernetes-goat.sh
+2. terraform init
+3. terraform apply
+4. вернитесь в инструкцию kubernetes (ПУНКТ 2.6) для запуска ansible и установке kubernetes на сервера
+    ```bash
+    cd ../kubernetes
+    ```
+
+# подготовка заданий
+
+1. git clone https://github.com/madhuakula/kubernetes-goat.git
+2. cd kubernetes-goat
+3. chmod +x setup-kubernetes-goat.sh && chmod +x access-kubernetes-goat.sh
+4. ./setup-kubernetes-goat.sh --insecure --kubeconfig ~/.kube/config
+5. ./access-kubernetes-goat.sh --insecure --kubeconfig ~/.kube/config
 
 # scenarios
+
 https://madhuakula.com/kubernetes-goat/docs/scenarios
