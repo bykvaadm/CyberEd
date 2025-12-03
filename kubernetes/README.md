@@ -5,10 +5,10 @@
 3. install helm https://helm.sh/docs/intro/install/
 4. install kubectl https://kubernetes.io/docs/tasks/tools/#kubectl
 5. install uv https://docs.astral.sh/uv/getting-started/installation/
-    ```bash
-    # Linux/Macos
-    curl -LsSf https://astral.sh/uv/install.sh | sh
-    ```
+   ```bash
+   # Linux/Macos
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   ```
 6. install python 3.10-3.13 (опционально, если питон нужной версии не уставновлен, скачается portable executable)
    ```bash
    uv python install 3.13

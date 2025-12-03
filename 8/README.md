@@ -175,7 +175,7 @@ node {
     // optional configuration, if you do not provide this the next higher configuration
     // (e.g. folder or global) will be used
     def configuration = [vaultUrl: 'http://vault-ui.vault.svc.cluster.local:8200',
-                         vaultCredentialId: '8cc5136e-1526-41e0-a057-204fe0863712',
+                         vaultCredentialId: '3115eae8-f7bd-4af2-a6b8-0f2f2e229c58',
                          skipSslVerification: 'true',
                          engineVersion: 2]
     
