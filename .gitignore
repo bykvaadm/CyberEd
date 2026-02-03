@@ -7,3 +7,4 @@ kubespray*
 kubernetes-goat
 key*.json
 .venv
+.DS_Store
