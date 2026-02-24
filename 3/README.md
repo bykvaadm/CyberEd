@@ -7,7 +7,7 @@
 
 ### Поднимаем приложение
 
-1. terraform apply - поднимаем 3 ВМ. информацию об именах и ip адресах можно увидеть в ansible/hosts
+1. terraform apply - поднимаем 3 ВМ. Терраформ автоматически запишет информацию об именах и ip адресах в ./ansible/hosts
 2. запускаем ansible-playbook -i ansible/hosts ansible/main.yaml -bD (Далее - под запускаем ansible везде будет
    подразумеваться эта команда)
 

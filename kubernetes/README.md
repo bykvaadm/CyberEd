@@ -42,13 +42,15 @@
     ../.venv/bin/ansible-playbook -i inventory/mycluster/hosts.yaml --become --become-user=root cluster.yml
     ```
 7. копируем себе конфиг с мастер ноды
+   <br>**ВНИМАНИЕ**<br>
+   текущие команды заменяют ваш kube config если он у вас уже есть (с созданием резервной копии)
    ```bash
    export NODE_1=$(grep ansible_host ../kubernetes/kubespray/inventory/mycluster/hosts.yaml | head -n1 | awk '{print $2}')
    ssh debian@${NODE_1} sudo cat /etc/kubernetes/admin.conf > ~/.kube/config
    # MAC
-   sed -i'' -e "s/127.0.0.1/${NODE_1}/g" ~/.kube/config
+   sed -i '.bak' -E "s|^([[:space:]]*server:).*|\1 https://${NODE_1}:6443|" ~/.kube/config
    # Linux
-   sed -i "s/127.0.0.1/${NODE_1}/g" ~/.kube/config 
+   sed -i.bak -E "s|^([[:space:]]*server:).*|\1 https://${NODE_1}:6443|" ~/.kube/config 
    ```
 8. Проверка работоспособности
    ```bash

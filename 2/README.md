@@ -340,6 +340,7 @@
 
 https://github.com/rebootuser/LinEnum
 https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS
+https://www.open-scap.org
 
 https://www.cisecurity.org/cis-benchmarks
 https://github.com/ansible-lockdown
