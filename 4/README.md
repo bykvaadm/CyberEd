@@ -1,4 +1,4 @@
-# Лабораторная работа №1 "Введение в Docker"
+# Лабораторная работа №4 "Введение в Docker"
 
 Требования к окружению для выполнению л\р:
 - установленный docker daemon: https://docs.docker.com/install/linux/docker-ce/debian/
