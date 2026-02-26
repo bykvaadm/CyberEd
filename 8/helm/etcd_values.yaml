@@ -90,7 +90,7 @@ diagnosticMode:
 image:
   registry: docker.io
   repository: bitnamilegacy/etcd
-  tag: 3.6.4-debian-12-r3
+  tag: 3.6.4-debian-12-r4
   digest: ""
   ## @param image.pullPolicy etcd image pull policy
   ## Specify a imagePullPolicy
@@ -250,7 +250,9 @@ existingConfigmap: ""
 ##   - name: FOO
 ##     value: "bar"
 ##
-extraEnvVars: []
+extraEnvVars:
+  - name: ETCD_INITIAL_CLUSTER_STATE
+    value: "new"
 ## @param extraEnvVarsCM Name of existing ConfigMap containing extra env vars
 ##
 extraEnvVarsCM: ""

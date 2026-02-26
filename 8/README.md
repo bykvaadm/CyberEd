@@ -21,13 +21,6 @@ helm --kube-insecure-skip-tls-verify --namespace jenkins upgrade --install jenki
 helm --kube-insecure-skip-tls-verify --namespace etcd upgrade --install etcd \
   --set persistence.enabled="false" --set replicaCount="3" --set auth.rbac.create=false \
   --create-namespace oci://registry-1.docker.io/bitnamicharts/etcd -f helm/etcd_values.yaml
-sleep 15s  
-kubectl --insecure-skip-tls-verify -n etcd edit statefulset.apps/etcd  
-# Добавить после env ETCD_INITIAL_CLUSTER_STATE:
-#       - env:
-#         - name: ETCD_INITIAL_CLUSTER_STATE
-#           value: new
-          
 # vault
 sleep 70s
 helm repo add hashicorp https://helm.releases.hashicorp.com
