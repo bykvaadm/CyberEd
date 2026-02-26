@@ -45,7 +45,7 @@
    <br>**ВНИМАНИЕ**<br>
    текущие команды заменяют ваш kube config если он у вас уже есть (с созданием резервной копии)
    ```bash
-   export NODE_1=$(grep ansible_host ../kubernetes/kubespray/inventory/mycluster/hosts.yaml | head -n1 | awk '{print $2}')
+   export NODE_1=$(grep ansible_host ./inventory/mycluster/hosts.yaml | head -n1 | awk '{print $2}')
    ssh debian@${NODE_1} sudo cat /etc/kubernetes/admin.conf > ~/.kube/config
    # MAC
    sed -i '.bak' -E "s|^([[:space:]]*server:).*|\1 https://${NODE_1}:6443|" ~/.kube/config
