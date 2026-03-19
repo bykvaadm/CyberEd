@@ -1,0 +1,145 @@
+---
+- name: Apply CIS hardening for Ubuntu 24
+  hosts: cis
+  become: true
+  roles:
+    - role: ubuntu24_cis
+      vars:
+        ansible_ssh_pipelining: True
+
+        ## section 1
+        ubtu24cis_rule_1_1_1_9: false # disable usb
+
+        # apparmor
+        ubtu24cis_rule_1_3_1_1: false
+        ubtu24cis_rule_1_3_1_2: false
+        ubtu24cis_rule_1_3_1_3: false
+        ubtu24cis_rule_1_3_1_4: false
+
+        # grub password
+        ubtu24cis_rule_1_4_1: true
+        ubtu24cis_set_boot_pass: true
+        ubtu24cis_grub_user: root
+        ubtu24cis_bootloader_password_hash: 'grub.pbkdf2.sha512.10000.69a2402d73b3a7aaedf97f57b5a824145c4472f16a07dc1dedd7e38faedd1e5306cbece3a77f4bd469053836257803acfbb66c1a2b4ca27c3ef120cdc757ed260ab58b2f4cbe6e537636f597f296d336' # P@ssw0rd
+
+        # 1.6
+        ubtu24cis_warning_banner: |
+          ВНИМАНИЕ!
+
+          Данная информационная система является собственностью организации.
+          Доступ разрешён только авторизованным пользователям.
+
+          Все действия пользователей могут регистрироваться и контролироваться.
+          Несанкционированный доступ запрещён и влечёт ответственность
+          в соответствии с действующим законодательством.
+
+          Продолжая работу, вы подтверждаете согласие с данными условиями.
+
+
+        ## section 2
+        ubtu24cis_rule_2_1_11: false # cups
+        ubtu24cis_rule_2_1_13: false # rsync
+        ubtu24cis_rule_2_1_18: false # nginx
+
+        # 2.3
+        ubtu24cis_time_sync_tool: "systemd-timesyncd"
+        ubtu24cis_time_pool:
+          - name: 0.ru.pool.ntp.org;
+            options: iburst maxsources 4
+        ubtu24cis_time_servers: [ ] # Fallback
+
+        # 2.4.1.8 /etc/cron.allow - add bk user
+        ubtu24cis_cron_allow_users:
+          - ubuntu
+
+        ## Section 3
+        ubtu24cis_ipv6_required: false
+        ubtu24cis_ipv6_disable: grub # 3.1.1
+
+
+        ubtu24cis_bluetooth_service: false
+        ubtu24cis_bluetooth_mask: false
+
+        ubtu24cis_is_router: false
+        ubtu24cis_rule_3_3_1: false
+
+        # disable ipv6
+        ubtu24cis_rule_4_4_3_1: false
+        ubtu24cis_rule_4_4_3_2: false
+        ubtu24cis_rule_4_4_3_3: false
+        ubtu24cis_rule_4_4_3_4: false
+
+        ## Section 4
+
+        ubtu24cis_firewall_package: "iptables"
+        ubtu24cis_rule_4_4_2_1: false # не делаем DROP для INPUT, OUTPUT, FORWARD
+
+        ## Section 5
+
+        # 5.1.4
+        ubtu24cis_sshd_allow_users: ubuntu
+        ubtu24cis_sshd_allow_groups: ""
+        # 5.1.6, 5.1.12, 5.1.15 - crypto ciphers
+        ubtu24cis_sshd_ciphers:
+          - aes256-gcm@openssh.com
+          - aes128-gcm@openssh.com
+          - aes256-ctr
+          - aes192-ctr
+          - aes128-ctr
+        ubtu24cis_sshd_macs:
+          - hmac-sha2-256-etm@openssh.com
+          - hmac-sha2-512-etm@openssh.com
+          - hmac-sha2-256
+          - hmac-sha2-512
+        ubtu24cis_sshd_kex_algorithms:
+          - sntrup761x25519-sha512@openssh.com
+          - ecdh-sha2-nistp256
+          - ecdh-sha2-nistp384
+          - ecdh-sha2-nistp521
+          - diffie-hellman-group-exchange-sha256
+          - diffie-hellman-group16-sha512
+          - diffie-hellman-group18-sha512
+          - diffie-hellman-group14-sha256
+
+        ubtu24cis_rule_5_2_4: false # don't patch passwordless sudo
+        ubtu24cis_sudo_timestamp_timeout: 60 # 5.2.6
+        ubtu24cis_rule_5_2_7: true # disable su
+
+        ubtu24cis_faillock_deny: 10 # (cis 5.3.3.1.1)**(!!!)** после скольки ошибок ввода пароля блокировать УЗ? (потенциальное влияние на скорость устранения инцидента с бизнес-услугой в негативную сторону)
+        ubtu24cis_faillock_unlock_time: 900 # (cis 5.3.3.1.2) через сколько разблокировать УЗ после блокировки?
+        ubtu24cis_rule_5_3_3_1_3: false # распространять блокировку на root?
+        ubtu24cis_pass_max_days: 9999 # 15 лет #  (cis 5.4.1.1)**(!!!)** срок жизни пароля (потенциальная невозможность обслуживания и ремонта оборудования, риск остановки бизнес-услуги)
+        ubtu24cis_pass_min_days: 1 # (cis 5.4.1.2) минимальное число дней между сменой пароля сконфигурировано
+        ubtu24cis_rule_5_4_1_5: false # (cis 5.4.1.5)**(!!!)** блокировать неактивных пользователей? (если да, сколько дней) (потенциальная невозможность обслуживания и ремонта оборудования, риск остановки бизнес-услуги)
+
+
+        ## Section 6
+        # не шлём журналы никуда
+        ubtu24cis_rule_6_1_2_1_1: false
+        ubtu24cis_rule_6_1_2_1_2: false
+        ubtu24cis_rule_6_1_2_1_3: false
+        ubtu24cis_rule_6_1_2_1_4: false
+        ubtu24cis_remote_log_server: ""
+
+        # 6.1.1.3
+        ubtu24cis_journald_systemmaxuse: "SystemMaxUse=1G"
+        ubtu24cis_journald_systemkeepfree: "SystemKeepFree=500M"
+        ubtu24cis_journald_runtimemaxuse: "RuntimeMaxUse=200M"
+        ubtu24cis_journald_runtimekeepfree: "RuntimeKeepFree=50M"
+        ubtu24cis_journald_maxfilesec: "MaxFileSec=1month"
+
+        ubtu24cis_auditd_max_log_file_action: rotate # (cis 6.2.2.2)**(!!!)** ротируем аудит логи? (потенциальное переполнение диска, риск остановки бизнес-услуги)
+        ubtu24cis_auditd_disk_full_action: rotate  # (cis 6.2.2.3)**(!!!)** блокировать ОС при невозможности записать аудит лог? (риск остановки бизнес-услуги)
+        ubtu24cis_auditd_admin_space_left_action: rotate
+        ubtu24cis_auditd_space_left_action: rotate
+
+        # не собираем контрольные суммы всех файлов
+        ubtu24cis_rule_6_3_1: false
+        ubtu24cis_rule_6_3_2: false
+        # (cis 6.3.2) как часто снимать слепки контроля целостности? (100% утилизация 1 ядра в течение 10 минут, риск временной приостановки или торможение оказания бизнес-сулуги)
+        # ubtu24cis_aide_cron_minute: 0
+        # ubtu24cis_aide_cron_hour: 5
+        # ubtu24cis_aide_cron_day: '*'
+        # ubtu24cis_aide_cron_month: '*'
+        # ubtu24cis_aide_cron_weekday: '*'
+        ubtu24cis_rule_6_3_3: false
