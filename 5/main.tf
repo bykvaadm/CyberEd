@@ -20,14 +20,14 @@ resource "yandex_compute_disk" "boot-disk-1" {
   type     = "network-hdd"
   zone     = "ru-central1-a"
   size     = "20"
-  image_id = "fd83j4siasgfq4pi1qif"
+  image_id = "fd8e9t6fpgi13oh7q39f"
 }
 resource "yandex_compute_disk" "boot-disk-2" {
   name     = "boot-disk-2"
   type     = "network-hdd"
   zone     = "ru-central1-a"
   size     = "20"
-  image_id = "fd83j4siasgfq4pi1qif"
+  image_id = "fd8e9t6fpgi13oh7q39f"
 }
 
 resource "yandex_compute_instance" "vm-1" {
@@ -92,42 +92,28 @@ resource "yandex_vpc_subnet" "subnet-1" {
   v4_cidr_blocks = ["192.168.10.0/24"]
 }
 
-output "internal_ip_address_vm_1" {
-  value = yandex_compute_instance.vm-1.network_interface.0.ip_address
-}
-
-output "internal_ip_address_vm_2" {
-  value = yandex_compute_instance.vm-2.network_interface.0.ip_address
-}
-
-
-output "external_ip_address_vm_1" {
+output "external_ip_address_vm_1_hacker" {
   value = yandex_compute_instance.vm-1.network_interface.0.nat_ip_address
 }
 
-output "external_ip_address_vm_2" {
+output "external_ip_address_vm_2_victim" {
   value = yandex_compute_instance.vm-2.network_interface.0.nat_ip_address
 }
-
-
-resource "local_file" "hosts" {
-  content  = "[all]\nhacker ansible_host=${yandex_compute_instance.vm-1.network_interface.0.nat_ip_address} ansible_user=debian\nvictim ansible_host=${yandex_compute_instance.vm-2.network_interface.0.nat_ip_address} ansible_user=debian"
-  filename = "ansible/hosts"
-}
-
 
 resource "null_resource" "hacker" {
   connection {
     type = "ssh"
     user = "debian"
     #password = var.root_password
-    host = yandex_compute_instance.vm-2.network_interface.0.nat_ip_address
+    host = yandex_compute_instance.vm-1.network_interface.0.nat_ip_address
   }
 
   provisioner "remote-exec" {
     inline = [
       "sudo apt update",
-      "sudo apt -y install nmap curl build-essential linux-headers-amd64 linux-image-amd64"
+      "sudo hostnamectl set-hostname ${yandex_compute_instance.vm-1.network_interface.0.nat_ip_address}",
+      "sudo bash -c 'cat >> /etc/bash.bashrc <<EOF\nPS1=\"[hacker@${yandex_compute_instance.vm-1.network_interface.0.nat_ip_address} \\w]\\$ \"\nEOF'",
+      "sudo apt -y install git netcat-openbsd nmap curl build-essential linux-headers-amd64 linux-image-amd64"
     ]
   }
   triggers = {
@@ -146,6 +132,8 @@ resource "null_resource" "victim" {
   provisioner "remote-exec" {
     inline = [
       "sudo apt update",
+      "sudo hostnamectl set-hostname ${yandex_compute_instance.vm-2.network_interface.0.nat_ip_address}",
+      "sudo bash -c 'cat >> /etc/bash.bashrc <<EOF\nPS1=\"[victim@${yandex_compute_instance.vm-2.network_interface.0.nat_ip_address} \\w]\\$ \"\nEOF'",
       "sudo apt -y install ca-certificates curl git linux-headers-amd64 linux-image-amd64",
       "sudo install -m 0755 -d /etc/apt/keyrings",
       "sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc",
