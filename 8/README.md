@@ -19,8 +19,13 @@ helm repo update
 helm --kube-insecure-skip-tls-verify --namespace jenkins upgrade --install jenkins --create-namespace jenkins/jenkins -f helm/jenkins_values.yaml
 # etcd
 helm --kube-insecure-skip-tls-verify --namespace etcd upgrade --install etcd \
-  --set persistence.enabled="false" --set replicaCount="3" --set auth.rbac.create=false \
-  --create-namespace oci://registry-1.docker.io/bitnamicharts/etcd -f helm/etcd_values.yaml
+  --set persistence.enabled="false" \
+  --set replicaCount="3" \
+  --set auth.rbac.create=false \
+  --set volumePermissions.image.repository=bitnamilegacy/os-shell \
+  --set "extraEnvVars[0].name=ETCD_INITIAL_CLUSTER_STATE,extraEnvVars[0].value=new" \
+  --set image.registry=docker.io,image.repository=bitnamilegacy/etcd,image.tag=3.6.4-debian-12-r4 \
+  --create-namespace oci://registry-1.docker.io/bitnamicharts/etcd
 # vault
 sleep 70s
 helm repo add hashicorp https://helm.releases.hashicorp.com

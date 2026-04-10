@@ -52,7 +52,7 @@ resource "yandex_compute_instance" "vm-1" {
   }
 
   metadata = {
-    user-data = "${file("meta.txt")}"
+    user-data = file("../meta.txt")
   }
 }
 resource "yandex_compute_instance" "vm-2" {
@@ -77,7 +77,7 @@ resource "yandex_compute_instance" "vm-2" {
   }
 
   metadata = {
-    user-data = "${file("meta.txt")}"
+    user-data = file("../meta.txt")
   }
 }
 
