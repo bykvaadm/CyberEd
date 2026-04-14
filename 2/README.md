@@ -36,7 +36,7 @@
 
 1. устанавливаем vault клиента, например, так:
    ```bash
-   pip install hvac
+   pip install hvac # для ansible всё равно ставить придётся
    ```
    ИЛИ
    ```bash
