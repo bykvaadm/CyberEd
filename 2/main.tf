@@ -68,7 +68,7 @@ output "external_ip_address_vm_1" {
   value = yandex_compute_instance.vm-1.network_interface.0.nat_ip_address
 }
 
-resource "local_file" "private_key" {
+resource "local_file" "hosts" {
   content  = "[servers]\ncis ansible_host=${yandex_compute_instance.vm-1.network_interface.0.nat_ip_address} ansible_user=ubuntu"
   filename = "hosts"
 }

@@ -1,6 +1,6 @@
 ---
 - name: Apply CIS hardening for Ubuntu 24
-  hosts: cis
+  hosts: all
   become: true
   roles:
     - role: ubuntu24_cis
@@ -8,6 +8,7 @@
         ansible_ssh_pipelining: True
 
         ## section 1
+        ubtu24cis_rule_1_1_1_6: false # disable overlayfs
         ubtu24cis_rule_1_1_1_9: false # disable usb
 
         # apparmor

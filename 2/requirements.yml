@@ -3,3 +3,6 @@ roles:
   - name: ubuntu24_cis
     src: https://github.com/ansible-lockdown/UBUNTU24-CIS.git
     version: devel
+
+collections:
+  - name: community.hashi_vault

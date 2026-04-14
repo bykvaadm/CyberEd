@@ -140,7 +140,8 @@ bwhWH5CxiMe9jP4uFTD1rM
 ```
 пробрасываем порт
 ```bash
-kubectl --insecure-skip-tls-verify --namespace jenkins port-forward svc/jenkins 8080:8080
+kubectl --insecure-skip-tls-verify --namespace jenkins port-forward svc/jenkins 8080:8080 &
+kubectl --insecure-skip-tls-verify --namespace vault port-forward svc/vault-ui 8200:8200 &
 ```
 открываем в браузере 127.0.0.1:8080 и вводим admin и пароль полученный ранее
 
