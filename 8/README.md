@@ -82,6 +82,13 @@ vault-agent-injector-bdbbcb8cf-d9djn   1/1     Running   0          8m18s
 kubectl --insecure-skip-tls-verify -n vault exec -ti vault-0 -- sh
 vault login token=hvs.pythjDn2XEhvnLweVKP5VnXW
 vault auth enable approle
+
+# включаем сразу v2
+vault secrets enable -path=kv kv-v2
+
+OR
+
+# enable v1 + upgrade to v2
 vault secrets enable -path=kv kv
 vault kv enable-versioning kv/
 
@@ -101,7 +108,7 @@ EOF
 vault policy write jenkins ~/jenkins.hcl
 
 # создаём роль jenkins и связать с политикой jenkins
-vault write auth/approle/role/jenkins policies=jenkins
+vault write auth/approle/role/jenkins token_policies="jenkins"
 ```
 
 Прочитаем данные для последующей авторизации, сначала role id (грубо говоря логин)
@@ -151,10 +158,10 @@ kubectl --insecure-skip-tls-verify --namespace vault port-forward svc/vault-ui 8
 4. HashiCorp Vault
 5. устанавливаем, ставим галку restart
 6. заново пробрасываем порт
-7. http://127.0.0.1:8080/manage/credentials/store/system/domain/_/newCredentials
+7. http://127.0.0.1:8081/manage/credentials/store/system/domain/_/
 8. выбираем Vault app role credential
 9. заполняем role_id, secret_id жмем create 
-10. сохраняем себе id/name (они одинаковые) // 3115eae8-f7bd-4af2-a6b8-0f2f2e229c58
+10. сохраняем себе id/name (они одинаковые) // 134edc53-d5ff-4ae1-9e69-107290a845f9
 11. dashboard -> new item
 12. имя - vault, тип - pipeline -> ok
 13. скрипт:

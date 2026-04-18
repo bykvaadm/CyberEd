@@ -59,7 +59,7 @@
    vault secrets enable -path=cis kv-v2
    vault kv put cis/golden_images/ubuntu24 \
      grub_password_hash="grub.pbkdf2.sha512.10000.69a2402d73b3a7aaedf97f57b5a824145c4472f16a07dc1dedd7e38faedd1e5306cbece3a77f4bd469053836257803acfbb66c1a2b4ca27c3ef120cdc757ed260ab58b2f4cbe6e537636f597f296d336"
-   vault kv get secret/cis/ubuntu24 # проверка
+   vault kv get cis/golden_images/ubuntu24 # проверка
    ```
 5. в main.yml меняем ubtu24cis_bootloader_password_hash на следующий, работающий с vault
    ```yaml
