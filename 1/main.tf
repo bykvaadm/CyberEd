@@ -12,15 +12,15 @@ terraform {
 }
 
 provider "yandex" {
-  zone = "ru-central1-a"
+  zone = var.yandex_zone
 }
 
 resource "yandex_compute_disk" "boot-disk-1" {
   name     = "boot-disk-1"
   type     = "network-hdd"
-  zone     = "ru-central1-a"
+  zone     = var.yandex_zone
   size     = "20"
-  image_id = "fd83j4siasgfq4pi1qif"
+  image_id = var.image_id
 }
 
 resource "yandex_compute_instance" "vm-1" {
@@ -55,7 +55,7 @@ resource "yandex_vpc_network" "network-1" {
 
 resource "yandex_vpc_subnet" "subnet-1" {
   name           = "subnet1"
-  zone           = "ru-central1-a"
+  zone           = var.yandex_zone
   network_id     = yandex_vpc_network.network-1.id
   v4_cidr_blocks = ["192.168.10.0/24"]
 }
@@ -68,7 +68,7 @@ output "external_ip_address_vm_1" {
   value = yandex_compute_instance.vm-1.network_interface.0.nat_ip_address
 }
 
-resource "local_file" "private_key" {
+resource "local_file" "hosts" {
   content  = "[osquery]\nosquery-1 ansible_host=${yandex_compute_instance.vm-1.network_interface.0.nat_ip_address} ansible_user=debian"
   filename = "ansible/hosts"
 }

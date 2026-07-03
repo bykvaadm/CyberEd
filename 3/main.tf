@@ -12,29 +12,29 @@ terraform {
 }
 
 provider "yandex" {
-  zone = "ru-central1-a"
+  zone = var.yandex_zone
 }
 
 resource "yandex_compute_disk" "boot-disk-1" {
   name     = "boot-disk-1"
   type     = "network-hdd"
-  zone     = "ru-central1-a"
+  zone     = var.yandex_zone
   size     = "20"
-  image_id = "fd83j4siasgfq4pi1qif"
+  image_id = var.image_id
 }
 resource "yandex_compute_disk" "boot-disk-2" {
   name     = "boot-disk-2"
   type     = "network-hdd"
-  zone     = "ru-central1-a"
+  zone     = var.yandex_zone
   size     = "20"
-  image_id = "fd83j4siasgfq4pi1qif"
+  image_id = var.image_id
 }
 resource "yandex_compute_disk" "boot-disk-3" {
   name     = "boot-disk-3"
   type     = "network-hdd"
-  zone     = "ru-central1-a"
+  zone     = var.yandex_zone
   size     = "20"
-  image_id = "fd83j4siasgfq4pi1qif"
+  image_id = var.image_id
 }
 
 resource "yandex_compute_instance" "vm-1" {
@@ -119,7 +119,7 @@ resource "yandex_vpc_network" "network-1" {
 
 resource "yandex_vpc_subnet" "subnet-1" {
   name           = "subnet1"
-  zone           = "ru-central1-a"
+  zone           = var.yandex_zone
   network_id     = yandex_vpc_network.network-1.id
   v4_cidr_blocks = ["192.168.10.0/24"]
 }
