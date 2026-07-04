@@ -18,7 +18,8 @@
 1. terraform init
 2. terraform apply
 3. ansible-galaxy install -r requirements.yml
-4. ansible-playbook -i hosts main.yml -bD
+4. установите пароль на пользователя под которым ходите на сервер (debian)
+5. ansible-playbook -i hosts main.yml -bKD # ansible спросит пароль, установленный на предыдущем шаге
 
 # задание со *
 
