@@ -24,13 +24,13 @@
     ```bash
     uv venv --python 3.13
     ```
-3. установим нужные зависимомсти
-    ```bash
-    uv pip install -r kubespray/requirements.txt
-    ```
-4. активируем виртуальную среду
+3. активируем виртуальную среду
     ```bash
     source .venv/bin/activate
+    ```
+4. установим нужные зависимомсти
+    ```bash
+    uv pip install -r kubespray/requirements.txt
     ```
 5. вернитесь в лабораторную 6/7/8 для установки серверов терраформом
    ```bash
@@ -59,9 +59,9 @@
    OUTPUT
    ```text
    NAME    STATUS   ROLES           AGE   VERSION
-   node1   Ready    control-plane   14m   v1.31.1
-   node2   Ready    <none>          13m   v1.31.1
-   node3   Ready    <none>          13m   v1.31.1
-   node4   Ready    <none>          13m   v1.31.1
+   node1   Ready    control-plane   14m   v1.36.2
+   node2   Ready    <none>          13m   v1.36.2
+   node3   Ready    <none>          13m   v1.36.2
+   node4   Ready    <none>          13m   v1.36.2
    ```
 9. продолжите выполнение лабы 6/7/8
