@@ -19,7 +19,7 @@
 | 5 | Побег из контейнера   | Практика container escape                                 |
 | 6 | Kubernetes            | Развертывание кластера                                    |
 | 7 | Kubernetes Goat       | Практика безопасности Kubernetes                          |
-| 8 | Vault + Jenkins в K8s | CI/CD с получением секретов из Vault                      |
+| 8 | Vault + GitLab в K8s  | CI/CD с получением секретов из Vault по JWT/OIDC          |
 
 ---
 
@@ -163,18 +163,24 @@ https://github.com/madhuakula/kubernetes-goat
 
 ---
 
-## Лабораторная 8 — Vault и Jenkins в Kubernetes
+## Лабораторная 8 — Vault и GitLab в Kubernetes
 
 **Цель:**  
 Настроить безопасный CI/CD-процесс с использованием Vault.
 
 **Задачи:**
 
-- Установить HashiCorp Vault в Kubernetes
-- Установить Jenkins
-- Настроить интеграцию Jenkins ↔ Vault
+- Установить HashiCorp Vault в Kubernetes (HA на Integrated Storage / Raft)
+- Установить GitLab CE (официальный helm-чарт)
+- Настроить интеграцию GitLab ↔ Vault по JWT/OIDC (ID tokens)
 - Создать пример pipeline
 - Получить секрет из Vault во время выполнения пайплайна
+
+**Изучаем:**
+
+- Integrated Storage (Raft) как рекомендованный бэкенд Vault
+- ID tokens в GitLab CI и jwt auth method в Vault
+- Ограничение доступа через bound_claims / bound_audiences и политики Vault
 
 **Результат:**  
 Рабочий CI/CD pipeline с безопасным хранением и использованием секретов.

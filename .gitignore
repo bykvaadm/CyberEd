@@ -8,3 +8,6 @@ kubernetes-goat
 key*.json
 .venv
 .DS_Store
+
+# лаба 8: unseal-ключи и root-токен Vault, которые генерит install.sh
+vault-init.json
