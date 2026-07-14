@@ -1,0 +1,18 @@
+ui:
+  enabled: true
+server:
+  dataStorage:
+    enabled: false
+  ha:
+    enabled: true
+    config: |
+      ui = true
+      listener "tcp" {
+        tls_disable = 1
+        address = "[::]:8200"
+        cluster_address = "[::]:8201"
+      }
+      storage "etcd" {
+        address  = "etcd.etcd.svc.cluster.local:2379"
+        etcd_api = "v3"
+      }

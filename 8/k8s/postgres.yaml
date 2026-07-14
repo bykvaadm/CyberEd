@@ -1,0 +1,122 @@
+# PostgreSQL для GitLab. Оператор (CloudNativePG) тут был бы оверкиллом: нам нужен
+# один под с базой, а он тянет за собой CRD, контроллер и обязательный PVC (а значит
+# и StorageClass, которого в kubespray нет). Поэтому — обычный манифест, как и redis.
+#
+# Всё эфемерно (emptyDir): лаба, данные одноразовые.
+#
+# POSTGRES_USER в официальном образе создаётся СУПЕРЮЗЕРОМ — поэтому GitLab при миграциях
+# сможет сам создать нужные расширения. Мы всё равно создаём их заранее (initdb-скрипт),
+# чтобы не зависеть от этого поведения.
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: postgres-app        # на этот secret ссылается global.psql.password.secret
+  namespace: gitlab
+type: Opaque
+stringData:
+  username: gitlab
+  password: gitlabpass      # лаба; в проде — генерить и не держать в git
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-initdb
+  namespace: gitlab
+data:
+  # Выполняется один раз при первичной инициализации кластера БД.
+  # Обязательные расширения GitLab (docs.gitlab.com/install/requirements/#extensions):
+  #   pg_trgm     — с давних пор
+  #   btree_gist  — с давних пор
+  #   amcheck     — обязателен начиная с GitLab 18.4, а мы на 19.x
+  #   plpgsql     — есть в образе по умолчанию
+  10-extensions.sql: |
+    CREATE EXTENSION IF NOT EXISTS pg_trgm;
+    CREATE EXTENSION IF NOT EXISTS btree_gist;
+    CREATE EXTENSION IF NOT EXISTS amcheck;
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+  namespace: gitlab
+  labels:
+    app: postgres
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+        - name: postgres
+          # ВЕРСИЯ ЖЁСТКО ЗАДАНА. GitLab 19.x (чарт 10.x) поддерживает PostgreSQL
+          # СТРОГО 17.x: min = max = 17 (docs.gitlab.com/install/requirements/).
+          # 18.x не поддерживается — не «обновляйте» бездумно.
+          image: postgres:17-alpine
+          env:
+            - name: POSTGRES_DB
+              value: gitlabhq_production
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-app
+                  key: username
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-app
+                  key: password
+            # данные в emptyDir — подкаталог, чтобы initdb не спотыкался о lost+found
+            - name: PGDATA
+              value: /var/lib/postgresql/data/pgdata
+          ports:
+            - name: postgres
+              containerPort: 5432
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              memory: 1Gi
+          readinessProbe:
+            exec:
+              command: ["pg_isready", "-U", "gitlab", "-d", "gitlabhq_production"]
+            initialDelaySeconds: 10
+            periodSeconds: 5
+          livenessProbe:
+            tcpSocket:
+              port: 5432
+            initialDelaySeconds: 30
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/postgresql/data
+            - name: initdb
+              mountPath: /docker-entrypoint-initdb.d
+      volumes:
+        - name: data
+          emptyDir: {}
+        - name: initdb
+          configMap:
+            name: postgres-initdb
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres
+  namespace: gitlab
+  labels:
+    app: postgres
+spec:
+  selector:
+    app: postgres
+  ports:
+    - name: postgres
+      port: 5432
+      targetPort: 5432

@@ -1,0 +1,53 @@
+# Vault UI наружу через ТОТ ЖЕ Envoy, что обслуживает GitLab — без второго прокси
+# и без port-forward.
+#
+# Как это работает:
+#   - Gateway чарта (gitlab-gw) слушает HTTP:80 с hostname gitlab.lab.test и пускает
+#     маршруты только из своего namespace (allowedRoutes: from: Same). Vault живёт в
+#     другом namespace, поэтому просто прицепить HTTPRoute к нему нельзя.
+#   - Решение: свой Gateway в namespace vault, того же GatewayClass (gitlab-gw), плюс
+#     mergeGateways: true в EnvoyProxy (см. gitlab_values.yaml). Тогда Envoy Gateway
+#     сажает оба Gateway на ОДИН Envoy. Требуется лишь уникальность тройки
+#     (порт, протокол, hostname): HTTP:80+vault.lab.test vs HTTP:80+gitlab.lab.test.
+#
+# Внешний DNS не нужен: имя резолвится через /etc/hosts на машине студента, а Envoy
+# матчит запрос по заголовку Host. Внутри кластера это имя никто не резолвит.
+#
+# ВНИМАНИЕ: открывает Vault UI по HTTP без TLS. Допустимо только в учебном стенде
+# с одноразовыми данными — root-токен и unseal-ключи пойдут по сети открытым текстом.
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  name: vault-gw
+  namespace: vault
+spec:
+  gatewayClassName: gitlab-gw
+  listeners:
+    - name: vault-web
+      protocol: HTTP
+      port: 80
+      hostname: vault.lab.test
+      allowedRoutes:
+        namespaces:
+          from: Same
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: vault-ui
+  namespace: vault
+spec:
+  parentRefs:
+    - name: vault-gw
+      sectionName: vault-web
+  hostnames:
+    - vault.lab.test
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+      backendRefs:
+        - name: vault-ui
+          port: 8200

@@ -1,18 +1,49 @@
+# Vault HA на Integrated Storage (Raft) — рекомендованный HashiCorp бэкенд.
+# Raft встроен в Vault, поэтому внешнее хранилище (etcd/Consul) не требуется.
+#
+# ВАЖНО (лаба): реального persistent storage под кластером нет, поэтому raft-данные лежат
+# в emptyDir — HA мы ИМИТИРУЕМ. При перезапуске подов данные Vault теряются (потребуется
+# заново operator init). В проде здесь был бы PVC: server.dataStorage.enabled: true.
+
 ui:
   enabled: true
+
+# Vault Agent Injector в этой лабе не нужен: секреты забирает GitLab CI по JWT,
+# а не сайдкар-инжектор. Плюс он ломает повторный helm upgrade: контроллер vault-k8s
+# сам вписывает caBundle в свой MutatingWebhookConfiguration и становится владельцем
+# поля, а helm 4 (server-side apply) при следующем апгрейде получает conflict.
+injector:
+  enabled: false
+
 server:
+  # PVC не создаём — вместо него emptyDir ниже
   dataStorage:
     enabled: false
+
+  volumes:
+    - name: raft-data
+      emptyDir: {}
+  volumeMounts:
+    - name: raft-data
+      mountPath: /vault/data
+
   ha:
     enabled: true
-    config: |
-      ui = true
-      listener "tcp" {
-        tls_disable = 1
-        address = "[::]:8200"
-        cluster_address = "[::]:8201"
-      }
-      storage "etcd" {
-        address  = "etcd.etcd.svc.cluster.local:2379"
-        etcd_api = "v3"
-      }
+    replicas: 3
+    raft:
+      enabled: true
+      setNodeId: true
+      config: |
+        ui = true
+
+        listener "tcp" {
+          tls_disable     = 1
+          address         = "[::]:8200"
+          cluster_address = "[::]:8201"
+        }
+
+        storage "raft" {
+          path = "/vault/data"
+        }
+
+        service_registration "kubernetes" {}

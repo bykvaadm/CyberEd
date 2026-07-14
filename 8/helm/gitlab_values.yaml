@@ -1,0 +1,155 @@
+# Официальный чарт gitlab/gitlab 10.x (CE, http, без cert-manager).
+#
+# ВАЖНО: с чарта 10.0.0 встроенные PostgreSQL / Redis / MinIO ВЫПИЛЕНЫ — они обязаны быть внешними.
+#   - PostgreSQL: простой манифест, один под (k8s/postgres.yaml)
+#   - Redis:      простой манифест (k8s/redis.yaml)
+#   - MinIO:      НЕ НУЖЕН — объектное хранилище выключено целиком (см. ниже)
+#
+# Домен задаётся при установке, файл не правим:
+#   --set global.hosts.domain=lab.test
+# Итоговый хост -> gitlab.lab.test, доступен по :80.
+#
+# Внешний DNS не нужен: имя резолвится через /etc/hosts на машине студента, а Envoy
+# матчит запрос по заголовку Host. Зона .test зарезервирована под тесты (RFC 2606).
+#
+# Почему не port-forward: чарт НЕ умеет порт в external_url (только http://<hostname>),
+# а external_url — это ещё и claim `iss` в ID-токене, и база для редиректов. При
+# port-forward на :8080 GitLab уводил бы браузер на :80 и логин ломался.
+
+global:
+  edition: ce                       # Community Edition, лицензия не нужна
+  hosts:
+    # domain — через --set (см. README)
+    https: false                     # http (issuer в ID token тоже http)
+
+  # ingress-nginx выведен из эксплуатации, поэтому идём дорогой чарта 10:
+  # Gateway API + Envoy (это его дефолт). CRD Gateway API едут внутри чарта.
+  ingress:
+    enabled: false
+    configureCertmanager: false
+    tls:
+      enabled: false
+  gatewayApi:
+    enabled: true
+    installEnvoy: true
+    configureCertmanager: false
+    httpToHttpsRedirect: false     # работаем по http, редирект на https не нужен
+
+  kas:
+    enabled: false                   # GitLab Agent server не нужен
+
+  # --- PostgreSQL: один под, простой манифест (k8s/postgres.yaml) ---
+  psql:
+    host: postgres.gitlab.svc.cluster.local
+    port: 5432
+    database: gitlabhq_production
+    username: gitlab
+    password:
+      secret: postgres-app
+      key: password
+
+  # --- Redis: простой манифест, без пароля ---
+  redis:
+    host: redis.gitlab.svc.cluster.local
+    port: 6379
+    auth:
+      enabled: false
+
+  appConfig:
+    # Объектное хранилище выключаем целиком — тогда MinIO/S3 не нужен вообще.
+    # GitLab сложит эти данные на локальный диск пода (эфемерно, нам хватает:
+    # пайплайн лабы не производит artifacts).
+    object_store:
+      enabled: false
+    artifacts:
+      enabled: false
+    lfs:
+      enabled: false
+    uploads:
+      enabled: false
+    packages:
+      enabled: false
+    defaultProjectsFeatures:
+      registry: false
+
+# --- отключаем тяжёлое/лишнее для лабы ---
+certmanager:
+  install: false
+installCertmanager: false
+
+prometheus:
+  install: false
+
+registry:
+  enabled: false
+
+# --- раннер идёт сабчартом и авто-регистрируется ---
+# gitlab.lab.test ВНУТРИ кластера не резолвится (его нет в CoreDNS), поэтому раннер ходит в GitLab
+# по внутреннему адресу сервиса — и регистрируется, и клонирует репозиторий.
+gitlab-runner:
+  install: true
+  gitlabUrl: http://gitlab-webservice-default.gitlab.svc.cluster.local:8181
+  runners:
+    config: |
+      [[runners]]
+        clone_url = "http://gitlab-webservice-default.gitlab.svc.cluster.local:8181"
+        [runners.kubernetes]
+          namespace = "{{.Release.Namespace}}"
+          image = "alpine:3.20"
+
+# --- Envoy Gateway: выставляем наружу без облачного LoadBalancer ---
+#
+# По умолчанию EnvoyProxy просит Service типа LoadBalancer, которого в kubespray нет.
+# NodePort не подходит: он даёт порт 30000–32767, а чарт НЕ умеет порт в external_url
+# (в gitlab.yml рендерятся только host/https) — GitLab всё равно считал бы, что живёт
+# на :80, и после логина редиректил бы в пустоту.
+#
+# Поэтому: Envoy как DaemonSet с hostPort 80 на каждой ноде.
+# Envoy сам сдвигает привилегированные порты (80 -> 10080) внутри контейнера, а :80
+# на хосте биндит kubelet/CNI — root и NET_BIND_SERVICE контейнеру не нужны.
+gatewayApiResources:
+  gateway:
+    # дефолт чарта — HTTPS (порт 443). Мы работаем без TLS, поэтому HTTP -> листенер на :80
+    protocol: HTTP
+  envoy:
+    proxySpec:
+      # mergeGateways: все Gateway этого GatewayClass садятся на ОДИН Envoy.
+      # Благодаря этому мы вешаем на тот же :80 ещё и Vault UI (k8s/vault-gateway.yaml),
+      # не поднимая второй прокси и не занимая порт повторно.
+      mergeGateways: true
+      provider:
+        type: Kubernetes
+        kubernetes:
+          envoyService:
+            type: ClusterIP
+          envoyDaemonSet:
+            patch:
+              type: StrategicMerge
+              value:
+                spec:
+                  template:
+                    spec:
+                      containers:
+                        - name: envoy
+                          ports:
+                            - name: http
+                              containerPort: 10080
+                              hostPort: 80
+                              protocol: TCP
+
+gitlab:
+  # toolbox нужен только для backup/restore — в лабе не используем.
+  # Заодно снимаем требование чарта настроить object storage под бэкапы.
+  toolbox:
+    enabled: false
+
+  # ужимаем реплики, чтобы влезть в воркеры 4CPU/8GB
+  webservice:
+    minReplicas: 1
+    maxReplicas: 1
+  sidekiq:
+    minReplicas: 1
+    maxReplicas: 1
+  gitlab-shell:
+    minReplicas: 1
+    maxReplicas: 1
