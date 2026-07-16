@@ -236,6 +236,17 @@ c_ok "redis готов"
 # ----------------------------------------------------------------- gitlab ---
 c_info "GitLab CE (chart ${GITLAB_CHART_VERSION} = GitLab 19.1.2)"
 helm_repo gitlab https://charts.gitlab.io
+
+# Gitaly раньше поднимался с PVC (persistence.enabled: true). volumeClaimTemplates у StatefulSet
+# неизменяемы — helm upgrade на новый emptyDir-конфиг Kubernetes отвергнет. Если с прошлого
+# прогона остался gitaly с PVC, сносим его (и осиротевший PVC), чтобы чарт пересоздал под.
+if $KUBECTL -n gitlab get statefulset gitlab-gitaly \
+     -o jsonpath='{.spec.volumeClaimTemplates}' 2>/dev/null | grep -q repo-data; then
+  c_warn "старый gitaly с PVC — пересоздаю под emptyDir"
+  $KUBECTL -n gitlab delete statefulset gitlab-gitaly --ignore-not-found >/dev/null 2>&1 || true
+  $KUBECTL -n gitlab delete pvc repo-data-gitlab-gitaly-0 --ignore-not-found >/dev/null 2>&1 || true
+fi
+
 $HELM -n gitlab upgrade --install gitlab gitlab/gitlab \
   --version "$GITLAB_CHART_VERSION" \
   -f helm/gitlab_values.yaml \
@@ -273,7 +284,7 @@ set -e
 export VAULT_TOKEN='${ROOT_TOKEN}'
 
 # kv-v2 + секрет, который потом заберёт pipeline
-vault secrets enable -path=kv kv-v2 2>/dev/null || true
+vault secrets enable -path=team1_kv kv-v2 2>/dev/null || true
 vault kv put -mount=kv thp/logstash-kube \
   keystore=ololo redis=azaza truststore=purumpurum >/dev/null
 

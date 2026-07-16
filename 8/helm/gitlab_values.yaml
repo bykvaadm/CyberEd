@@ -138,6 +138,16 @@ gatewayApiResources:
                               protocol: TCP
 
 gitlab:
+  # Gitaly (хранилище git-репозиториев) по умолчанию поднимает PVC (repo-data, 50Gi) и ждёт
+  # дефолтный StorageClass, которого в kubespray нет — под висит в Pending с FailedBinding.
+  # Ставим emptyDir: во-первых, консистентно с остальной лабой (всё эфемерно), во-вторых,
+  # воркеры preemptible — node-local хранилище (local-path) всё равно пропадёт вместе с нодой,
+  # так что PVC дал бы лишь ложное ощущение надёжности.
+  # ЦЕНА: если под gitaly перезапустится, репозитории проекта пропадут — просто push'ните заново.
+  gitaly:
+    persistence:
+      enabled: false
+
   # toolbox нужен только для backup/restore — в лабе не используем.
   # Заодно снимаем требование чарта настроить object storage под бэкапы.
   toolbox:

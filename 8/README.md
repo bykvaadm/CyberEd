@@ -480,6 +480,16 @@ truststore  len=10  sha256=...
   раннер должен был авторегистрироваться.
 - Webservice долго не поднимается / OOM — уменьшите нагрузку (у нас уже `minReplicas=1`), при
   необходимости добавьте память воркерам в `main.tf`.
+- `pod gitlab-gitaly-0 Pending`, в событиях `FailedBinding ... no persistent volumes available
+  ... no storage class is set` — Gitaly по умолчанию просит PVC, а StorageClass в kubespray нет.
+  У нас в `gitlab_values.yaml` он отключён (`gitlab.gitaly.persistence.enabled: false` → emptyDir).
+  Если под уже создан со старым PVC, `helm upgrade` его не поменяет (`volumeClaimTemplates`
+  неизменяемы) — снесите StatefulSet и PVC, затем переустановите:
+  ```bash
+  kubectl --insecure-skip-tls-verify -n gitlab delete statefulset gitlab-gitaly
+  kubectl --insecure-skip-tls-verify -n gitlab delete pvc repo-data-gitlab-gitaly-0
+  # затем повторите helm upgrade из шага «gitlab (официальный чарт, CE)»
+  ```
 - Vault после перезапуска пода снова `sealed` и пустой — это ожидаемо: raft лежит в `emptyDir`.
   Пройдите `operator init` + `raft join` + unseal заново (или включите `dataStorage` с PVC).
 - `vault operator raft join` ругается на уже присоединённую ноду — проверьте
